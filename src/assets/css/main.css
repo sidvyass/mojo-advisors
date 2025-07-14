@@ -1,0 +1,45 @@
+/* hide the little arrow on any .dropdown-toggle */
+.navbar-nav .dropdown-toggle::after {
+	display: none;
+}
+
+/* increase space between About / Solutions / Careers */
+.navbar-nav.mx-auto .nav-link {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+/* All nav bar text */
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .dropdown-item {
+	font-size: 0.95rem;
+	color: #000 !important;
+}
+
+
+/* Mouse hover toggle menu */
+@media (min-width: 992px) {
+
+	/* TODO: test media */
+	.navbar .nav-item.dropdown:hover>.dropdown-menu {
+		display: block;
+		margin-top: 0;
+	}
+}
+
+
+/* super-specific hover styling for Contact Us button */
+nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collapse#mainNav>a.btn.btn-dark.btn-md.rounded-pill:hover {
+	background-color: #fff !important;
+	color: #000 !important;
+	border: 1px solid #000 !important;
+	box-shadow: none !important;
+}
+
+
+.dropdown-divider-center {
+	width: 50%;
+	margin: 0.05rem auto;
+	border-top: 1px solid #ccc;
+}

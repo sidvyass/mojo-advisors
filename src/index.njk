@@ -1,0 +1,516 @@
+{% extends "layouts/base.njk" %}
+
+{% block head %}
+	{{ super() }}
+	<link rel="stylesheet" href="/assets/css/home.css">
+{% endblock %}
+
+{% block content %}
+<div class="hero position-relative">
+  <canvas class="background"></canvas>
+
+  <div class="hero-content text-center">
+    <h1>Differentiated strategic, operational, financial & investment advice</h1>
+    <h5 class="text-muted">In order for us to do well, you must do well. We conduct meaningful work with those whom which we develop meaningful relationships.</h5>
+    <a href="/book-meeting" class="btn btn-dark btn-lg">Book a Meeting</a>
+
+  <!-- Brand-logo marquee -->
+<div class="container pt-5">
+  <div class="brand-marquee">
+    <div class="strip d-flex align-items-center">
+      <!-- ───── Original set of logos ───── -->
+      <img src="/assets/logos/absolut_care_logo.jpg" alt="Brand 1">
+      <img src="/assets/logos/ashbury_logo.jpg"    alt="Brand 2">
+      <img src="/assets/logos/bis_america_advis.png" alt="Brand 3">
+      <img src="/assets/logos/bridgeway.png"       alt="Brand 4">
+      <img src="/assets/logos/child_trust.png"     alt="Brand 5">
+      <img src="/assets/logos/cms.png"             alt="Brand 6">
+      <img src="/assets/logos/fed_health.jpg"      alt="Brand 7">
+      <img src="/assets/logos/filthy.webp"         alt="Brand 8">
+      <img src="/assets/logos/firstday_health.png" alt="Brand 9">
+      <img src="/assets/logos/ingleside.jpg"       alt="Brand 10">
+
+      <!-- ───── Duplicate set for seamless looping ───── -->
+      <img src="/assets/logos/absolut_care_logo.jpg" alt="Brand 1">
+      <img src="/assets/logos/ashbury_logo.jpg"    alt="Brand 2">
+      <img src="/assets/logos/bis_america_advis.png" alt="Brand 3">
+      <img src="/assets/logos/bridgeway.png"       alt="Brand 4">
+      <img src="/assets/logos/child_trust.png"     alt="Brand 5">
+      <img src="/assets/logos/cms.png"             alt="Brand 6">
+      <img src="/assets/logos/fed_health.jpg"      alt="Brand 7">
+      <img src="/assets/logos/filthy.webp"         alt="Brand 8">
+      <img src="/assets/logos/firstday_health.png" alt="Brand 9">
+      <img src="/assets/logos/ingleside.jpg"       alt="Brand 10">
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+
+
+<section class="container py-5">
+  <!-- Section header -->
+  <div class="text-center mb-5">
+    <h1 class="display-5">Pricing that fits your team</h1>
+    <p class="text-muted fs-5">Choose the plan that fits your team's needs. All plans include contact-based pricing.</p>
+  </div>
+
+  <!-- Four pricing cards -->
+  <div class="row gx-4 gy-4">
+    <!-- Card 1 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Essential</h4>
+          <p class="card-subtitle mb-3 text-muted">Perfect for growing teams</p>
+          <ul class="list-unstyled mb-4 flex-grow-1">
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Monthly financial reporting</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Budget preparation & variance analysis</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Cash flow forecasting</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Basic tax planning coordination with CPA</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>One 1-hour consultation call per month</li>
+            <li class="mb-2 text-muted pb-2"><span class="text-success mr-2">&#10003;</span>Email support for ad-hoc questions</li>
+          </ul>
+          <a href="#" class="btn btn-dark w-75 d-block mx-auto mt-auto">Contact for Pricing</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Pro</h4>
+          <p class="card-subtitle mb-3 text-muted">For established businesses</p>
+          <ul class="list-unstyled mb-4 flex-grow-1">
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Everything in Essential</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Weekly cash flow updates</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Detailed KPI tracking & reporting</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Annual strategic planning session</li>
+            <li class="mb-2 text-muted pb-2"><span class="text-success mr-2">&#10003;</span>Tax strategy optimization with CPA collaboration</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Two 1-hour consultation calls per month</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Priority email & phone support</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Basic HR & compliance guidance</li>
+          </ul>
+          <a href="#" class="btn btn-dark w-75 d-block mx-auto mt-auto">Contact for Pricing</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Premium</h4>
+          <p class="card-subtitle mb-3 text-muted">Scalable solutions</p>
+          <ul class="list-unstyled mb-4 flex-grow-1">
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>All Pro features</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Real-time financial dashboard access</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Monthly strategic planning & forecasting</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Scenario analysis & financial modeling</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Capital structure & fundraising strategy</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Board meeting preparation & attendance</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Weekly 1-hour consultation calls</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Dedicated account manager with support during normal business hours</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Full HR, compliance & risk management support</li>
+          </ul>
+          <a href="#" class="btn btn-dark w-75 d-block mx-auto mt-auto">Contact for Pricing</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Enterprise</h4>
+          <p class="card-subtitle mb-3 text-muted">Complete enterprise suite</p>
+          <ul class="list-unstyled mb-4 flex-grow-1">
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>All Business features</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Unlimited consultation calls with 24/7 support</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Unlimited Event Driven Support</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Quarterly Strategic Review</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Priority Access to Network</li>
+            <li class="mb-2 text-muted"><span class="text-success mr-2">&#10003;</span>Custom services</li>
+          </ul>
+          <a href="#" class="btn btn-dark w-75 d-block mx-auto mt-auto">Contact for Pricing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="container py-5">
+  <div class="text-center mb-5">
+    <h2>Frequently Asked Questions</h2>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">What are CFO Services, and who are they for?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>CFO Services provide strategic financial guidance typically offered by a Chief Financial Officer, but on an outsourced or part-time basis. These services include financial planning, budgeting, forecasting, cash flow management, and performance analysis. They are ideal for small to medium-sized businesses, startups, or organizations that need high-level financial expertise without hiring a full-time CFO.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">What specific services does your CFO Services business offer?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>Our CFO Services include:<br>
+i. Financial Strategy: Developing long-term financial plans aligned with your business goals.<br>
+ii. Budgeting & Forecasting: Creating detailed budgets and financial forecasts to guide decision-making.<br>
+iii. Cash Flow Management: Optimizing cash flow to ensure liquidity and operational stability.<br>
+iv. Financial Reporting: Preparing customized reports, including profit & loss, balance sheets, and KPIs.<br>
+v. Fundraising Support: Assisting with investor pitches, financial modeling, and capital-raising strategies.<br>
+vi. Risk Management: Identifying and mitigating financial risks.<br>
+vii. Compliance & Governance: Ensuring adherence to financial regulations and best practices.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">How do your CFO Services differ from traditional accounting?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>Traditional accounting focuses on historical data, such as bookkeeping, tax preparation, and compliance. Our CFO Services are forward-looking, emphasizing strategic planning, financial analysis, and growth-oriented decision-making. While accountants record and report, our CFOs help you plan and achieve your business objectives.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">Who can benefit from your CFO Services?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>Our services are designed for:<br>
+i. Startups needing financial structure and fundraising support.<br>
+ii. Small to Medium Enterprises (SMEs) aiming to scale or improve profitability.<br>
+iii. Nonprofits seeking better financial oversight.<br>
+iv. Businesses in Transition (e.g., mergers, acquisitions, or leadership changes) requiring interim financial leadership.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">Do you offer a free consultation</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>Yes, we provide a complimentary initial consultation to assess your business’s financial needs, discuss goals,
+and determine how our services can add value. This session typically lasts 30-60 minutes.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">How often will I interact with my CFO?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>Interaction frequency depends on your engagement level and the service package that you choose.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">Can your CFO Services help with fundraising or securing loans?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>Absolutely. We regularly assist our clients with:<br>
+i. Creating robust financial models and projections for investors or lenders.<br>
+ii. Preparing pitch decks and business plans.<br>
+iii. Advising on valuation and deal structures.<br>
+iv. Connecting you with our network of potential investors or financial institutions (where applicable).</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">How do you ensure confidentiality of my financial data?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>We prioritize data security by:<br>
+i. Signing Non-Disclosure Agreements (NDAs) with all clients & maintaining the utmost confidentiality.<br>
+ii. Using secure, encrypted platforms for data storage and communication.<br>
+iii. Implementing strict access controls to protect sensitive information.<br>
+iv. Our team adheres to industry-standard privacy regulations.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">What industries do you serve?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>We work with clients across diverse sectors, including technology, healthcare, manufacturing, retail,
+real estate, nonprofits, and professional services. Our expertise is adaptable to your industry’s
+unique financial challenges.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">Do I need to have an in-house accounting team to use your services?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>No, you don’t need an in-house accounting team. We can work with your existing bookkeeper or accountant
+or recommend trusted partners if needed. Our role is to provide strategic oversight, not replace day-to-day
+accounting. We can provide these services, but for an additional monthly charge.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">How quickly can you start providing CFO Services?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>We can typically begin within 1 week of signing an agreement, depending on the scope of services and your
+availability for onboarding. Urgent needs may be accommodated sooner—contact us to discuss.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">What tools or software do you use?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>We leverage industry-standard tools like QuickBooks, Xero, NetSuite, Microsoft Excel, and advanced
+analytics platforms for forecasting and reporting. We can also adapt to your existing systems to ensure
+seamless integration.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">Can you help with tax planning or compliance?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>While we don’t regularly prepare tax returns, we will collaborate with your CPA or tax advisor to provide
+strategic tax planning and ensure compliance with financial regulations. We will absolutely focus on
+optimizing your financial structure to minimize tax liabilities where possible. We can also prepare tax returns
+for an additional charge.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">What qualifications do your CFOs have?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>Our team consists of experienced financial professionals with experience as CFOs at large organizations,
+working on an interim basis as CFOs, individuals with advanced degrees and professional certifications with
+proven track records of driving organizational success, strategic planning, fundraising and driving business
+growth.<br><br>
+Our team brings to the table not only experience working in a Chief Financial Officer capacity but also
+experience as investment bankers, raising debt and equity capital as well as advising on successful buy and
+sell side mergers and acquisitions. Additionally, our team has worked in private equity capacities directly
+investing and managing companies like yours, assisting them with their growth by providing
+capital and strategic oversight.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">How do you measure the success of your CFO Services?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>Success is measured by your business outcomes, such as:<br>
+i. Improved profitability and cash flow.<br>
+ii. Achievement of financial goals (e.g., securing funding, hitting revenue targets).<br>
+iii. Enhanced financial visibility through clear, actionable reporting.<br>
+iv. Client satisfaction and long-term partnership.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">Can you provide interim CFO services during a transition?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>Yes, we can offer interim CFO services to bridge gaps during leadership changes, mergers, or other
+transitions. We ensure continuity and stability while helping you recruit a permanent CFO if needed.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">What is the onboarding process like?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>Our onboarding process, at the minimum, includes:<br>
+i. Discovery Call: Understanding your business and financial challenges.<br>
+ii. Assessment: Reviewing your financials and systems.<br>
+iii. Proposal: Outlining a tailored service plan and pricing.<br>
+iv. Kickoff: Setting goals, timelines, and communication protocols.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">Do you offer ongoing support or one-time projects?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>Both! We provide ongoing CFO support through retainers or one-time engagements for specific projects like
+financial audits, budgeting, or investor pitches. We tailor our services to your needs.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" id="faq1">
+    <div class="accordion-title">
+      <div class="accordion-title-text">How do I get started?</div>
+      <img
+        src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+        alt="chevron down icon"
+        class="accordion-icon"
+      >
+    </div>
+    <div class="accordion-content-wrapper">
+      <div class="accordion-content">
+        <p>Contact us via our website, email, or phone to schedule your free consultation. We’ll discuss your needs,
+answer any questions, and outline next steps to get started. Let us help you achieve your financial goals!
+For further inquiries, reach out at joseph.melville@mojoadvisorsllc.com or visit mojoadvisorsllc.com</p>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" ></script>
+  <script src="/assets/js/particle_init.js" ></script>
+  <script src="/assets/js/home.js" ></script>
+{% endblock %}

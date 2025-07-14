@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Custom FAQ Accordion</title>
+	<style>
+		.accordion-item {
+			background: #fff;
+			border-top: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			margin: 0;
+		}
+
+		.accordion-title {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1rem;
+			cursor: pointer;
+			user-select: none;
+		}
+
+		.accordion-title-text {
+			margin: 0;
+			font-size: 1rem;
+			transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+			transition: color .3s;
+		}
+
+		.accordion-icon {
+			width: 1rem;
+			height: 1rem;
+			transition: transform .3s;
+		}
+
+		.accordion-content-wrapper {
+			height: 0;
+			opacity: 0;
+			overflow: hidden;
+			transition: height .3s ease, opacity .3s ease .1s;
+		}
+
+		.accordion-content {
+			padding: 0 1rem 1rem;
+		}
+
+		/* “Open” state */
+		.accordion-item.open .accordion-icon {
+			transform: rotate(180deg);
+		}
+
+		.accordion-item.open .accordion-content-wrapper {
+			opacity: 1;
+			height: var(--content-height);
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="accordion-item" id="faq1">
+		<div class="accordion-title">
+			<div class="accordion-title-text">What is Finto?</div>
+			<img src="https://cdn.prod.website-files.com/684c19327b327e58d058855f/684c19327b327e58d058864c_interface-icon-chevron-down.svg"
+				alt="chevron down icon" class="accordion-icon">
+		</div>
+		<div class="accordion-content-wrapper">
+			<div class="accordion-content">
+				<p>Finto is an intelligent platform for automated invoice processing and accounting.
+					Using self-learning AI agents, Finto handles time-consuming tasks such as
+					reading, verifying, coding, and posting invoices — fully automated and in real
+					time.</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		document.querySelectorAll('.accordion-item').forEach(item => {
+			const title = item.querySelector('.accordion-title');
+			const contentWrapper = item.querySelector('.accordion-content-wrapper');
+			const content = item.querySelector('.accordion-content');
+
+			// Pre-calculate and store the full height
+			contentWrapper.style.setProperty(
+				'--content-height',
+				content.scrollHeight + 'px'
+			);
+
+			title.addEventListener('click', () => {
+				const isOpen = item.classList.toggle('open');
+
+				// If closing, clear the height after transition so it collapses
+				if (!isOpen) {
+					contentWrapper.addEventListener('transitionend', function handler() {
+						if (!item.classList.contains('open')) {
+							contentWrapper.style.height = '0';
+						}
+						contentWrapper.removeEventListener('transitionend', handler);
+					});
+				}
+			});
+		});
+	</script>
+
+</body>
+
+</html>
