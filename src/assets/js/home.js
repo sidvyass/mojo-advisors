@@ -25,4 +25,12 @@ document.querySelectorAll('.accordion-item').forEach(item => {
 			contentWrapper.style.height = null;
 		}
 	});
+
+	const carouselEl = document.getElementById('testimonialCarousel');
+	new bootstrap.Carousel(carouselEl, {
+		interval: 5000,
+		wrap: true,
+		touch: true,
+		ride: 'carousel'
+	});
 });

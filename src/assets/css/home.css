@@ -88,6 +88,17 @@
 	background-color: #041536 !important;
 }
 
+/* all the sub-headings (the <h5>) in your biz-section */
+.biz-section .write-up-col h5 {
+	font-size: 1.5rem;
+	padding-bottom: 1rem;
+}
+
+/* all the paragraph text in your biz-section */
+.biz-section .write-up-col p {
+	font-size: 1.5rem;
+}
+
 .services-heading {
 	font-size: 5rem;
 	font-weight: 700;
@@ -112,6 +123,11 @@
 	width: 75%;
 }
 
+.service-point p.mb-0 {
+	font-size: 1.125rem;
+}
+
+
 .svg-icon {
 	width: 2.5rem;
 	height: 2.5rem;
@@ -124,32 +140,4 @@
 
 .svg-icon:hover {
 	opacity: 1;
-}
-
-.testimonials-heading {
-	font-size: 6rem;
-	font-weight: 700;
-	letter-spacing: 3px;
-	width: 100%;
-}
-
-.testimonials-sub-heading {
-	font-size: 2rem;
-	font-weight: 500;
-	padding-bottom: 2rem;
-}
-
-#testimonialCarousel .carousel-control-prev,
-#testimonialCarousel .carousel-control-next {
-	width: 2.5rem;
-	height: 2.5rem;
-	background-color: #000000;
-	border-radius: 50%;
-	top: 50%;
-}
-
-/* shrink the chevron icon inside */
-#testimonialCarousel .carousel-control-prev-icon,
-#testimonialCarousel .carousel-control-next-icon {
-	background-size: 1.2rem 1.2rem;
 }

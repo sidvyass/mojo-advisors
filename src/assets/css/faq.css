@@ -1,0 +1,54 @@
+.hero {
+	position: relative;
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+		url("/assets/images/pricing_hero.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 70vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+.hero .hero-card {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	max-width: 2000px;
+}
+
+.hero .hero-card>h1.display-5 {
+	font-size: 5rem;
+	font-weight: 700;
+	padding: 1rem;
+}
+
+.hero .hero-card>p.fs-5 {
+	color: black;
+	font-size: 1.6rem;
+	font-weight: 500;
+	padding: 1rem;
+}
+
+.hero-btn {
+	background-color: #041536;
+	margin-top: 1rem;
+	padding: 1rem;
+	/* This is to map it correctly below sub heading*/
+	margin-left: 0.9rem;
+}
+
+
+#faq .btn {
+	text-align: start;
+	background-color: #ffffff;
+	border-color: #000000;
+	text-decoration: none;
+	font-size: 1.6rem;
+}
+
+#faq .card {
+	box-shadow: none;
+}

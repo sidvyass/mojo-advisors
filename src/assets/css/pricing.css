@@ -1,0 +1,150 @@
+.hero {
+	position: relative;
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+		url("/assets/images/pricing_hero.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 80vh;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 2rem;
+	color: white;
+}
+
+.hero .hero-card {
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	transform: translateY(-50%);
+	max-width: 600px;
+}
+
+.hero .hero-card>h1.display-5 {
+	font-size: 5rem;
+	font-weight: 700;
+	padding: 1rem;
+}
+
+.hero .hero-card>p.fs-5 {
+	color: black;
+	font-size: 1.6rem;
+	font-weight: 500;
+	padding: 1rem;
+}
+
+.hero-btn {
+	background-color: #041536;
+	margin-top: 1rem;
+	padding: 1rem;
+	/* This is to map it correctly below sub heading*/
+	margin-left: 0.9rem;
+}
+
+.dark-bg {
+	padding: 2rem;
+	background-color: #000000;
+}
+
+.commitment-section.dark-bg img {
+	-webkit-filter: brightness(0) invert(1);
+	filter: brightness(0) invert(1);
+}
+
+.commitment-section.dark-bg .container-fluid>h2 {
+	text-align: center;
+	font-weight: 700;
+}
+
+.commitment-section h5.fw-bold.text-white {
+	font-size: 1.5rem;
+	line-height: 1.3;
+}
+
+.commitment-section .container-fluid {
+	max-width: 1500px;
+}
+
+.commitment-section p.text-white-75 {
+	font-size: 1.125rem;
+	line-height: 1.6;
+}
+
+/* Add boxes around each pricing card */
+.pricing-section .plan-card {
+	border: 1px solid #041536;
+	border-radius: 0.5rem;
+	padding: 2rem;
+	background-color: #fff;
+}
+
+/* Optional: make all cards equal height and vertically spaced */
+.pricing-section .row>[class*="col-"] {
+	display: flex;
+}
+
+.pricing-section .plan-card {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.pricing-section .plan-card:hover {
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+	transform: translateY(-5px);
+}
+
+/* make only the check-mark.svg icons green */
+.pricing-section .feature-item img[src$="check-mark.svg"] {
+	filter: invert(36%) sepia(82%) saturate(5283%) hue-rotate(90deg) brightness(90%) contrast(92%);
+}
+
+.price-btn {
+	background-color: #041536;
+}
+
+.pricing-container {
+	padding-top: 2rem;
+	padding-right: 4rem !important;
+	padding-left: 4rem !important;
+}
+
+.most-selected {
+	background-color: #000000 !important;
+}
+
+.pricing-heading {
+	font-size: 4rem;
+	font-weight: 700;
+	padding-bottom: 2rem;
+	padding-top: 1rem;
+}
+
+/* ensure plan-card can be a positioning context */
+.pricing-section .plan-card {
+	position: relative;
+	overflow: visible;
+}
+
+/* style & position the ribbon */
+.pricing-section .plan-card.featured .ribbon {
+	position: absolute;
+	top: -0.75rem;
+	/* pulls it above the top edge */
+	left: 50%;
+	/* centers it horizontally */
+	transform: translateX(-50%);
+	background-color: #FFC107;
+	/* or your highlight color */
+	color: #000;
+	/* text color */
+	padding: 0.25rem 0.75rem;
+	/* vertical/horizontal padding */
+	border-radius: 1.5rem;
+	/* pill shape */
+	font-size: 0.875rem;
+	font-weight: 700;
+	z-index: 1;
+	white-space: nowrap;
+}

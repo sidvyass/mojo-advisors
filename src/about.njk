@@ -1,0 +1,62 @@
+{% extends "layouts/base.njk" %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="/assets/css/about.css">
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+	<!-- Hero card content -->
+	<div class="hero-card">
+		<h1 class="display-5 fw-bold mb-1">
+			About Us
+		</h1>
+
+		<p class="fs-5 text-light mb-3" style="">
+			Transform each breath of fresh air into your own personal paradise. At Crescent, we promise
+			landscapes that are
+			equal parts green and grand.
+		</p>
+	</div>
+</div>
+
+<section id="team" class="py-5">
+	<div class="container">
+		<h2 class="text-center mb-5">Meet Our Team</h2>
+
+		<!-- Team Member 1: image left, text right -->
+		<div class="row align-items-center mb-5">
+			<div class="col-md-6">
+				<img src="/assets/images/team1.jpg" alt="John Doe" class="img-fluid rounded shadow-sm">
+			</div>
+			<div class="col-md-6">
+				<h3 class="mb-3">John Doe</h3>
+				<p>Lead Landscaper with over a decade of experience creating sustainable outdoor spaces
+					that thrive year-round.</p>
+			</div>
+		</div>
+
+		<!-- Team Member 2: image right, text left -->
+		<div class="row align-items-center mb-5">
+			<div class="col-md-6 order-md-2">
+				<img src="/assets/images/team2.jpg" alt="Jane Smith"
+					class="img-fluid rounded shadow-sm">
+			</div>
+			<div class="col-md-6 order-md-1">
+				<h3 class="mb-3">Jane Smith</h3>
+				<p>Design Specialist passionate about blending modern aesthetics with eco-friendly
+					practices.</p>
+			</div>
+		</div>
+
+		<!-- Repeat as needed... -->
+	</div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="/assets/js/about.js"></script>
+{% endblock %}
