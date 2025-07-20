@@ -43,3 +43,9 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
 	margin: 0.05rem auto;
 	border-top: 1px solid #ccc;
 }
+
+/* Overriding container-fluid boostrap class */
+.container-fluid {
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+}

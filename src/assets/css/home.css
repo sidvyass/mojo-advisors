@@ -1,1 +1,155 @@
+.hero {
+	position: relative;
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+		url("/assets/images/hero2.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 90vh;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 2rem;
+	color: white;
+}
 
+.hero .hero-card {
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	transform: translateY(-50%);
+	max-width: 600px;
+}
+
+.hero .hero-card>h1.display-5 {
+	font-size: 6rem;
+	font-weight: 700;
+	padding: 1rem;
+}
+
+.hero .hero-card>p.fs-5 {
+	color: black;
+	font-size: 1.6rem;
+	font-weight: 500;
+	padding: 1rem;
+}
+
+.hero-btn {
+	background-color: #041536;
+	margin-top: 1rem;
+	padding: 1rem;
+	/* This is to map it correctly below sub heading*/
+	margin-left: 0.9rem;
+}
+
+.company-logos .company-logo {
+	height: 120px;
+	padding: 2rem;
+	width: 100%;
+}
+
+.biz-section {
+	height: 70vh;
+}
+
+.biz-img {
+	padding-right: 0px !important;
+}
+
+.write-up-col {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #000000;
+	padding-right: 3rem;
+	padding-left: 3rem;
+}
+
+.biz-write-up {
+	padding: 0;
+}
+
+.biz-section .biz-heading {
+	font-size: 3.6rem;
+	font-weight: 500;
+	padding-bottom: 2rem;
+}
+
+.biz-img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.biz-btn {
+	margin-top: 2rem;
+	padding: 1rem;
+	width: 30%;
+	background-color: #041536 !important;
+}
+
+.services-heading {
+	font-size: 5rem;
+	font-weight: 700;
+	width: 100%;
+	padding: 2rem;
+}
+
+.service-point {
+	padding: 2rem;
+	padding-left: 5rem;
+	padding-right: 2rem;
+}
+
+.service-point h5 {
+	font-size: 2.3rem;
+	font-weight: 500;
+}
+
+.service-point p {
+	font-weight: 500;
+	padding-top: 2rem;
+	width: 75%;
+}
+
+.svg-icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	fill: currentColor;
+	/* lets you tint via the text-color util */
+	opacity: 0.8;
+	transition: opacity .25s;
+	margin-right: 1rem;
+}
+
+.svg-icon:hover {
+	opacity: 1;
+}
+
+.testimonials-heading {
+	font-size: 6rem;
+	font-weight: 700;
+	letter-spacing: 3px;
+	width: 100%;
+}
+
+.testimonials-sub-heading {
+	font-size: 2rem;
+	font-weight: 500;
+	padding-bottom: 2rem;
+}
+
+#testimonialCarousel .carousel-control-prev,
+#testimonialCarousel .carousel-control-next {
+	width: 2.5rem;
+	height: 2.5rem;
+	background-color: #000000;
+	border-radius: 50%;
+	top: 50%;
+}
+
+/* shrink the chevron icon inside */
+#testimonialCarousel .carousel-control-prev-icon,
+#testimonialCarousel .carousel-control-next-icon {
+	background-size: 1.2rem 1.2rem;
+}

@@ -8,76 +8,196 @@
 {% block content %}
 
 
-<div class="hero" style="position: relative; background-image: ; background-size: cover;
-	background-position: center; height: 90vh; display: flex; align-items: center; justify-content: flex-start;
-	padding: 2rem; color: white;">
-
+<div class="hero">
 	<!-- Hero card content -->
-	<div class="hero-card"
-		style="position: relative; z-index: 1; background: transparent; padding: 2rem; width: 555px; display: flex; flex-direction: column; gap: 1.5rem; margin-left: 20%;">
-
-		<h1 class="display-5 fw-bold mb-1" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);">
+	<div class="hero-card">
+		<h1 class="display-5 fw-bold mb-1">
 			Financial Growth and Stability<br>
 		</h1>
 
-		<p class="fs-5 text-white-75 mb-3" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);">
+		<p class="fs-5 text-light mb-3" style="">
 			Transform each breath of fresh air into your own personal paradise. At Crescent, we promise landscapes that are
 			equal parts green and grand.
 		</p>
 
 		<div>
-			<a href="" class="btn btn-light d-inline-flex align-items-center">
-				<span class="me-2">Contact Us</span>
+			<a href="" class="btn btn-dark w-50 hero-btn">
+				<span class="me-2 px-1">SCHEDULE A FREE MEETING</span>
 				<img src="https://cdn.prod.website-files.com/6616b1af6b1a369ac15900ff/6616e9a80310eee50e4e4f58_ChevronRight.svg"
-					alt="" style="height: 1rem;">
+					alt="">
 			</a>
 		</div>
 	</div>
 </div>
 
 
-<section class="container py-5">
-	<div class="text-center mb-4">
-		<h2 class="text-uppercase text-muted mb-2" style="letter-spacing: 2px;">Testimonials</h2>
-		<h3 class="fw-bold">What Our Clients Are Saying</h3>
+<section class="bg-dark p-5 max-width-bg text-center">
+	<div class="container-fluid">
+		<!-- Section title -->
+		<h3 class="text-white mb-4 p-3">A FEW COMPANIES WE HAVE WORKED WITH</h3>
+		<!-- Logos row -->
+		<div class="row justify-content-center align-items-center pt-3 company-logos">
+			<div class="col-auto mb-3">
+				<img src="/assets/logos/subway.png" alt="Company 1" class="img-fluid company-logo">
+			</div>
+			<div class="col-auto mb-3">
+				<img src="/assets/logos/bis_america_advis.png" alt="Company 2" class="img-fluid company-logo"">
+			</div>
+			<div class=" col-auto mb-3">
+				<img src="/assets/logos/oceanclub.png" alt="Company 3" class="img-fluid company-logo"">
+			</div>
+			<div class=" col-auto mb-3">
+				<img src="/assets/logos/cms.png" alt="Company 4" class="img-fluid company-logo">
+			</div>
+			<div class="col-auto mb-3">
+				<img src="/assets/logos/sinai.png" alt="Company 5" class="img-fluid company-logo">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="py-5">
+	<div class="container text-center mb-5">
+		<h2 class="fw-bold services-heading">Expert Guidance so you can focus on growth</h2>
 	</div>
 
-	<div class="row g-4">
-		<!-- Testimonial 1 -->
-		<div class="col-md-6">
-			<div class="p-4 border rounded bg-light h-100">
-				<p class="fst-italic mb-4">
-					“Brady CFO significantly enhanced our liquidity and secured additional financing needed for growth. They’re
-					now helping optimize our pricing strategy without harming customer relationships.”
-				</p>
-				<div class="d-flex align-items-center">
-					<img
-						src="https://bradycfo.com/wp-content/uploads/2025/01/pretty-woman-glasses-is-standing-by-window-transparent-office-woman-rests-looking-out-window-office.png"
-						alt="Casey Hollnagel" class="rounded-circle me-3" width="60" height="60">
-					<div>
-						<strong>Casey Hollnagel</strong><br>
-						<small class="text-muted">Vertical Foods LLC</small>
-					</div>
+	<div class="container w-75">
+		<div class="row g-4">
+			<!-- Growth/strategy -->
+			<div class="col-md-6 service-point">
+				<div class="d-flex align-items-center mb-2">
+					<img src="/assets/icons/graph-up.svg" alt="Growth" class="svg-icon me-2 text-primary">
+					<h5 class="fw-light mb-0">Strategic Growth</h5>
 				</div>
+				<p class="mb-0">
+					We hire CFOs from top investment banks, PE & VC firms, and consulting firms to ensure that you are paired with
+					someone that understands your business and is well-versed in the support you are looking for.
+				</p>
 			</div>
+
+			<!-- Forecasting/modeling -->
+			<div class="col-md-6 service-point">
+				<div class="d-flex align-items-center mb-2">
+					<img src="/assets/icons/calculator.svg" alt="Forecasting" class="svg-icon me-2 text-success">
+					<h5 class="fw-light mb-0">Financial Modeling</h5>
+				</div>
+				<p class="mb-0">
+					Access insightful forecasts and collaborate on strategic moves, leveraging our extensive experience with
+					hundreds of companies like yours. We’ll strategize and model the impact of various scenarios to help guide
+					your business in the right direction.
+				</p>
+			</div>
+
+			<!-- Cash management -->
+			<div class="col-md-6 service-point">
+				<div class="d-flex align-items-center mb-2">
+					<img src="/assets/icons/currency-dollar.svg" alt="Cash Management" class="svg-icon me-2 text-warning">
+					<h5 class="fw-light mb-0">Cash & Liquidity</h5>
+				</div>
+				<p class="mb-0">
+					Need to stretch your cash? We’ve got your back. We’ll help you run a tight financial ship by implementing cash
+					management strategies and providing a clear, insightful view of your spending to maximize your efficiency.
+				</p>
+			</div>
+
+			<!-- Risk & compliance -->
+			<div class="col-md-6 service-point">
+				<div class="d-flex align-items-center mb-2">
+					<img src="/assets/icons/shield-check.svg" alt="Risk & Compliance" class="svg-icon me-2 text-info">
+					<h5 class="fw-light mb-0">Risk & Compliance</h5>
+				</div>
+				<p class="mb-0">
+					Elevate your pitch with an experienced CFO, not only to craft a personalized financial model, but also to help
+					you maximize your valuation. We guide you through the process and help you choose the right form of capital so
+					you can navigate your fundraise or M&A process confidently.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="container-fluid biz-section">
+	<div class="row g-5 h-100">
+		<!-- Image Left -->
+		<div class="col-lg-6 biz-img">
+			<img src="/assets/images/hero.jpg" alt="Get Business Insights from the Experts"
+				class="img-fluid rounded shadow biz-img">
 		</div>
 
-		<!-- Testimonial 2 -->
-		<div class="col-md-6">
-			<div class="p-4 border rounded bg-light h-100">
-				<p class="fst-italic mb-4">
-					“Working with Mason over the past 4 months has taught me more about myself personally and professionally than
-					I ever imagined. He truly values people and long-term growth.”
+		<!-- Content Right -->
+		<div class="col-lg-6 write-up-col text-light">
+			<div class="text-center">
+				<h2 class="fw-bold mb-3 biz-heading">Get Business Insights from the Experts</h2>
+				<h5 class="mb-4 text-muted">
+					Join us on <em>Brewing Business</em> as we explore the stories, strategies, and lessons that drive
+					success for companies in the $5M–$75M revenue range.
+				</h5>
+				<p class="mb-4">
+					From navigating cash flow challenges to unlocking growth opportunities, our podcast delivers actionable advice
+					straight from business leaders and trusted advisors. Discover how to create a more profitable and valuable
+					business—one conversation at a time.
 				</p>
-				<div class="d-flex align-items-center">
-					<div class="rounded-circle bg-secondary me-3" style="width:60px; height:60px;"></div>
-					<div>
-						<strong>Hunter Robertson</strong><br>
-						<small class="text-muted">Director of Finance, Tamarack Grove Engineering</small>
+				<a href="/" class="btn btn-dark btn-md biz-btn">Learn more</a>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="container py-5">
+	<div class="text-center mb-4">
+		<h2 class="text-uppercase testimonials-heading text-muted">Testimonials</h2>
+		<h3 class="fw-bold testimonials-sub-heading">What Our Clients Are Saying</h3>
+	</div>
+
+	<div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+
+			<!-- Testimonial 1 -->
+			<div class="carousel-item active">
+				<div class="card bg-light border rounded mx-auto" style="max-width: 600px;">
+					<div class="card-body text-center">
+						<p class="fst-italic mb-4">
+							“Brady CFO significantly enhanced our liquidity and secured additional financing needed for growth.
+							They’re
+							now helping optimize our pricing strategy without harming customer relationships.”
+						</p>
+						<h5 class="fw-bold mb-1">Casey Hollnagel</h5>
+						<p class="text-muted mb-0">Vertical Foods LLC</p>
 					</div>
 				</div>
 			</div>
+
+			<!-- Testimonial 2 -->
+			<div class="carousel-item">
+				<div class="card bg-light border rounded mx-auto" style="max-width: 600px;">
+					<div class="card-body text-center">
+						<p class="fst-italic mb-4">
+							“Working with Mason over the past 4 months has taught me more about myself personally and professionally
+							than
+							I ever imagined. He truly values people and long-term growth.”
+						</p>
+						<h5 class="fw-bold mb-1">Hunter Robertson</h5>
+						<p class="text-muted mb-0">Director of Finance, Tamarack Grove Engineering</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Add more .carousel-item blocks here as needed -->
+
 		</div>
+
+		<!-- Controls -->
+		<button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden"></span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden"></span>
+		</button>
 	</div>
 </section>
 
