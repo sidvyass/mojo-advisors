@@ -28,6 +28,10 @@
 	}
 }
 
+.contact-us-btn {
+	background-color: #041536;
+}
+
 
 /* super-specific hover styling for Contact Us button */
 nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collapse#mainNav>a.btn.btn-dark.btn-md.rounded-pill:hover {

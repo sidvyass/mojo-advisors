@@ -2,7 +2,7 @@
 	position: relative;
 	background-image:
 		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-		url("/assets/images/pricing_hero.jpg");
+		url("/assets/images/faq_hero.jpg");
 	background-size: cover;
 	background-position: center;
 	height: 70vh;
@@ -40,15 +40,75 @@
 	margin-left: 0.9rem;
 }
 
-
-#faq .btn {
-	text-align: start;
-	background-color: #ffffff;
-	border-color: #000000;
-	text-decoration: none;
-	font-size: 1.6rem;
+.faq-heading::after {
+	content: "";
+	display: block;
+	width: 3rem;
+	height: 0.35rem;
+	background-color: #041536;
+	margin: 0.25rem auto 0;
+	/* center it under the text */
+	border-radius: 2px;
+	/* soften the edges */
 }
 
-#faq .card {
+/* Wrap the entire Q-and-A in a single bordered box */
+#faqAccordion .accordion-item {
+	border: 1px solid #ccc;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	margin-bottom: 1rem;
+}
+
+/* Style the question “button” */
+#faqAccordion .accordion-button {
+	background-color: #fff;
+	color: #333;
+	border: none;
 	box-shadow: none;
+	padding: 1rem 1.5rem;
+	font-weight: 500;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 0;
+	justify-content: flex-start;
+	text-align: left;
+}
+
+/* Body stays white and gets a divider line */
+#faqAccordion .accordion-body {
+	background-color: #fff;
+	padding: 1rem 1.5rem;
+	font-size: 1.125rem;
+}
+
+.faq-heading {
+	font-size: 4rem;
+	padding-bottom: 1rem;
+}
+
+/* make space and transition for the arrow */
+#faqAccordion .accordion-button .arrow-icon {
+	margin-left: auto;
+	transition: transform 0.2s ease;
+	transform: rotate(0deg);
+	flex-shrink: 0;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+/* when expanded (i.e. button no longer has .collapsed), rotate down */
+#faqAccordion .accordion-button:not(.collapsed) .arrow-icon {
+	transform: rotate(90deg);
+}
+
+/* Ensure button is full-width and flexbox */
+#faqAccordion .accordion-button {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	padding: 1rem;
+	box-sizing: border-box;
 }
