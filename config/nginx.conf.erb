@@ -1,0 +1,37 @@
+daemon off;
+worker_processes auto;
+
+events {
+  use epoll;
+  accept_mutex on;
+  worker_connections 512;
+}
+
+http {
+  # … all your gzip, logs, mime.types, etc. …
+
+  server {
+    # ← replace fixed port with Heroku’s ENV port
+    listen       <%= ENV["PORT"] %> reuseport;
+    charset      UTF-8;
+    port_in_redirect off;
+    keepalive_timeout 5;
+
+    # ← point at your Eleventy output
+    root         <%= ENV["HOME"] %>/_site;
+    
+    # remove or update mruby handlers if you’re not using the static buildpack’s fallback logic
+    # mruby_post_read_handler …
+    
+    location / {
+      try_files $uri $uri/ /index.html; 
+    }
+
+    location @404 { return 404; }
+    
+    location ~* \.(?:css|js|jpg|jpeg|png|gif|svg|ico|json)$ {
+      expires    30d;
+      add_header Cache-Control "public, max-age=2592000";
+    }
+  }
+}
