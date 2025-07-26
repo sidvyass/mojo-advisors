@@ -1,4 +1,8 @@
 {
+  "scripts": {
+  "build": "eleventy",
+  "heorku-postbuild": "npm run build"
+  },
   "name": "mojo_webapp",
   "version": "1.0.0",
   "main": "index.js",
