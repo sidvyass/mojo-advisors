@@ -1,6 +1,6 @@
 {
   "scripts": {
-  "build": "eleventy",
+  "build": "npx @11ty/eleventy",
   "heorku-postbuild": "npm run build"
   },
   "name": "mojo_webapp",
