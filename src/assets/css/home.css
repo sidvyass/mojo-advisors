@@ -30,7 +30,6 @@
 	background-color: #041536;
 	margin-top: 1rem;
 	padding: 1rem;
-	margin-left: 0.9rem;
 }
 
 /* ---------- Company Logos ---------- */
@@ -243,7 +242,7 @@
 	}
 
 	.service-point p {
-		font-size: 1rem;
+		font-size: 1.125rem;
 	}
 
 	.biz-heading {
@@ -326,7 +325,7 @@
 	}
 
 	.service-point p {
-		font-size: 0.9rem;
+		font-size: 1.125rem;
 	}
 
 	.biz-heading {

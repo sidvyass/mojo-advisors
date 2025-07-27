@@ -78,85 +78,13 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
 	/* ensure the list stays right-aligned */
 }
 
-.testimonials-heading {
-	font-size: 6rem;
-	font-weight: 700;
-	letter-spacing: 3px;
-	width: 100%;
-}
+@media (max-width: 991.98px) {
 
-.testimonials-sub-heading {
-	font-size: 2rem;
-	font-weight: 500;
-	padding-bottom: 2rem;
-}
-
-#testimonialCarousel .carousel-control-prev,
-#testimonialCarousel .carousel-control-next {
-	width: 2.5rem;
-	height: 2.5rem;
-	background-color: #000000;
-	border-radius: 50%;
-	top: 50%;
-}
-
-/* shrink the chevron icon inside */
-#testimonialCarousel .carousel-control-prev-icon,
-#testimonialCarousel .carousel-control-next-icon {
-	background-size: 1.2rem 1.2rem;
-}
-
-
-#testimonialCarousel .test-card {
-	width: 800px;
-	max-width: 90%;
-	min-height: 650px;
-	max-height: 600px;
-}
-
-#testimonialCarousel .test-card .card-body {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	text-align: center;
-}
-
-/* Testimonial text */
-#testimonialCarousel .test-card .card-body p.fst-italic {
-	font-size: 1.6rem;
-	padding-bottom: 1rem;
-	font-style: italic;
-	/* your styles here */
-}
-
-/* Author name */
-#testimonialCarousel .test-card .card-body h5.fw-bold {
-	font-size: 2rem;
-	font-weight: 500;
-}
-
-/* Author subheading (company/title) */
-#testimonialCarousel .test-card .card-body p.text-muted {
-	font-size: 1rem;
-	font-weight: 500;
-}
-
-/* make slide transitions faster & hint GPU acceleration */
-#testimonialCarousel .carousel-item {
-	transition: transform 0.4s ease-in-out;
-	/* default is .6s */
-	will-change: transform;
-}
-
-.g-sec {
-	/* subtle two-tone gradient */
-	background: linear-gradient(135deg, rgba(245, 248, 255, 1) 0%, rgba(224, 232, 255, 1) 100%);
-
-	/* overlay a light geometric SVG pattern — grab one from HeroPatterns or SVGBackgrounds.com */
-	background-image: url('/assets/images/cornered-stairs.svg');
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
+	.navbar-collapse.collapsing,
+	.navbar-collapse.show {
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+		padding: 1rem 0;
+	}
 }

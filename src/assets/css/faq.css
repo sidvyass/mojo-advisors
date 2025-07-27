@@ -1,3 +1,6 @@
+/* assets/css/faq.css */
+
+/* keep your existing hero styles */
 .hero {
 	position: relative;
 	background-image:
@@ -36,8 +39,20 @@
 	background-color: #041536;
 	margin-top: 1rem;
 	padding: 1rem;
-	/* This is to map it correctly below sub heading*/
 	margin-left: 0.9rem;
+}
+
+/* ====== NEW DARK-MODE FAQ STYLES ====== */
+.faq-section {
+	background-color: #000;
+	color: #fff;
+}
+
+.faq-heading {
+	font-size: 4.5rem;
+	/* bumped up */
+	padding-bottom: 1rem;
+	color: #fff;
 }
 
 .faq-heading::after {
@@ -45,50 +60,49 @@
 	display: block;
 	width: 3rem;
 	height: 0.35rem;
-	background-color: #041536;
+	background-color: white;
 	margin: 0.25rem auto 0;
-	/* center it under the text */
 	border-radius: 2px;
-	/* soften the edges */
 }
 
-/* Wrap the entire Q-and-A in a single bordered box */
+/* Accordion container */
 #faqAccordion .accordion-item {
-	border: 1px solid #ccc;
+	border: 1px solid #444;
 	border-radius: 0.5rem;
 	overflow: hidden;
 	margin-bottom: 1rem;
+	background-color: #000;
 }
 
-/* Style the question “button” */
+/* Question button */
 #faqAccordion .accordion-button {
-	background-color: #fff;
-	color: #333;
+	background-color: #000;
+	color: #fff;
 	border: none;
 	box-shadow: none;
-	padding: 1rem 1.5rem;
+	padding: 1.25rem 1.5rem;
+	/* increased padding */
+	font-size: 1.25rem;
+	/* larger text */
 	font-weight: 500;
-	display: block;
-	width: 100%;
-	box-sizing: border-box;
-	border-radius: 0;
+	display: flex;
+	align-items: center;
 	justify-content: flex-start;
 	text-align: left;
 }
 
-/* Body stays white and gets a divider line */
+/* Body of answer */
 #faqAccordion .accordion-body {
-	background-color: #fff;
-	padding: 1rem 1.5rem;
-	font-size: 1.125rem;
+	background-color: #000;
+	color: #fff;
+	padding: 1.25rem 1.5rem;
+	/* increased padding */
+	font-size: 1.25rem;
+	/* larger text */
+	border-top: 1px solid #444;
 }
 
-.faq-heading {
-	font-size: 4rem;
-	padding-bottom: 1rem;
-}
-
-/* make space and transition for the arrow */
+/* Arrow icon rotation (if you’re using one) */
 #faqAccordion .accordion-button .arrow-icon {
 	margin-left: auto;
 	transition: transform 0.2s ease;
@@ -98,17 +112,33 @@
 	height: 1.5rem;
 }
 
-/* when expanded (i.e. button no longer has .collapsed), rotate down */
 #faqAccordion .accordion-button:not(.collapsed) .arrow-icon {
 	transform: rotate(90deg);
 }
 
-/* Ensure button is full-width and flexbox */
-#faqAccordion .accordion-button {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	width: 100%;
-	padding: 1rem;
-	box-sizing: border-box;
+/* ---------- CTA Section ---------- */
+.cta-section {
+	background-color: #000;
+}
+
+.cta-title {
+	font-size: 2.5rem;
+}
+
+.cta-text {
+	font-size: 1.25rem;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.cta-btn {
+	background-color: #041536;
+	border-color: #041536;
+	color: #fff;
+	padding: 0.75rem 1.5rem;
+	transition: background-color .3s;
+}
+
+.cta-btn:hover {
+	background-color: #03213a;
 }

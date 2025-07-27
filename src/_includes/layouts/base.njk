@@ -17,17 +17,24 @@
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-white p-3">
 			<div class="container px-4">
+
+				<!-- Brand -->
 				<a class="navbar-brand" href="/">
 					<img src="/assets/images/mojo_logo.png" alt="Logo" height="40">
 				</a>
 
-				<!-- Note the BS5 data-bs-* attributes -->
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+				<!-- Mobile-only: Contact + Toggler -->
+				<div class="d-flex d-lg-none ms-auto align-items-center">
+					<a class="btn contact-us-btn text-light btn-md me-2" href="/contact">Contact
+						Us</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
 
+				<!-- Collapsible nav links + desktop Contact -->
 				<div class="collapse navbar-collapse" id="mainNav">
 					<ul class="navbar-nav mx-auto">
 						<li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li>
@@ -37,7 +44,7 @@
 						<li class="nav-item"><a class="nav-link" href="/careers">Careers</a>
 						</li>
 					</ul>
-					<a class="btn contact-us-btn text-light btn-md rounded-pill"
+					<a class="btn contact-us-btn text-light btn-md d-none d-lg-inline-block ms-auto"
 						href="/contact">Contact Us</a>
 				</div>
 			</div>
