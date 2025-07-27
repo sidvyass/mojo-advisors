@@ -2,73 +2,79 @@
 
 {% block head %}
 {{ super() }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <link rel="stylesheet" href="/assets/css/home.css">
 {% endblock %}
 
 {% block content %}
 
-<div class="hero">
-	<!-- Hero card content -->
-	<div class="hero-card">
-		<h1 class="display-5 fw-bold mb-1">
-			Financial Growth and Stability<br>
-		</h1>
 
-		<p class="fs-5 text-light mb-3" style="">
-			We act swiftly and strategically, leveraging
-			sharp judgment and disciplined execution to seize fleeting opportunities that others may miss or
-			lack the expertise to pursue
-		</p>
-
-		<div>
-			<a href="" class="btn btn-dark w-50 hero-btn">
-				<span class="me-2 px-1">SCHEDULE A FREE MEETING</span>
-				<img src="https://cdn.prod.website-files.com/6616b1af6b1a369ac15900ff/6616e9a80310eee50e4e4f58_ChevronRight.svg"
-					alt="">
-			</a>
+<div class="hero d-flex align-items-center">
+	<div class="container">
+		<div class="row justify-content-start">
+			<div class="col-12 col-md-8 col-lg-6 hero-card text-center text-md-start">
+				<h1 class="display-5 fw-bold mb-3">
+					Financial Growth and Stability
+				</h1>
+				<p class="fs-5 text-light mb-4">
+					We act swiftly and strategically, leveraging
+					sharp judgment and disciplined execution to seize fleeting opportunities
+					that others may miss or lack the expertise to pursue.
+				</p>
+				<a href="#" class="btn btn-dark hero-btn px-4 py-2">
+					SCHEDULE A FREE MEETING
+					<img src="…/ChevronRight.svg" alt="" class="ms-2" />
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
 
 
-<section class="bg-dark p-5 max-width-bg text-center">
-	<div class="container-fluid">
-		<!-- Section title -->
-		<h3 class="text-white mb-4 p-3">A FEW COMPANIES WE HAVE WORKED WITH</h3>
-		<!-- Logos row -->
-		<div class="row justify-content-center align-items-center pt-3 company-logos">
-			<div class="col-auto mb-3">
-				<img src="/assets/logos/subway.png" alt="Company 1" class="img-fluid company-logo">
+<section class="bg-dark p-5 text-center">
+	<div class="container">
+		<h3 class="text-white mb-4">A FEW COMPANIES WE HAVE WORKED WITH</h3>
+
+		<!-- Swiper -->
+		<div class="swiper my-logos-swiper">
+			<div class="swiper-wrapper">
+				{% set logos = [
+				"/assets/logos/subway.png",
+				"/assets/logos/bis_america_advis.png",
+				"/assets/logos/oceanclub.png",
+				"/assets/logos/cms.png",
+				"/assets/logos/sinai.png"
+				] %}
+				{% for logo in logos %}
+				<div class="swiper-slide d-flex justify-content-center">
+					<img src="{{ logo }}" alt="Client Logo" class="company-logo" />
+				</div>
+				{% endfor %}
 			</div>
-			<div class="col-auto mb-3">
-				<img src="/assets/logos/bis_america_advis.png" alt="Company 2"
-					class="img-fluid company-logo"">
-			</div>
-			<div class=" col-auto mb-3">
-				<img src="/assets/logos/oceanclub.png" alt="Company 3" class="img-fluid company-logo"">
-			</div>
-			<div class=" col-auto mb-3">
-				<img src="/assets/logos/cms.png" alt="Company 4" class="img-fluid company-logo">
-			</div>
-			<div class="col-auto mb-3">
-				<img src="/assets/logos/sinai.png" alt="Company 5" class="img-fluid company-logo">
-			</div>
+			<!-- Arrows -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
 		</div>
 	</div>
 </section>
 
 <section class="py-5 g-sec">
-	<div class="container text-center mb-5">
-		<h2 class="fw-bold services-heading">Expert Guidance so you can focus on growth</h2>
-	</div>
+	<div class="container">
+		<!-- Section title, always centered -->
+		<div class="text-center mb-5">
+			<h2 class="fw-bold services-heading">
+				Expert Guidance so you can focus on growth
+			</h2>
+		</div>
 
-	<div class="container w-75">
-		<div class="row g-4">
+		<!-- Service points: 1-col on xs, 2-col on md+ -->
+		<div class="row g-5 justify-content-center">
 			<!-- Growth/strategy -->
-			<div class="col-md-6 service-point">
-				<div class="d-flex align-items-center mb-2">
+			<div class="col-12 col-md-6 mb-5 service-point text-center text-md-start">
+				<div
+					class="d-flex flex-column flex-md-row align-items-center justify-content-center mb-4">
 					<img src="/assets/icons/graph-up.svg" alt="Growth"
-						class="svg-icon me-2 text-primary">
+						class="svg-icon me-0 me-md-2 mb-2 mb-md-0">
 					<h5 class="fw-light mb-0">Strategic Growth</h5>
 				</div>
 				<p class="mb-0">
@@ -80,10 +86,11 @@
 			</div>
 
 			<!-- Forecasting/modeling -->
-			<div class="col-md-6 service-point">
-				<div class="d-flex align-items-center mb-2">
+			<div class="col-12 col-md-6 mb-5 service-point text-center text-md-start">
+				<div
+					class="d-flex flex-column flex-md-row align-items-center justify-content-center mb-4">
 					<img src="/assets/icons/calculator.svg" alt="Forecasting"
-						class="svg-icon me-2 text-success">
+						class="svg-icon me-0 me-md-2 mb-2 mb-md-0">
 					<h5 class="fw-light mb-0">Financial Modeling</h5>
 				</div>
 				<p class="mb-0">
@@ -96,10 +103,11 @@
 			</div>
 
 			<!-- Cash management -->
-			<div class="col-md-6 service-point">
-				<div class="d-flex align-items-center mb-2">
-					<img src="/assets/icons/currency-dollar.svg" alt="Cash Management"
-						class="svg-icon me-2 text-warning">
+			<div class="col-12 col-md-6 mb-5 service-point text-center text-md-start">
+				<div
+					class="d-flex flex-column flex-md-row align-items-center justify-content-center mb-4">
+					<img src="/assets/icons/currency-dollar.svg" alt="Cash"
+						class="svg-icon me-0 me-md-2 mb-2 mb-md-0">
 					<h5 class="fw-light mb-0">Cash & Liquidity</h5>
 				</div>
 				<p class="mb-0">
@@ -111,10 +119,11 @@
 			</div>
 
 			<!-- Risk & compliance -->
-			<div class="col-md-6 service-point">
-				<div class="d-flex align-items-center mb-2">
-					<img src="/assets/icons/shield-check.svg" alt="Risk & Compliance"
-						class="svg-icon me-2 text-info">
+			<div class="col-12 col-md-6 service-point text-center text-md-start">
+				<div
+					class="d-flex flex-column flex-md-row align-items-center justify-content-center mb-4">
+					<img src="/assets/icons/shield-check.svg" alt="Risk"
+						class="svg-icon me-0 me-md-2 mb-2 mb-md-0">
 					<h5 class="fw-light mb-0">Risk & Compliance</h5>
 				</div>
 				<p class="mb-0">
@@ -131,31 +140,30 @@
 
 
 <section class="container-fluid biz-section">
-	<div class="row g-5 h-100">
-		<!-- Image Left -->
-		<div class="col-lg-6 biz-img">
+	<div class="row align-items-stretch g-4">
+		<!-- Image on top at xs, left at lg -->
+		<div class="col-12 col-lg-6 p-0 biz-img">
 			<img src="/assets/images/hero.jpg" alt="Get Business Insights from the Experts"
-				class="img-fluid rounded shadow biz-img">
+				class="img-fluid w-100 rounded shadow">
 		</div>
 
-		<!-- Content Right -->
-		<div class="col-lg-6 write-up-col text-light">
-			<div class="text-center">
-				<h2 class="fw-bold mb-3 biz-heading">Get Business Insights from the Experts</h2>
+		<!-- Text below on xs, right on lg -->
+		<div class="col-12 col-lg-6 d-flex align-items-center justify-content-center bg-black text-light p-4">
+			<div class="text-center text-lg-start">
+				<h2 class="fw-bold mb-3 biz-heading">
+					Get Business Insights from the Experts
+				</h2>
 				<h5 class="mb-4 text-muted">
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos officiis
-					voluptatibus quae ipsam saepe aperiam necessitatibus quod incidunt suscipit,
-					natus et accusantium eligendi. Repellendus, beatae!
+					voluptatibus quae ipsam saepe aperiam…
 				</h5>
-				<p class="mb-4">
+				<p class="mb-4 biz-copy">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam id cum
-					architecto aliquid illum, ipsum distinctio laborum hic, alias quo voluptas natus
-					autem eos ex molestias? Dicta ab ipsa iure repellat, delectus excepturi iste
-					corporis ea nulla nisi eius, eveniet neque eum quo dolorem temporibus quos amet
-					aliquam ipsam? Ullam!
+					architecto aliquid illum, ipsum distinctio laborum hic, alias quo…
 				</p>
-				<a href="/" class="btn btn-dark btn-md biz-btn">Learn more</a>
-
+				<a href="/" class="btn btn-dark biz-btn">
+					Learn more
+				</a>
 			</div>
 		</div>
 	</div>
@@ -248,5 +256,28 @@
 
 {% block scripts %}
 {{ super() }}
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		new Swiper('.my-logos-swiper', {
+			loop: true,
+			slidesPerView: 5,
+			spaceBetween: 24,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			breakpoints: {
+				0: {slidesPerView: 1, spaceBetween: 12},
+				576: {slidesPerView: 2, spaceBetween: 16},
+				768: {slidesPerView: 3, spaceBetween: 20},
+				992: {slidesPerView: 4, spaceBetween: 24},
+				1200: {slidesPerView: 5, spaceBetween: 24},
+			}
+		});
+	});
+</script>
+
 <script src="/assets/js/home.js"></script>
 {% endblock %}

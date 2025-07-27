@@ -1,4 +1,25 @@
 document.querySelectorAll('.accordion-item').forEach(item => {
+	const logosSwiper = new Swiper('.my-logos-swiper', {
+		loop: true,
+		slidesPerView: 5,
+		spaceBetween: 24,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			// when window ≤ 576px
+			0: { slidesPerView: 1, spaceBetween: 12 },
+			// ≥ 576px
+			576: { slidesPerView: 2, spaceBetween: 16 },
+			// ≥ 768px
+			768: { slidesPerView: 3, spaceBetween: 20 },
+			// ≥ 992px
+			992: { slidesPerView: 4, spaceBetween: 24 },
+			// ≥ 1200px
+			1200: { slidesPerView: 5, spaceBetween: 24 }
+		}
+	});
 	const title = item.querySelector('.accordion-title');
 	const contentWrapper = item.querySelector('.accordion-content-wrapper');
 	const content = item.querySelector('.accordion-content');
@@ -33,4 +54,6 @@ document.querySelectorAll('.accordion-item').forEach(item => {
 		touch: true,
 		ride: 'carousel'
 	});
+
+	// Initialize client-logos carousel
 });
