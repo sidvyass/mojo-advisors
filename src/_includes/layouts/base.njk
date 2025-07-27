@@ -5,11 +5,10 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<title>{% block title %}My Site{% endblock %}</title>
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	<!-- Bootstrap 5 CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
 		crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="/assets/css/main.css">
 	{% block head %}{% endblock %}
 </head>
@@ -22,29 +21,22 @@
 					<img src="/assets/images/mojo_logo.png" alt="Logo" height="40">
 				</a>
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse"
-					data-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+				<!-- Note the BS5 data-bs-* attributes -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
 					aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
 				<div class="collapse navbar-collapse" id="mainNav">
-
 					<ul class="navbar-nav mx-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="/faq">FAQ</a>
+						<li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li>
+						<li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+						<li class="nav-item"><a class="nav-link" href="/pricing">Pricing</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/about">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/pricing">Pricing</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/careers">Careers</a>
+						<li class="nav-item"><a class="nav-link" href="/careers">Careers</a>
 						</li>
 					</ul>
-
 					<a class="btn contact-us-btn text-light btn-md rounded-pill"
 						href="/contact">Contact Us</a>
 				</div>
@@ -53,17 +45,17 @@
 	</header>
 
 	<main class="container-fluid">
-		{% block content %}
-		{% endblock %}
+		{% block content %}{% endblock %}
 	</main>
 
 	<footer class="footer-bg text-light py-4 mt-auto">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<p>© 2025 Mojo Advisors LLC. All rights reserved. <a href="/t_and_c/"
-							class="text-light">Terms and
-							Conditions</a></p>
+					<p>
+						© 2025 Mojo Advisors LLC. All rights reserved.
+						<a href="/t_and_c/" class="text-light">Terms and Conditions</a>
+					</p>
 				</div>
 				<div class="col-md-6 text-md-end">
 					<ul class="list-inline mb-0">
@@ -79,7 +71,10 @@
 		</div>
 	</footer>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Bootstrap 5 Bundle (includes Popper) -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+		crossorigin="anonymous"></script>
 	{% block scripts %}{% endblock %}
 </body>
 

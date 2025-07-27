@@ -83,8 +83,13 @@
 }
 
 .biz-copy {
-	font-size: 1.5rem;
+	font-size: 1.125rem;
 	line-height: 1.6;
+}
+
+.biz-text-muted {
+	font-size: 1.25rem;
+	font-style: italic;
 }
 
 .biz-btn {
