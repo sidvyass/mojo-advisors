@@ -216,9 +216,14 @@
 		padding: 4rem 0;
 	}
 
+	.hero-card {
+		text-align: center !important;
+	}
+
 	.hero-card h1.display-5 {
 		font-size: 3.5rem;
 	}
+
 
 	.hero-card p.fs-5 {
 		font-size: 1.25rem;
@@ -291,12 +296,16 @@
 		padding: 2rem 1rem;
 	}
 
+	.hero-card {
+		text-align: center !important;
+	}
+
 	.hero-card h1.display-5 {
-		font-size: 2.5rem;
+		font-size: 3rem;
 	}
 
 	.hero-card p.fs-5 {
-		font-size: 1rem;
+		font-size: 1.25rem;
 	}
 
 	.company-logo {
