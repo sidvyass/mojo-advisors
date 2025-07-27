@@ -47,3 +47,43 @@
 	/* This is to map it correctly below sub heading*/
 	margin-left: 0.9rem;
 }
+
+#team {
+	/* subtle two-tone gradient */
+	background: linear-gradient(135deg, rgba(245, 248, 255, 1) 0%, rgba(224, 232, 255, 1) 100%);
+
+	/* overlay a light geometric SVG pattern — grab one from HeroPatterns or SVGBackgrounds.com */
+	background-image: url('/assets/images/cornered-stairs.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.team-heading::after {
+	content: "";
+	display: block;
+	width: 3rem;
+	height: 0.35rem;
+	background-color: #041536;
+	margin: 0.25rem auto 0;
+	border-radius: 2px;
+}
+
+.team-heading {
+	font-size: 4rem;
+	padding-bottom: 1rem;
+	font-weight: 550;
+}
+
+.name-title {
+	font-size: 2.75rem;
+}
+
+.name-position {
+	font-size: 2rem;
+}
+
+.name-paragraph {
+	font-size: 1.125rem;
+	font-weight: 500;
+}

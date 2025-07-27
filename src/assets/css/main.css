@@ -149,3 +149,14 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
 	/* default is .6s */
 	will-change: transform;
 }
+
+.g-sec {
+	/* subtle two-tone gradient */
+	background: linear-gradient(135deg, rgba(245, 248, 255, 1) 0%, rgba(224, 232, 255, 1) 100%);
+
+	/* overlay a light geometric SVG pattern — grab one from HeroPatterns or SVGBackgrounds.com */
+	background-image: url('/assets/images/cornered-stairs.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
