@@ -59,7 +59,7 @@
 }
 
 .company-logo {
-	max-height: 100px;
+	max-height: 40px;
 	width: auto;
 	object-fit: contain;
 }
@@ -67,7 +67,7 @@
 /* On smaller screens, shrink further */
 @media (max-width: 576px) {
 	.company-logo {
-		max-height: 60px;
+		max-height: 35px;
 	}
 }
 
@@ -194,58 +194,6 @@
 	}
 }
 
-/*.biz-section {*/
-/*	height: 70vh;*/
-/*}*/
-/**/
-/*.biz-img {*/
-/*	padding-right: 0px !important;*/
-/*}*/
-
-/*.write-up-col {*/
-/*	display: flex;*/
-/*	align-items: center;*/
-/*	justify-content: center;*/
-/*	background-color: #000000;*/
-/*	padding-right: 3rem;*/
-/*	padding-left: 3rem;*/
-/*}*/
-
-/*.biz-write-up {*/
-/*	padding: 0;*/
-/*}*/
-/**/
-/*.biz-section .biz-heading {*/
-/*	font-size: 3.6rem;*/
-/*	font-weight: 500;*/
-/*	padding-bottom: 2rem;*/
-/*}*/
-/**/
-/*.biz-img {*/
-/*	object-fit: cover;*/
-/*	height: 100%;*/
-/*	width: 100%;*/
-/*}*/
-/**/
-/*.biz-btn {*/
-/*	margin-top: 2rem;*/
-/*	padding: 1rem;*/
-/*	width: 30%;*/
-/*	background-color: #041536 !important;*/
-/*}*/
-
-/* all the sub-headings (the <h5>) in your biz-section */
-/*.biz-section .write-up-col h5 {*/
-/*	font-size: 1.5rem;*/
-/*	padding-bottom: 1rem;*/
-/*}*/
-/**/
-/*/* all the paragraph text in your biz-section */
-*/
-/*.biz-section .write-up-col p {*/
-/*	font-size: 1.5rem;*/
-/*}*/
-/**/
 
 .svg-icon {
 	width: 2.5rem;
@@ -259,4 +207,187 @@
 
 .svg-icon:hover {
 	opacity: 1;
+}
+
+.testimonials-heading {
+	font-size: 6rem;
+	font-weight: 700;
+	letter-spacing: 3px;
+}
+
+.testimonials-sub-heading {
+	font-size: 2rem;
+	font-weight: 500;
+	padding-bottom: 1.5rem;
+}
+
+/* Let the grid size the card; just add padding */
+.test-card {
+	padding: 2rem 1rem;
+}
+
+/* Inner typography */
+.testimonial-text {
+	font-size: 1.6rem;
+	line-height: 1.6;
+}
+
+.testimonial-author {
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.testimonial-company {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+/* Controls */
+#testimonialCarousel .carousel-control-prev,
+#testimonialCarousel .carousel-control-next {
+	width: 2.5rem;
+	height: 2.5rem;
+	background-color: #000;
+	border-radius: 50%;
+}
+
+#testimonialCarousel .carousel-control-prev-icon,
+#testimonialCarousel .carousel-control-next-icon {
+	background-size: 1.2rem 1.2rem;
+}
+
+/* Tablet & below */
+@media (max-width: 992px) {
+	.testimonials-heading {
+		font-size: 4rem;
+	}
+
+	.testimonials-sub-heading {
+		font-size: 1.5rem;
+	}
+
+	/*.testimonial-text {*/
+	/*	font-size: 14rem;*/
+	/*}*/
+
+	.testimonial-author {
+		font-size: 1.75rem;
+	}
+
+	.testimonial-company {
+		font-size: 0.9rem;
+	}
+}
+
+/* Phone & below */
+@media (max-width: 576px) {
+	.testimonials-heading {
+		font-size: 3rem;
+	}
+
+	.testimonials-sub-heading {
+		font-size: 1.25rem;
+	}
+
+	/*.testimonial-text {*/
+	/*	font-size: 10rem;*/
+	/*}*/
+
+	.testimonial-author {
+		font-size: 1.5rem;
+	}
+
+	.testimonial-company {
+		font-size: 0.8rem;
+	}
+
+	#testimonialCarousel .card {
+		height: 150vh;
+	}
+
+	/* Allow swipe on touch */
+	#testimonialCarousel .carousel-inner {
+		touch-action: pan-y;
+	}
+}
+
+@media (max-width: 992px) {
+	#testimonialCarousel .test-card .card-body p.fst-italic {
+		font-size: 1.4rem;
+	}
+
+	#testimonialCarousel .test-card .card-body h5.fw-bold {
+		font-size: 1.75rem;
+	}
+
+	#testimonialCarousel .test-card .card-body p.text-muted {
+		font-size: 0.9rem;
+	}
+}
+
+/* Phone & below (≤576px) */
+@media (max-width: 576px) {
+	#testimonialCarousel .test-card .card-body p.fst-italic {
+		font-size: 1rem;
+	}
+
+	#testimonialCarousel .test-card .card-body h5.fw-bold {
+		font-size: 1.5rem;
+	}
+
+	#testimonialCarousel .test-card .card-body p.text-muted {
+		font-size: 0.8rem;
+	}
+}
+
+/* CTA Section */
+.cta-section {
+	background-color: #000;
+}
+
+.cta-title {
+	font-size: 2.5rem;
+}
+
+.cta-text {
+	font-size: 1.25rem;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.cta-btn {
+	background-color: #041536;
+	border-color: #041536;
+	color: #fff;
+	padding: 0.75rem 1.5rem;
+	transition: background-color .3s;
+}
+
+.cta-btn:hover {
+	background-color: #03213a;
+}
+
+/* Responsive typography */
+@media (max-width: 992px) {
+	.cta-title {
+		font-size: 2.25rem;
+	}
+
+	.cta-text {
+		font-size: 1.125rem;
+	}
+}
+
+@media (max-width: 576px) {
+	.cta-title {
+		font-size: 1.75rem;
+	}
+
+	.cta-text {
+		font-size: 1rem;
+	}
+
+	.cta-btn {
+		width: 100%;
+	}
 }
