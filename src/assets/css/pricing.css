@@ -14,7 +14,6 @@
 	background-color: #041536;
 	margin-top: 1rem;
 	padding: 1rem;
-	width: 350px;
 	margin-left: 0.9rem;
 }
 
@@ -276,8 +275,22 @@
 
 /* Phone & below */
 @media (max-width: 576px) {
-	.testimonials-heading {
+
+	.pricing-heading {
 		font-size: 3rem;
+		font-weight: 700;
+		padding-top: 1rem;
+		padding-bottom: 2rem;
+	}
+
+	.pricing-container {
+		padding-top: 2rem;
+		padding-right: 1.5rem !important;
+		padding-left: 1.5rem !important;
+	}
+
+	.testimonials-heading {
+		font-size: 2.5rem;
 	}
 
 	.testimonials-sub-heading {
