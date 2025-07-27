@@ -94,6 +94,17 @@
 	padding-bottom: 2rem;
 }
 
+
+.pricing-heading::after {
+	content: "";
+	display: block;
+	width: 3rem;
+	height: 0.35rem;
+	background-color: #041536;
+	margin: 0.25rem auto 0;
+	border-radius: 2px;
+}
+
 .pricing-section .plan-card.featured .ribbon {
 	position: absolute;
 	top: -0.75rem;

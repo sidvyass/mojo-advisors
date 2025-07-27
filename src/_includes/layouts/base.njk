@@ -41,8 +41,6 @@
 						<li class="nav-item"><a class="nav-link" href="/about">About</a></li>
 						<li class="nav-item"><a class="nav-link" href="/pricing">Pricing</a>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="/careers">Careers</a>
-						</li>
 					</ul>
 					<a class="btn contact-us-btn text-light btn-md d-none d-lg-inline-block ms-auto"
 						href="/contact">Contact Us</a>
@@ -82,6 +80,24 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
 		crossorigin="anonymous"></script>
+	<script>
+		(function () {
+			const nav = document.querySelector('nav.navbar');
+			let lastScroll = window.pageYOffset;
+
+			window.addEventListener('scroll', () => {
+				const current = window.pageYOffset;
+				if (current > lastScroll && current > 50) {
+					// scrolling down & past 50px → hide
+					nav.classList.add('navbar--hidden');
+				} else {
+					// scrolling up → show
+					nav.classList.remove('navbar--hidden');
+				}
+				lastScroll = current;
+			}, {passive: true});
+		})();
+	</script>
 	{% block scripts %}{% endblock %}
 </body>
 

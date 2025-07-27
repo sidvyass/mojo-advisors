@@ -1,3 +1,26 @@
+/* 1. translucent background + blur */
+nav.navbar {
+	background-color: rgba(255, 255, 255, 0.8) !important;
+	backdrop-filter: blur(10px);
+	transition: transform 0.3s ease, background-color 0.3s ease;
+	will-change: transform;
+	z-index: 1030;
+	/* ensure it sits above page content */
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+/* 2. hidden state: slide up out of view */
+nav.navbar.navbar--hidden {
+	transform: translateY(-100%);
+}
+
+main.container-fluid {
+	padding-top: 80px;
+	/* roughly your navbar height + padding */
+}
+
 /* hide the little arrow on any .dropdown-toggle */
 .navbar-nav .dropdown-toggle::after {
 	display: none;
