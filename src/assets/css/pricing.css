@@ -1,50 +1,27 @@
+/* ---------- Hero Section ---------- */
 .hero {
 	position: relative;
-	background-image:
-		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-		url("/assets/images/pricing_hero.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("/assets/images/pricing_hero.jpg");
 	background-size: cover;
 	background-position: center;
 	height: 80vh;
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
 	padding: 2rem;
-	color: white;
-}
-
-.hero .hero-card {
-	position: absolute;
-	top: 50%;
-	left: 15%;
-	transform: translateY(-50%);
-	max-width: 600px;
-}
-
-.hero .hero-card>h1.display-5 {
-	font-size: 5rem;
-	font-weight: 700;
-	padding: 1rem;
-}
-
-.hero .hero-card>p.fs-5 {
-	color: black;
-	font-size: 1.6rem;
-	font-weight: 500;
-	padding: 1rem;
 }
 
 .hero-btn {
 	background-color: #041536;
 	margin-top: 1rem;
 	padding: 1rem;
-	/* This is to map it correctly below sub heading*/
+	width: 350px;
 	margin-left: 0.9rem;
 }
 
+/* ---------- Commitment Section ---------- */
 .dark-bg {
 	padding: 2rem;
-	background-color: #000000;
+	background-color: #000;
 }
 
 .commitment-section.dark-bg img {
@@ -71,23 +48,21 @@
 	line-height: 1.6;
 }
 
-/* Add boxes around each pricing card */
+/* ---------- Pricing Section ---------- */
 .pricing-section .plan-card {
 	border: 1px solid #041536;
 	border-radius: 0.5rem;
 	padding: 2rem;
 	background-color: #fff;
-}
-
-/* Optional: make all cards equal height and vertically spaced */
-.pricing-section .row>[class*="col-"] {
-	display: flex;
-}
-
-.pricing-section .plan-card {
+	position: relative;
+	overflow: visible;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+}
+
+.pricing-section .row>[class*="col-"] {
+	display: flex;
 }
 
 .pricing-section .plan-card:hover {
@@ -95,7 +70,6 @@
 	transform: translateY(-5px);
 }
 
-/* make only the check-mark.svg icons green */
 .pricing-section .feature-item img[src$="check-mark.svg"] {
 	filter: invert(36%) sepia(82%) saturate(5283%) hue-rotate(90deg) brightness(90%) contrast(92%);
 }
@@ -111,40 +85,242 @@
 }
 
 .most-selected {
-	background-color: #000000 !important;
+	background-color: #000 !important;
 }
 
 .pricing-heading {
 	font-size: 4rem;
 	font-weight: 700;
-	padding-bottom: 2rem;
 	padding-top: 1rem;
+	padding-bottom: 2rem;
 }
 
-/* ensure plan-card can be a positioning context */
-.pricing-section .plan-card {
-	position: relative;
-	overflow: visible;
-}
-
-/* style & position the ribbon */
 .pricing-section .plan-card.featured .ribbon {
 	position: absolute;
 	top: -0.75rem;
-	/* pulls it above the top edge */
 	left: 50%;
-	/* centers it horizontally */
 	transform: translateX(-50%);
 	background-color: #FFC107;
-	/* or your highlight color */
 	color: #000;
-	/* text color */
 	padding: 0.25rem 0.75rem;
-	/* vertical/horizontal padding */
 	border-radius: 1.5rem;
-	/* pill shape */
 	font-size: 0.875rem;
 	font-weight: 700;
 	z-index: 1;
 	white-space: nowrap;
+}
+
+/* ---------- Testimonials Section ---------- */
+.testimonials-heading {
+	font-size: 6rem;
+	font-weight: 700;
+	letter-spacing: 3px;
+}
+
+.testimonials-sub-heading {
+	font-size: 2rem;
+	font-weight: 500;
+	padding-bottom: 1.5rem;
+}
+
+.test-card {
+	padding: 2rem 1rem;
+}
+
+.testimonial-text {
+	font-size: 1.6rem;
+	line-height: 1.6;
+}
+
+.testimonial-author {
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.testimonial-company {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+#testimonialCarousel .carousel-control-prev,
+#testimonialCarousel .carousel-control-next {
+	width: 2.5rem;
+	height: 2.5rem;
+	background-color: #000;
+	border-radius: 50%;
+}
+
+#testimonialCarousel .carousel-control-prev-icon,
+#testimonialCarousel .carousel-control-next-icon {
+	background-size: 1.2rem 1.2rem;
+}
+
+/* 1) Hide the default Swiper SVG backgrounds */
+.my-testimonial-swiper .swiper-button-prev,
+.my-testimonial-swiper .swiper-button-next {
+	background: none;
+}
+
+/* 2) Inject your own light-grey arrows */
+.my-testimonial-swiper .swiper-button-prev::after,
+.my-testimonial-swiper .swiper-button-next::after {
+	content: '';
+	font-size: 1.8rem;
+	color: #ccc;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-family: monospace;
+}
+
+/* ← on the left */
+.my-testimonial-swiper .swiper-button-prev::after {
+	content: '←';
+	left: 0.5rem;
+}
+
+/* → on the right */
+.my-testimonial-swiper .swiper-button-next::after {
+	content: '→';
+	right: 0.5rem;
+}
+
+/* ---------- CTA Section ---------- */
+.cta-section {
+	background-color: #000;
+}
+
+.cta-title {
+	font-size: 2.5rem;
+}
+
+.cta-text {
+	font-size: 1.25rem;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.cta-btn {
+	background-color: #041536;
+	border-color: #041536;
+	color: #fff;
+	padding: 0.75rem 1.5rem;
+	transition: background-color .3s;
+}
+
+.cta-btn:hover {
+	background-color: #03213a;
+}
+
+/* ---------- Responsive Adjustments ---------- */
+/* Mobile: Hero */
+@media (max-width: 767.98px) {
+	.hero {
+		height: 80vh;
+		padding: 1.5rem 1rem;
+	}
+
+	.hero h1 {
+		font-size: 2.5rem;
+		line-height: 1.2;
+	}
+
+	.hero p.lead {
+		font-size: 1rem;
+	}
+
+	.hero .btn-lg {
+		padding: 0.75rem 1.5rem;
+		font-size: 1rem;
+	}
+}
+
+/* Tablet & below */
+@media (max-width: 992px) {
+	.testimonials-heading {
+		font-size: 4rem;
+	}
+
+	.testimonials-sub-heading {
+		font-size: 1.5rem;
+	}
+
+	.testimonial-author {
+		font-size: 1.75rem;
+	}
+
+	.testimonial-company {
+		font-size: 0.9rem;
+	}
+
+	#testimonialCarousel .test-card .card-body p.fst-italic {
+		font-size: 1.4rem;
+	}
+
+	#testimonialCarousel .test-card .card-body h5.fw-bold {
+		font-size: 1.75rem;
+	}
+
+	#testimonialCarousel .test-card .card-body p.text-muted {
+		font-size: 0.9rem;
+	}
+
+	.cta-title {
+		font-size: 2.25rem;
+	}
+
+	.cta-text {
+		font-size: 1.125rem;
+	}
+}
+
+/* Phone & below */
+@media (max-width: 576px) {
+	.testimonials-heading {
+		font-size: 3rem;
+	}
+
+	.testimonials-sub-heading {
+		font-size: 1.25rem;
+	}
+
+	.testimonial-author {
+		font-size: 1.5rem;
+	}
+
+	.testimonial-company {
+		font-size: 0.8rem;
+	}
+
+	#testimonialCarousel .card {
+		height: 150vh;
+	}
+
+	#testimonialCarousel .carousel-inner {
+		touch-action: pan-y;
+	}
+
+	#testimonialCarousel .test-card .card-body p.fst-italic {
+		font-size: 1rem;
+	}
+
+	#testimonialCarousel .test-card .card-body h5.fw-bold {
+		font-size: 1.5rem;
+	}
+
+	#testimonialCarousel .test-card .card-body p.text-muted {
+		font-size: 0.8rem;
+	}
+
+	.cta-title {
+		font-size: 1.75rem;
+	}
+
+	.cta-text {
+		font-size: 1rem;
+	}
+
+	.cta-btn {
+		width: 100%;
+	}
 }

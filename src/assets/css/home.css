@@ -1,8 +1,7 @@
+/* ---------- Hero Section ---------- */
 .hero {
 	position: relative;
-	background-image:
-		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-		url("/assets/images/hero2.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("/assets/images/hero2.jpg");
 	background-size: cover;
 	background-position: center;
 	height: 90vh;
@@ -14,7 +13,6 @@
 }
 
 .hero .hero-card {
-	/* we rely on the grid now—no absolute at all */
 	padding: 1rem;
 }
 
@@ -28,64 +26,27 @@
 	color: #ddd;
 }
 
-/* Mobile tweaks */
-@media (max-width: 992px) {
-	.hero {
-		height: 80vh;
-		padding: 4rem 0;
-	}
-
-	.hero-card h1.display-5 {
-		font-size: 3.5rem;
-	}
-
-	.hero-card p.fs-5 {
-		font-size: 1.25rem;
-	}
+.hero-btn {
+	background-color: #041536;
+	margin-top: 1rem;
+	padding: 1rem;
+	margin-left: 0.9rem;
 }
 
-@media (max-width: 576px) {
-	.hero-card h1.display-5 {
-		font-size: 2.5rem;
-	}
-
-	.hero-card p.fs-5 {
-		font-size: 1rem;
-	}
-
-	.hero {
-		padding: 2rem 1rem;
-	}
-}
-
+/* ---------- Company Logos ---------- */
 .company-logo {
 	max-height: 40px;
 	width: auto;
 	object-fit: contain;
 }
 
-/* On smaller screens, shrink further */
-@media (max-width: 576px) {
-	.company-logo {
-		max-height: 35px;
-	}
-}
-
-.hero-btn {
-	background-color: #041536;
-	margin-top: 1rem;
-	padding: 1rem;
-	/* This is to map it correctly below sub heading*/
-	margin-left: 0.9rem;
-}
-
 .company-logos .company-logo {
 	height: 120px;
-	padding: 2rem;
 	width: 100%;
+	padding: 2rem;
 }
 
-/* Base sizes */
+/* ---------- Services Section ---------- */
 .services-heading {
 	font-size: 5rem;
 	font-weight: 700;
@@ -101,55 +62,21 @@
 	font-weight: 500;
 }
 
-/* Medium tablets down (≤992px) */
-@media (max-width: 992px) {
-	.services-heading {
-		font-size: 3.5rem;
-	}
-
-	.service-point h5 {
-		font-size: 2rem;
-	}
-
-	.service-point p {
-		font-size: 1rem;
-	}
+.services-heading::after {
+	content: "";
+	display: block;
+	width: 3rem;
+	height: 0.35rem;
+	background-color: #041536;
+	margin: 1rem auto 0;
+	border-radius: 2px;
 }
 
-/* Phones down (≤576px) */
-@media (max-width: 576px) {
-	.services-heading {
-		font-size: 2.5rem;
-	}
-
-	.service-point h5 {
-		font-size: 1.5rem;
-	}
-
-	.service-point p {
-		font-size: 0.9rem;
-	}
-
-	/* Optionally shrink icons */
-	.svg-icon {
-		width: 2rem;
-		height: 2rem;
-	}
-}
-
-/* --- Base biz-section styles --- */
+/* ---------- Biz Section ---------- */
 .biz-section {
 	background-color: #000;
-	/* if you want the black background to bleed full-width */
 }
 
-/* Make the button a bit narrower on desktop, full-width on mobile */
-.biz-btn {
-	padding: .75rem 1.5rem;
-	width: auto;
-}
-
-/* Typography */
 .biz-heading {
 	font-size: 3.6rem;
 	font-weight: 500;
@@ -160,46 +87,16 @@
 	line-height: 1.6;
 }
 
-
-/* --- Tablet & below (≤992px) --- */
-@media (max-width: 992px) {
-	.biz-heading {
-		font-size: 2.75rem;
-	}
-
-	.biz-copy {
-		font-size: 1.25rem;
-	}
-
-	.biz-section .row {
-		/* ensure full-width stacking doesn’t collapse margins */
-		margin-top: 2rem;
-	}
+.biz-btn {
+	padding: 0.75rem 1.5rem;
+	width: auto;
 }
 
-/* --- Phone & below (≤576px) --- */
-@media (max-width: 576px) {
-	.biz-heading {
-		font-size: 2.25rem;
-	}
-
-	.biz-copy {
-		font-size: 1rem;
-	}
-
-	.biz-btn {
-		display: block;
-		width: 100%;
-		text-align: center;
-	}
-}
-
-
+/* ---------- SVG Icons ---------- */
 .svg-icon {
 	width: 2.5rem;
 	height: 2.5rem;
 	fill: currentColor;
-	/* lets you tint via the text-color util */
 	opacity: 0.8;
 	transition: opacity .25s;
 	margin-right: 1rem;
@@ -209,6 +106,7 @@
 	opacity: 1;
 }
 
+/* ---------- Testimonials Section ---------- */
 .testimonials-heading {
 	font-size: 6rem;
 	font-weight: 700;
@@ -221,12 +119,10 @@
 	padding-bottom: 1.5rem;
 }
 
-/* Let the grid size the card; just add padding */
 .test-card {
 	padding: 2rem 1rem;
 }
 
-/* Inner typography */
 .testimonial-text {
 	font-size: 1.6rem;
 	line-height: 1.6;
@@ -242,7 +138,6 @@
 	font-weight: 500;
 }
 
-/* Controls */
 #testimonialCarousel .carousel-control-prev,
 #testimonialCarousel .carousel-control-next {
 	width: 2.5rem;
@@ -256,91 +151,37 @@
 	background-size: 1.2rem 1.2rem;
 }
 
-/* Tablet & below */
-@media (max-width: 992px) {
-	.testimonials-heading {
-		font-size: 4rem;
-	}
-
-	.testimonials-sub-heading {
-		font-size: 1.5rem;
-	}
-
-	/*.testimonial-text {*/
-	/*	font-size: 14rem;*/
-	/*}*/
-
-	.testimonial-author {
-		font-size: 1.75rem;
-	}
-
-	.testimonial-company {
-		font-size: 0.9rem;
-	}
+/* 1) Hide the default Swiper SVG backgrounds */
+.my-testimonial-swiper .swiper-button-prev,
+.my-testimonial-swiper .swiper-button-next {
+	background: none;
 }
 
-/* Phone & below */
-@media (max-width: 576px) {
-	.testimonials-heading {
-		font-size: 3rem;
-	}
-
-	.testimonials-sub-heading {
-		font-size: 1.25rem;
-	}
-
-	/*.testimonial-text {*/
-	/*	font-size: 10rem;*/
-	/*}*/
-
-	.testimonial-author {
-		font-size: 1.5rem;
-	}
-
-	.testimonial-company {
-		font-size: 0.8rem;
-	}
-
-	#testimonialCarousel .card {
-		height: 150vh;
-	}
-
-	/* Allow swipe on touch */
-	#testimonialCarousel .carousel-inner {
-		touch-action: pan-y;
-	}
+/* 2) Inject your own light-grey arrows */
+.my-testimonial-swiper .swiper-button-prev::after,
+.my-testimonial-swiper .swiper-button-next::after {
+	content: '';
+	font-size: 1.8rem;
+	color: #ccc;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-family: monospace;
 }
 
-@media (max-width: 992px) {
-	#testimonialCarousel .test-card .card-body p.fst-italic {
-		font-size: 1.4rem;
-	}
-
-	#testimonialCarousel .test-card .card-body h5.fw-bold {
-		font-size: 1.75rem;
-	}
-
-	#testimonialCarousel .test-card .card-body p.text-muted {
-		font-size: 0.9rem;
-	}
+/* ← on the left */
+.my-testimonial-swiper .swiper-button-prev::after {
+	content: '←';
+	left: 0.5rem;
 }
 
-/* Phone & below (≤576px) */
-@media (max-width: 576px) {
-	#testimonialCarousel .test-card .card-body p.fst-italic {
-		font-size: 1rem;
-	}
-
-	#testimonialCarousel .test-card .card-body h5.fw-bold {
-		font-size: 1.5rem;
-	}
-
-	#testimonialCarousel .test-card .card-body p.text-muted {
-		font-size: 0.8rem;
-	}
+/* → on the right */
+.my-testimonial-swiper .swiper-button-next::after {
+	content: '→';
+	right: 0.5rem;
 }
 
-/* CTA Section */
+/* ---------- CTA Section ---------- */
 .cta-section {
 	background-color: #000;
 }
@@ -367,8 +208,74 @@
 	background-color: #03213a;
 }
 
-/* Responsive typography */
+/* ---------- Media Queries ---------- */
+/* Medium tablets and below (≤992px) */
 @media (max-width: 992px) {
+	.hero {
+		height: 80vh;
+		padding: 4rem 0;
+	}
+
+	.hero-card h1.display-5 {
+		font-size: 3.5rem;
+	}
+
+	.hero-card p.fs-5 {
+		font-size: 1.25rem;
+	}
+
+	.services-heading {
+		font-size: 3.5rem;
+	}
+
+	.service-point h5 {
+		font-size: 2rem;
+	}
+
+	.service-point p {
+		font-size: 1rem;
+	}
+
+	.biz-heading {
+		font-size: 2.75rem;
+	}
+
+	.biz-copy {
+		font-size: 1.25rem;
+	}
+
+	.biz-section .row {
+		margin-top: 2rem;
+	}
+
+	.testimonials-heading {
+		font-size: 4rem;
+	}
+
+	.testimonials-sub-heading {
+		font-size: 1.5rem;
+	}
+
+	.testimonial-author {
+		font-size: 1.75rem;
+	}
+
+	.testimonial-company {
+		font-size: 0.9rem;
+	}
+
+	#testimonialCarousel .test-card .card-body p.fst-italic {
+		font-size: 1.4rem;
+	}
+
+	#testimonialCarousel .test-card .card-body h5.fw-bold {
+		font-size: 1.75rem;
+	}
+
+	#testimonialCarousel .test-card .card-body p.text-muted {
+		font-size: 0.9rem;
+	}
+
 	.cta-title {
 		font-size: 2.25rem;
 	}
@@ -378,7 +285,86 @@
 	}
 }
 
+/* Phones down (≤576px) */
 @media (max-width: 576px) {
+	.hero {
+		padding: 2rem 1rem;
+	}
+
+	.hero-card h1.display-5 {
+		font-size: 2.5rem;
+	}
+
+	.hero-card p.fs-5 {
+		font-size: 1rem;
+	}
+
+	.company-logo {
+		max-height: 35px;
+	}
+
+	.services-heading {
+		font-size: 2.5rem;
+	}
+
+	.service-point h5 {
+		font-size: 1.5rem;
+	}
+
+	.service-point p {
+		font-size: 0.9rem;
+	}
+
+	.biz-heading {
+		font-size: 2.25rem;
+	}
+
+	.biz-copy {
+		font-size: 1rem;
+	}
+
+	.biz-btn {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	.testimonials-heading {
+		font-size: 3rem;
+	}
+
+	.testimonials-sub-heading {
+		font-size: 1.25rem;
+	}
+
+	.testimonial-author {
+		font-size: 1.5rem;
+	}
+
+	.testimonial-company {
+		font-size: 0.8rem;
+	}
+
+	#testimonialCarousel .card {
+		height: 150vh;
+	}
+
+	#testimonialCarousel .carousel-inner {
+		touch-action: pan-y;
+	}
+
+	#testimonialCarousel .test-card .card-body p.fst-italic {
+		font-size: 1rem;
+	}
+
+	#testimonialCarousel .test-card .card-body h5.fw-bold {
+		font-size: 1.5rem;
+	}
+
+	#testimonialCarousel .test-card .card-body p.text-muted {
+		font-size: 0.8rem;
+	}
+
 	.cta-title {
 		font-size: 1.75rem;
 	}

@@ -2,33 +2,31 @@
 
 {% block head %}
 {{ super() }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <link rel="stylesheet" href="/assets/css/pricing.css">
 {% endblock %}
 
 {% block content %}
 
-<div class="hero">
-	<!-- Hero card content -->
-	<div class="hero-card">
-		<h1 class="display-5 fw-bold mb-1">
-			Pricing that fits your team<br>
-		</h1>
-
-		<p class="fs-5 text-light mb-3" style="">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo officia est, eaque perspiciatis
-			fugit consectetur quibusdam eligendi maiores harum exercitationem adipisci! Aliquid officiis
-			dolor alias?
-		</p>
-
-		<div>
-			<a href="" class="btn btn-dark w-50 hero-btn">
-				<span class="me-2 px-1">SCHEDULE A FREE MEETING</span>
-				<img src="https://cdn.prod.website-files.com/6616b1af6b1a369ac15900ff/6616e9a80310eee50e4e4f58_ChevronRight.svg"
-					alt="">
-			</a>
+<section class="hero d-flex align-items-center">
+	<div class="container">
+		<div class="row justify-content-center"><!-- center columns horizontally -->
+			<div class="col-12 col-md-8 col-lg-6 text-center text-md-start text-white">
+				<h1 class="display-2 fw-bold mb-3" style="font-weight:600;">
+					Pricing that fits your team
+				</h1>
+				<p class="lead mb-4" style="font-weight:400; font-size:1.25rem;">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo officia est, eaque
+					perspiciatis fugit consectetur quibusdam eligendi maiores harum exercitationem
+					adipisci! Aliquid officiis dolor alias?
+				</p>
+				<a href="#" class="btn hero-btn text-light btn-lg" style="font-size:1.25rem;">
+					Contact Us
+				</a>
+			</div>
 		</div>
 	</div>
-</div>
+</section>
 
 <section class="commitment-section dark-bg text-light">
 	<div class="container-fluid">
@@ -322,84 +320,116 @@
 		<h3 class="fw-bold testimonials-sub-heading">What Our Clients Are Saying</h3>
 	</div>
 
-	<div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-		<div class="carousel-inner">
-
-			<!-- Testimonial 1 -->
-			<div class="carousel-item active">
-				<div class="card bg-light test-card border rounded mx-auto">
-					<div class="card-body text-center">
-						<p class="fst-italic mb-4">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-							placeat atque, dolor perferendis magni
-							officia harum tenetur voluptatem dolorum sint pariatur
-							laudantium voluptas quas voluptatum vel voluptates
-							earum nemo aliquid delectus accusantium eligendi totam maiores
-							dolore. Rerum eius omnis suscipit ut ullam
-							quam voluptatum soluta cupiditate, architecto ipsa nesciunt
-							aliquam, totam a numquam accusamus fugiat
-							necessitatibus iure optio corporis, temporibus officiis
-							consectetur? Sit eos aliquid possimus facilis
-							consequatur consectetur illo in adipisci. Placeat provident
-							architecto, tempora nihil neque ipsa error
-							autem rerum debitis nam optio libero ex. Quia commodi placeat
-							alias laboriosam doloremque ab itaque
-							laborum ut, at unde perferendis!
-						</p>
-						<h5 class="fw-bold mb-1">Casey Hollnagel</h5>
-						<p class="text-muted mb-0">Vertical Foods LLC</p>
+	<div class="swiper my-testimonial-swiper">
+		<div class="swiper-wrapper">
+			{% for item in [
+			{ text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus facilis fuga iure
+			quae veniam accusantium vel explicabo quasi dignissimos hic minima velit soluta voluptate earum,
+			similique sit numquam? Voluptatem fuga voluptatibus architecto tempora. Atque vel aut eveniet
+			labore dicta. Ad quod veniam necessitatibus labore molestiae molestias earum odio eveniet
+			doloremque. Quas autem eligendi, fuga ipsa perferendis placeat rerum magni culpa tenetur
+			repudiandae quam expedita modi natus impedit doloribus, nulla blanditiis accusantium quia ut,
+			non praesentium vel obcaecati perspiciatis ipsam. Quidem dicta minus tempora, doloribus enim
+			atque repellat autem soluta omnis molestiae dolorum earum perferendis deleniti maxime saepe
+			eveniet. Praesentium sunt enim officia impedit labore doloremque quis accusantium cumque cum
+			dolorum, veniam animi adipisci alias voluptas! Facere officiis non voluptatem, error ex autem!
+			Repellat cum illo doloribus deserunt corporis nihil laudantium quae voluptatibus dolorem?
+			Voluptatum commodi accusamus magni asperiores in fugit, nemo rerum, odio tempore voluptatem ex
+			modi inventore eos atque.", author: "Casey Hollnagel", company: "Vertical Foods LLC"
+			},
+			{ text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam harum placeat nobis ea
+			dolorum sint quis debitis dolorem rerum repellat hic error laborum officiis assumenda eveniet,
+			praesentium vero iste maxime blanditiis consequuntur. Dolorum sunt perferendis quae laboriosam
+			alias incidunt a corporis eos, illo nam minus possimus accusamus facilis voluptate fugit dolores
+			atque suscipit consequatur eaque amet odit consectetur odio. Eum ex deleniti dignissimos, ut
+			voluptates, distinctio voluptatem eveniet, ipsum sint assumenda libero! Quas iusto ipsam,
+			ratione temporibus cumque explicabo laboriosam harum non saepe quidem exercitationem itaque ab.
+			In at vitae adipisci! Delectus eum distinctio illum nisi porro ab ullam voluptatibus?", author:
+			"Hunter Robertson", company:
+			"Tamarack Grove Engineering" }
+			] %}
+			<div class="swiper-slide">
+				<div class="row justify-content-center">
+					<div class="col-12 col-md-10 col-lg-8">
+						<div class="card bg-light border rounded test-card mx-auto">
+							<div
+								class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+								<p class="fst-italic mb-4">{{ item.text }}</p>
+								<h5 class="fw-bold mb-1">{{ item.author }}</h5>
+								<p class="text-muted mb-0">{{ item.company }}</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-
-			<!-- Testimonial 2 -->
-			<div class="carousel-item">
-				<div class="card bg-light test-card border rounded mx-auto">
-					<div class="card-body text-center">
-						<p class="fst-italic mb-4">
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-							Doloremque cumque nulla, assumenda maiores
-							inventore, consectetur atque a delectus blanditiis iste
-							necessitatibus error! Rerum sunt earum deserunt
-							qui aliquid alias, quasi nobis quia, repudiandae officiis porro.
-							Libero ut tempore eaque saepe vitae,
-							nihil animi debitis soluta neque adipisci laboriosam aliquam
-							quae voluptatibus eos veritatis. Officiis
-							aperiam officia, ullam qui harum dignissimos aut! Animi
-							voluptate harum porro deserunt alias unde nemo qui
-							dolores ea at! Neque aperiam natus quos, reiciendis quidem vel
-							ab nemo unde. Soluta commodi eligendi nam
-							voluptates minus vel similique, omnis, doloribus consequatur
-							quod sunt, numquam iusto! Hic, dolores.
-						</p>
-						<h5 class="fw-bold mb-1">Hunter Robertson</h5>
-						<p class="text-muted mb-0">Director of Finance, Tamarack Grove
-							Engineering</p>
-					</div>
-				</div>
-			</div>
-
-			<!-- Add more .carousel-item blocks here as needed -->
-
+			{% endfor %}
 		</div>
 
-		<!-- Controls -->
-		<button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-			data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden"></span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-			data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden"></span>
-		</button>
+		<!-- navigation arrows -->
+		<div class="swiper-button-prev testimonial-prev"></div>
+		<div class="swiper-button-next testimonial-next"></div>
 	</div>
 </section>
+
+<section class="cta-section text-center py-5">
+	<div class="container">
+		<h2 class="cta-title text-white fw-bold mb-3">
+			Ready to take the next step?
+		</h2>
+		<p class="cta-text text-white mb-4 p-2">
+			Schedule a meeting with our Team to discuss how Mojo CFO can support your business’s financial
+			growth and stability.
+		</p>
+		<a href="https://forms.gle/HW7q5Bn8mr4QP6s3A" target="_blank" class="btn btn-primary btn-lg cta-btn">
+			Let's Have a Conversation
+			<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="16"
+				height="16" fill="currentColor" aria-hidden="true">
+			</svg>
+		</a>
+	</div>
+</section>
+
 
 {% endblock %}
 
 {% block scripts %}
 {{ super() }}
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		new Swiper('.my-logos-swiper', {
+			loop: true,
+			slidesPerView: 5,
+			spaceBetween: 24,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			breakpoints: {
+				0: {slidesPerView: 1, spaceBetween: 12},
+				576: {slidesPerView: 2, spaceBetween: 16},
+				768: {slidesPerView: 3, spaceBetween: 20},
+				992: {slidesPerView: 4, spaceBetween: 24},
+				1200: {slidesPerView: 5, spaceBetween: 24},
+			}
+		});
+
+		new Swiper('.my-testimonial-swiper', {
+			loop: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			navigation: {
+				nextEl: '.testimonial-next',
+				prevEl: '.testimonial-prev',
+			},
+			// optional: fade effect
+			// effect: 'fade',
+			// fadeEffect: { crossFade: true },
+			// enable swiping on mobile
+			simulateTouch: true,
+			speed: 600,
+		});
+	});
+</script>
 <script src="/assets/js/pricing.js"></script>
 {% endblock %}
