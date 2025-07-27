@@ -21,7 +21,7 @@
 	font-weight: 600;
 }
 
-.hero-card p.fs-5 {
+.hero-card p {
 	font-size: 1.6rem;
 	color: #ddd;
 }
@@ -46,14 +46,27 @@
 }
 
 /* ---------- Services Section ---------- */
+
+#service-section {
+	/* subtle two-tone gradient */
+	background: linear-gradient(135deg, rgba(245, 248, 255, 1) 0%, rgba(224, 232, 255, 1) 100%);
+
+	/* overlay a light geometric SVG pattern — grab one from HeroPatterns or SVGBackgrounds.com */
+	background-image: url('/assets/images/cornered-stairs.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
 .services-heading {
 	font-size: 5rem;
 	font-weight: 700;
 }
 
+
 .service-point h5 {
 	font-size: 3rem;
-	font-weight: 500;
+	font-weight: 500 !important;
 }
 
 .service-point p {
@@ -229,7 +242,7 @@
 	}
 
 
-	.hero-card p.fs-5 {
+	.hero-card p {
 		font-size: 1.25rem;
 	}
 
@@ -239,6 +252,7 @@
 
 	.service-point h5 {
 		font-size: 2rem;
+		font-weight: 500 !important;
 	}
 
 	.service-point p {
@@ -308,7 +322,7 @@
 		font-size: 3rem;
 	}
 
-	.hero-card p.fs-5 {
+	.hero-card p {
 		font-size: 1.25rem;
 	}
 
@@ -322,6 +336,7 @@
 
 	.service-point h5 {
 		font-size: 1.5rem;
+		font-weight: 500 !important;
 	}
 
 	.service-point p {
