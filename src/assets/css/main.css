@@ -88,3 +88,19 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
 		padding: 1rem 0;
 	}
 }
+
+@media (min-width: 992px) {
+
+	/* make the collapse container a positioning context */
+	.navbar .navbar-collapse {
+		position: relative;
+	}
+
+	/* pull the nav-links out of the flex flow and center them */
+	.navbar-nav.mx-auto {
+		position: absolute;
+		top: 50%;
+		left: 42%;
+		transform: translate(-50%, -50%);
+	}
+}
