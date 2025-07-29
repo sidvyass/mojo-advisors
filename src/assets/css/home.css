@@ -1,7 +1,7 @@
 /* ---------- Hero Section ---------- */
 .hero {
 	position: relative;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("/assets/images/hero2.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("/assets/images/hero2.jpg");
 	background-size: cover;
 	background-position: center;
 	height: 90vh;
@@ -17,12 +17,13 @@
 }
 
 .hero-card h1.display-5 {
-	font-size: 5rem;
-	font-weight: 600;
+	font-size: 80px;
+	font-weight: 900 !important;
 }
 
 .hero-card p {
-	font-size: 1.6rem;
+	font-size: 25px;
+	font-weight: 800;
 	color: #ddd;
 }
 
@@ -30,6 +31,7 @@
 	background-color: #041536;
 	margin-top: 1rem;
 	padding: 1rem;
+	min-height: 40px;
 }
 
 /* ---------- Company Logos ---------- */
@@ -45,48 +47,10 @@
 	padding: 2rem;
 }
 
-/* ---------- Services Section ---------- */
-
-#service-section {
-	/* subtle two-tone gradient */
-	background: linear-gradient(135deg, rgba(245, 248, 255, 1) 0%, rgba(224, 232, 255, 1) 100%);
-
-	/* overlay a light geometric SVG pattern — grab one from HeroPatterns or SVGBackgrounds.com */
-	background-image: url('/assets/images/cornered-stairs.svg');
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-}
-
-.services-heading {
-	font-size: 5rem;
-	font-weight: 700;
-}
-
-
-.service-point h5 {
-	font-size: 3rem;
-	font-weight: 500 !important;
-}
-
-.service-point p {
-	font-size: 1.25rem;
-	font-weight: 500;
-}
-
-.services-heading::after {
-	content: "";
-	display: block;
-	width: 3rem;
-	height: 0.35rem;
-	background-color: #041536;
-	margin: 1rem auto 0;
-	border-radius: 2px;
-}
-
 /* ---------- Biz Section ---------- */
 .biz-section {
 	background-color: #000;
+	min-height: 600px;
 }
 
 .biz-heading {
@@ -109,6 +73,10 @@
 	width: auto;
 }
 
+.biz-img {
+	height: 100%;
+}
+
 /* ---------- SVG Icons ---------- */
 .svg-icon {
 	width: 2.5rem;
@@ -125,13 +93,14 @@
 
 /* ---------- Testimonials Section ---------- */
 .testimonials-heading {
-	font-size: 6rem;
+	font-size: 5.5rem;
 	font-weight: 700;
 	letter-spacing: 3px;
+	padding-bottom: 1rem;
 }
 
 .testimonials-sub-heading {
-	font-size: 2rem;
+	font-size: 3rem;
 	font-weight: 500;
 	padding-bottom: 1.5rem;
 }
@@ -224,6 +193,7 @@
 .cta-btn:hover {
 	background-color: #03213a;
 }
+
 
 /* ---------- Media Queries ---------- */
 /* Medium tablets and below (≤992px) */
@@ -404,4 +374,274 @@
 	.cta-btn {
 		width: 100%;
 	}
+}
+
+.services-section {
+	/* fallback colour in case image is not loaded */
+	background-color: #0d1b2a;
+	/* gradient overlay to mimic tinted glass effect */
+	background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(13, 27, 42, 0.9) 50%, rgba(13, 27, 42, 0.8) 100%), url("/assets/images/corp_meeting.jpg");
+	color: #ffffff;
+	min-height: 600px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Card style: translucent with border and blur effect */
+.services-card {
+	background: rgba(0, 34, 58, 0.75);
+	border: 1px solid rgba(0, 173, 239, 0.4);
+	border-radius: 0.5rem;
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+}
+
+/* Underline style for list items (except last) via border-bottom from HTML) */
+.services-card ul li {
+	line-height: 1.5;
+}
+
+/* Responsiveness: adjust padding on smaller screens */
+@media (max-width: 767.98px) {
+	.services-section {
+		padding: 3rem 1rem;
+		min-height: auto;
+	}
+
+	.services-card {
+		margin-top: 2rem;
+	}
+}
+
+/* Increase main heading size & tighten line-height */
+.services-section h2 {
+	font-size: 5rem;
+	font-weight: 900 !important;
+	line-height: 1.1;
+}
+
+/* “Brady CFO provides:” text */
+.services-card>p {
+	font-size: 2rem;
+}
+
+/* Icons in the list */
+.services-card ul li i {
+	font-size: 3rem;
+}
+
+/* List item text */
+.services-card ul li span {
+	font-size: 22px;
+	/* Optional: slightly more letter-spacing for readability */
+	letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+	.services-section h2 {
+		font-size: 2.5rem;
+	}
+
+	.services-card>p {
+		font-size: 1.1rem;
+	}
+
+	.services-card ul li i {
+		font-size: 1.75rem;
+	}
+
+	.services-card ul li span {
+		font-size: 1rem;
+	}
+}
+
+.strategy-section {
+	position: relative;
+	background-image:
+		linear-gradient(to right,
+			rgba(255, 255, 255, 0.3) 0%,
+			rgba(255, 255, 255, 0.9) 25%,
+			rgba(255, 255, 255, 1.0) 75%,
+			rgba(255, 255, 255, 0.3) 100%),
+		url('/assets/images/farm_photo.jpg');
+	background-size: cover;
+	background-position: center;
+	min-height: 600px;
+}
+
+.strategy-section h2 {
+	font-size: 36px;
+}
+
+.strategy-section .h5 {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.strategy-section p {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 210%;
+	text-align: center;
+	color: #101010;
+	max-width: 728px;
+	margin: 0 auto;
+}
+
+/* Responsive tweaks for .strategy-section */
+@media (max-width: 767.98px) {
+
+	/* Mobile */
+	.strategy-section {
+		min-height: 250px;
+		padding: 2rem 1rem;
+		background-image:
+			linear-gradient(to right,
+				rgba(255, 255, 255, 0.3) 0%,
+				rgba(255, 255, 255, 0.9) 25%,
+				rgba(255, 255, 255, 1.0) 75%,
+				rgba(255, 255, 255, 0.3) 100%),
+			url('/assets/images/farm_photo.jpg');
+	}
+
+	.strategy-section h2 {
+		font-size: 1.5rem;
+	}
+
+	.strategy-section p.h5 {
+		font-size: 1.125rem;
+	}
+
+	.strategy-section p.lead {
+		font-size: 1rem;
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+	/* Tablet */
+	.strategy-section {
+		min-height: 300px;
+		padding: 3rem 1.5rem;
+		background-image:
+			linear-gradient(to right,
+				rgba(255, 255, 255, 0.3) 0%,
+				rgba(255, 255, 255, 0.9) 25%,
+				rgba(255, 255, 255, 1.0) 75%,
+				rgba(255, 255, 255, 0.3) 100%),
+			url('/assets/images/farm_photo.jpg');
+	}
+
+	.strategy-section h2 {
+		font-size: 1.75rem;
+	}
+
+	.strategy-section p.h5 {
+		font-size: 1.25rem;
+	}
+
+	.strategy-section p.lead {
+		font-size: 1.125rem;
+		max-width: 600px;
+	}
+}
+
+
+/* services.css */
+/* services.css */
+#our-services {
+	position: relative;
+	overflow: hidden;
+	min-height: 800px;
+}
+
+/* break the H1 out to full viewport width */
+#our-services .services-title {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100vw;
+	/* span the full viewport */
+	margin: 0 0 2rem;
+	font-size: 12rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 0.05);
+	pointer-events: none;
+}
+
+/* pale block behind image */
+#our-services .bg-block {
+	position: absolute;
+	top: 35%;
+	right: -20%;
+	width: 100%;
+	height: 80%;
+	background-color: #e6eef3;
+	border-radius: 0.25rem;
+	z-index: 1;
+}
+
+/* lift image above the block */
+#our-services .section-img {
+	position: relative;
+	z-index: 2;
+}
+
+/* underline on Learn More */
+#our-services .learn-more {
+	border-bottom: 3px solid #00adef;
+	padding-bottom: 2px;
+}
+
+
+/* 2. Sub-heading (<h2>) */
+#our-services h2 {
+	font-family: Arial, sans-serif;
+	font-size: 22px;
+	font-weight: 500;
+	color: #33503f;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+	letter-spacing: .21em;
+}
+
+/* 3. Paragraphs */
+#our-services p {
+	font-family: Georgia, serif;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.6;
+	color: #222;
+	margin-bottom: 1rem;
+}
+
+/* 4. List items */
+#our-services ul li {
+	font-family: Georgia, serif;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.6;
+	color: #222;
+	margin-bottom: .5rem;
+}
+
+/* 5. “Learn More” link/button */
+#our-services .learn-more {
+	font-family: Arial, sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	color: #1d1d1d;
+	text-decoration: none;
+	border-bottom: 4px solid #009db3;
+	/*padding-bottom: 2px;*/
+	display: inline-block;
+}
+
+#our-services .learn-more:hover {
+	border-color: #007a8a;
 }

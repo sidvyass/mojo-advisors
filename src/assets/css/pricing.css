@@ -348,3 +348,84 @@
 		width: 100%;
 	}
 }
+
+.services-section {
+	/* fallback colour in case image is not loaded */
+	background-color: #0d1b2a;
+	/* gradient overlay to mimic tinted glass effect */
+	background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(13, 27, 42, 0.9) 50%, rgba(13, 27, 42, 0.8) 100%), url("/assets/images/hero2.jpg");
+	color: #ffffff;
+	min-height: 600px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Card style: translucent with border and blur effect */
+.services-card {
+	background: rgba(0, 34, 58, 0.75);
+	border: 1px solid rgba(0, 173, 239, 0.4);
+	border-radius: 0.5rem;
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+}
+
+/* Underline style for list items (except last) via border-bottom from HTML) */
+.services-card ul li {
+	line-height: 1.5;
+}
+
+/* Responsiveness: adjust padding on smaller screens */
+@media (max-width: 767.98px) {
+	.services-section {
+		padding: 3rem 1rem;
+		min-height: auto;
+	}
+
+	.services-card {
+		margin-top: 2rem;
+	}
+}
+
+/* Increase main heading size & tighten line-height */
+.services-section h2 {
+	font-size: 5rem;
+	line-height: 1.1;
+}
+
+/* “Brady CFO provides:” text */
+.services-card>p {
+	font-size: 2rem;
+}
+
+/* Icons in the list */
+.services-card ul li i {
+	font-size: 3rem;
+}
+
+/* List item text */
+.services-card ul li span {
+	font-size: 22px;
+	/* Optional: slightly more letter-spacing for readability */
+	letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+	.services-section h2 {
+		font-size: 2.5rem;
+	}
+
+	.services-card>p {
+		font-size: 1.1rem;
+	}
+
+	.services-card ul li i {
+		font-size: 1.75rem;
+	}
+
+	.services-card ul li span {
+		font-size: 1rem;
+	}
+}

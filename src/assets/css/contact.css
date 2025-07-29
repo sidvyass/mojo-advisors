@@ -1,0 +1,49 @@
+.hero {
+	position: relative;
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+		url("/assets/images/contact_hero.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 70vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* ← center horizontally */
+	padding: 2rem;
+	color: white;
+}
+
+.hero .hero-card {
+	/* remove the absolute positioning */
+	position: relative;
+	top: auto;
+	left: auto;
+	transform: none;
+	max-width: 600px;
+	width: 100%;
+	/* optional: lets it shrink/grow */
+	margin: 0 auto;
+	/* centers if width < container */
+}
+
+.hero .hero-card>h1.display-5 {
+	font-size: 5rem;
+	font-weight: 700;
+	padding: 1rem;
+}
+
+.hero .hero-card>p.fs-5 {
+	color: black;
+	font-size: 1.6rem;
+	font-weight: 500;
+	padding: 1rem;
+}
+
+.hero-btn {
+	background-color: #041536;
+	margin-top: 1rem;
+	padding: 1rem;
+	/* This is to map it correctly below sub heading*/
+	margin-left: 0.9rem;
+}

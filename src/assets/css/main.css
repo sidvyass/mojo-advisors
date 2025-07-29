@@ -127,3 +127,88 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
 		transform: translate(-50%, -50%);
 	}
 }
+
+/* — NAV LINKS — */
+.navbar .nav-link {
+	color: #041536 !important;
+	font-size: 0.95rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 0.5rem 1rem;
+	position: relative;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+	color: #041536 !important;
+}
+
+/* underline on hover & active */
+.navbar .nav-link::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 2px;
+	background-color: #425F57;
+	transition: width 0.2s ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+	width: 100%;
+}
+
+/* — CTA BUTTON — */
+.conversation-btn {
+	border: 2px solid #041536;
+	color: #041536;
+	background: transparent;
+	text-transform: uppercase;
+	font-weight: 600;
+	padding: 0.4rem 1.5rem;
+	border-radius: 0.25rem;
+	transition: background 0.2s, color 0.2s;
+}
+
+.conversation-btn:hover {
+	background: #041536;
+	color: #fff;
+	text-decoration: none;
+}
+
+/* — BACKDROP & BLUR — */
+nav.navbar {
+	background-color: rgba(255, 255, 255, 0.8) !important;
+	backdrop-filter: blur(10px);
+	transition: transform 0.3s ease, background-color 0.3s ease;
+	z-index: 1030;
+}
+
+nav.navbar.navbar--hidden {
+	transform: translateY(-100%);
+}
+
+main.container-fluid {
+	padding-top: 80px;
+	/* navbar height */
+}
+
+/* 1. bump all nav-link text to 18px and add a bit more horizontal padding */
+.navbar .nav-link {
+	font-size: 18px;
+	padding: 0.75rem 1.5rem;
+}
+
+/* 2. bump the CTA button font to 18px and enlarge its “box” */
+.conversation-btn {
+	font-size: 18px;
+	padding: 0.75rem 2.5rem;
+	font-weight: 900;
+	line-height: 1;
+	letter-spacing: 0.15em;
+	/* you can also force a min-height if you like: */
+	/* min-height: 48px; */
+}
