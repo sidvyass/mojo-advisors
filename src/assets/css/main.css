@@ -131,8 +131,10 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
 /* — NAV LINKS — */
 .navbar .nav-link {
 	color: #041536 !important;
-	font-size: 0.95rem;
-	font-weight: 600;
+	font-weight: 900;
+	font-size: 18px;
+	line-height: 1;
+	letter-spacing: 0.15em;
 	text-transform: uppercase;
 	padding: 0.5rem 1rem;
 	position: relative;
@@ -163,7 +165,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
 
 /* — CTA BUTTON — */
 .conversation-btn {
-	border: 2px solid #041536;
+	border: 3px solid #041536;
 	color: #041536;
 	background: transparent;
 	text-transform: uppercase;
@@ -171,6 +173,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
 	padding: 0.4rem 1.5rem;
 	border-radius: 0.25rem;
 	transition: background 0.2s, color 0.2s;
+	width: 25%;
 }
 
 .conversation-btn:hover {

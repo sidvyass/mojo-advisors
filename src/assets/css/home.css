@@ -377,11 +377,21 @@
 }
 
 .services-section {
-	/* fallback colour in case image is not loaded */
+	/* stack gradient on top of photo */
+	background:
+		linear-gradient(to right,
+			rgba(0, 0, 0, 1.0) 50%,
+			/* 70% opaque black at left */
+			rgba(0, 0, 0, 0.2) 100%
+			/* fully transparent at right */
+		),
+		url("/assets/images/corp_meeting.jpg") center/cover no-repeat;
+
+	/* fallback colour */
 	background-color: #0d1b2a;
-	/* gradient overlay to mimic tinted glass effect */
-	background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(13, 27, 42, 0.9) 50%, rgba(13, 27, 42, 0.8) 100%), url("/assets/images/corp_meeting.jpg");
-	color: #ffffff;
+
+	/* layout */
+	color: #fff;
 	min-height: 600px;
 	display: flex;
 	align-items: center;
@@ -551,7 +561,6 @@
 }
 
 
-/* services.css */
 /* services.css */
 #our-services {
 	position: relative;
