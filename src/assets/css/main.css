@@ -40,6 +40,10 @@ main.container-fluid {
 	color: #000 !important;
 }
 
+.conversation-btn {
+	margin-left: 15rem !important;
+}
+
 
 /* Mouse hover toggle menu */
 @media (min-width: 992px) {
