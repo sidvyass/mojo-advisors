@@ -1,656 +1,518 @@
+@import url('base.css');
+
 /* ---------- Hero Section ---------- */
 .hero {
-	position: relative;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("/assets/images/hero2.jpg");
-	background-size: cover;
-	background-position: center;
-	height: 90vh;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	padding: 2rem;
-	color: white;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("/assets/images/hero2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    color: white;
 }
 
 .hero .hero-card {
-	padding: 1rem;
+    padding: 1rem;
 }
 
 .hero-card h1.display-5 {
-	font-size: 80px;
-	font-weight: 900 !important;
+    font-family: var(--hero-font-family);
+    font-size: var(--hero-font-size);
+    font-weight: var(--hero-font-weight) !important;
+    text-transform: uppercase;
 }
 
 .hero-card p {
-	font-size: 25px;
-	font-weight: 800;
-	color: #ddd;
+    font-size: var(--hero-font-size-p);
+    font-weight: var(--hero-font-weight-p);
+    color: #ddd;
 }
 
 .hero-btn {
-	background-color: #041536;
-	margin-top: 1rem;
-	padding: 1rem;
-	min-height: 40px;
+    background-color: var(--primary-color);
+    /* vertically centers text if no padding */
+    padding: 0 1.5rem;
+    /* horizontal padding only */
 }
 
 /* ---------- Company Logos ---------- */
 .company-logo {
-	max-height: 40px;
-	width: auto;
-	object-fit: contain;
+    max-height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
 .company-logos .company-logo {
-	height: 120px;
-	width: 100%;
-	padding: 2rem;
+    height: 120px;
+    width: 100%;
+    padding: 2rem;
 }
 
 /* ---------- Biz Section ---------- */
-.biz-section {
-	background-color: #000;
-	min-height: 600px;
-}
 
 .biz-heading {
-	font-size: 3.6rem;
-	font-weight: 500;
+    font-size: 3.6rem;
+    font-weight: 500;
 }
 
 .biz-copy {
-	font-size: 1.125rem;
-	line-height: 1.6;
+    font-size: 1.125rem;
+    line-height: 1.6;
 }
 
 .biz-text-muted {
-	font-size: 1.25rem;
-	font-style: italic;
+    font-size: 1.25rem;
+    font-style: italic;
 }
 
 .biz-btn {
-	padding: 0.75rem 1.5rem;
-	width: auto;
-}
-
-.biz-img {
-	height: 100%;
+    padding: 0.75rem 1.5rem;
+    width: auto;
 }
 
 /* ---------- SVG Icons ---------- */
 .svg-icon {
-	width: 2.5rem;
-	height: 2.5rem;
-	fill: currentColor;
-	opacity: 0.8;
-	transition: opacity .25s;
-	margin-right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: currentColor;
+    opacity: 0.8;
+    transition: opacity .25s;
+    margin-right: 1rem;
 }
 
 .svg-icon:hover {
-	opacity: 1;
+    opacity: 1;
 }
 
 /* ---------- Testimonials Section ---------- */
 .testimonials-heading {
-	font-size: 5.5rem;
-	font-weight: 700;
-	letter-spacing: 3px;
-	padding-bottom: 1rem;
+    font-size: 5.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding-bottom: 1rem;
 }
 
 .testimonials-sub-heading {
-	font-size: 3rem;
-	font-weight: 500;
-	padding-bottom: 1.5rem;
+    font-size: 3rem;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
 }
 
 .test-card {
-	padding: 2rem 1rem;
+    padding: 2rem 1rem;
 }
 
 .testimonial-text {
-	font-size: 1.6rem;
-	line-height: 1.6;
+    font-size: 1.6rem;
+    line-height: 1.6;
 }
 
 .testimonial-author {
-	font-size: 2rem;
-	font-weight: 500;
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 .testimonial-company {
-	font-size: 1rem;
-	font-weight: 500;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 #testimonialCarousel .carousel-control-prev,
 #testimonialCarousel .carousel-control-next {
-	width: 2.5rem;
-	height: 2.5rem;
-	background-color: #000;
-	border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #000;
+    border-radius: 50%;
 }
 
 #testimonialCarousel .carousel-control-prev-icon,
 #testimonialCarousel .carousel-control-next-icon {
-	background-size: 1.2rem 1.2rem;
+    background-size: 1.2rem 1.2rem;
 }
 
 /* 1) Hide the default Swiper SVG backgrounds */
 .my-testimonial-swiper .swiper-button-prev,
 .my-testimonial-swiper .swiper-button-next {
-	background: none;
+    background: none;
 }
 
 /* 2) Inject your own light-grey arrows */
 .my-testimonial-swiper .swiper-button-prev::after,
 .my-testimonial-swiper .swiper-button-next::after {
-	content: '';
-	font-size: 1.8rem;
-	color: #ccc;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	font-family: monospace;
+    content: '';
+    font-size: 1.8rem;
+    color: #ccc;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: monospace;
 }
 
 /* ← on the left */
 .my-testimonial-swiper .swiper-button-prev::after {
-	content: '←';
-	left: 0.5rem;
+    content: '←';
+    left: 0.5rem;
 }
 
 /* → on the right */
 .my-testimonial-swiper .swiper-button-next::after {
-	content: '→';
-	right: 0.5rem;
-}
-
-/* ---------- CTA Section ---------- */
-.cta-section {
-	background-color: #000;
-}
-
-.cta-title {
-	font-size: 2.5rem;
-}
-
-.cta-text {
-	font-size: 1.25rem;
-	max-width: 600px;
-	margin: 0 auto;
-}
-
-.cta-btn {
-	background-color: #041536;
-	border-color: #041536;
-	color: #fff;
-	padding: 0.75rem 1.5rem;
-	transition: background-color .3s;
-}
-
-.cta-btn:hover {
-	background-color: #03213a;
+    content: '→';
+    right: 0.5rem;
 }
 
 
 /* ---------- Media Queries ---------- */
 /* Medium tablets and below (≤992px) */
 @media (max-width: 992px) {
-	.hero {
-		height: 80vh;
-		padding: 4rem 0;
-	}
+    .hero {
+        height: 80vh;
+        padding: 4rem 0;
+    }
 
-	.hero-card {
-		text-align: center !important;
-	}
+    .hero-card {
+        text-align: center !important;
+    }
 
-	.hero-card h1.display-5 {
-		font-size: 3.5rem;
-	}
+    .hero-card h1.display-5 {
+        font-size: 3.5rem;
+    }
 
 
-	.hero-card p {
-		font-size: 1.25rem;
-	}
+    .hero-card p {
+        font-size: 1.25rem;
+    }
 
-	.services-heading {
-		font-size: 3.5rem;
-	}
+    .services-heading {
+        font-size: 3.5rem;
+    }
 
-	.service-point h5 {
-		font-size: 2rem;
-		font-weight: 500 !important;
-	}
+    .service-point h5 {
+        font-size: 2rem;
+        font-weight: 500 !important;
+    }
 
-	.service-point p {
-		font-size: 1.125rem;
-	}
+    .service-point p {
+        font-size: 1.125rem;
+    }
 
-	.biz-heading {
-		font-size: 2.75rem;
-	}
+    .biz-heading {
+        font-size: 2.75rem;
+    }
 
-	.biz-copy {
-		font-size: 1.25rem;
-	}
+    .biz-copy {
+        font-size: 1.25rem;
+    }
 
-	.biz-section .row {
-		margin-top: 2rem;
-	}
+    .biz-section .row {
+        margin-top: 2rem;
+    }
 
-	.testimonials-heading {
-		font-size: 4rem;
-	}
+    .testimonials-heading {
+        font-size: 4rem;
+    }
 
-	.testimonials-sub-heading {
-		font-size: 1.5rem;
-	}
+    .testimonials-sub-heading {
+        font-size: 1.5rem;
+    }
 
-	.testimonial-author {
-		font-size: 1.75rem;
-	}
+    .testimonial-author {
+        font-size: 1.75rem;
+    }
 
-	.testimonial-company {
-		font-size: 0.9rem;
-	}
+    .testimonial-company {
+        font-size: 0.9rem;
+    }
 
-	#testimonialCarousel .test-card .card-body p.fst-italic {
-		font-size: 1.4rem;
-	}
+    #testimonialCarousel .test-card .card-body p.fst-italic {
+        font-size: 1.4rem;
+    }
 
-	#testimonialCarousel .test-card .card-body h5.fw-bold {
-		font-size: 1.75rem;
-	}
+    #testimonialCarousel .test-card .card-body h5.fw-bold {
+        font-size: 1.75rem;
+    }
 
-	#testimonialCarousel .test-card .card-body p.text-muted {
-		font-size: 0.9rem;
-	}
-
-	.cta-title {
-		font-size: 2.25rem;
-	}
-
-	.cta-text {
-		font-size: 1.125rem;
-	}
+    #testimonialCarousel .test-card .card-body p.text-muted {
+        font-size: 0.9rem;
+    }
 }
 
 /* Phones down (≤576px) */
 @media (max-width: 576px) {
-	.hero {
-		padding: 2rem 1rem;
-	}
+    .hero {
+        padding: 2rem 1rem;
+    }
 
-	.hero-card {
-		text-align: center !important;
-	}
+    .hero-card {
+        text-align: center !important;
+    }
 
-	.hero-card h1.display-5 {
-		font-size: 3rem;
-	}
+    .hero-card h1.display-5 {
+        font-size: 3rem;
+    }
 
-	.hero-card p {
-		font-size: 1.25rem;
-	}
+    .hero-card p {
+        font-size: 1.25rem;
+    }
 
-	.company-logo {
-		max-height: 35px;
-	}
+    .company-logo {
+        max-height: 35px;
+    }
 
-	.services-heading {
-		font-size: 2.5rem;
-	}
+    .services-heading {
+        font-size: 2.5rem;
+    }
 
-	.service-point h5 {
-		font-size: 1.5rem;
-		font-weight: 500 !important;
-	}
+    .service-point h5 {
+        font-size: 1.5rem;
+        font-weight: 500 !important;
+    }
 
-	.service-point p {
-		font-size: 1.125rem;
-	}
+    .service-point p {
+        font-size: 1.125rem;
+    }
 
-	.biz-heading {
-		font-size: 2.25rem;
-	}
+    .biz-heading {
+        font-size: 2.25rem;
+    }
 
-	.biz-copy {
-		font-size: 1rem;
-	}
+    .biz-copy {
+        font-size: 1rem;
+    }
 
-	.biz-btn {
-		display: block;
-		width: 100%;
-		text-align: center;
-	}
+    .biz-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
 
-	.testimonials-heading {
-		font-size: 2.5rem;
-	}
+    .testimonials-heading {
+        font-size: 2.5rem;
+    }
 
-	.testimonials-sub-heading {
-		font-size: 1.25rem;
-	}
+    .testimonials-sub-heading {
+        font-size: 1.25rem;
+    }
 
-	.testimonial-author {
-		font-size: 1.5rem;
-	}
+    .testimonial-author {
+        font-size: 1.5rem;
+    }
 
-	.testimonial-company {
-		font-size: 0.8rem;
-	}
+    .testimonial-company {
+        font-size: 0.8rem;
+    }
 
-	#testimonialCarousel .card {
-		height: 150vh;
-	}
+    #testimonialCarousel .card {
+        height: 150vh;
+    }
 
-	#testimonialCarousel .carousel-inner {
-		touch-action: pan-y;
-	}
+    #testimonialCarousel .carousel-inner {
+        touch-action: pan-y;
+    }
 
-	#testimonialCarousel .test-card .card-body p.fst-italic {
-		font-size: 1rem;
-	}
+    #testimonialCarousel .test-card .card-body p.fst-italic {
+        font-size: 1rem;
+    }
 
-	#testimonialCarousel .test-card .card-body h5.fw-bold {
-		font-size: 1.5rem;
-	}
+    #testimonialCarousel .test-card .card-body h5.fw-bold {
+        font-size: 1.5rem;
+    }
 
-	#testimonialCarousel .test-card .card-body p.text-muted {
-		font-size: 0.8rem;
-	}
-
-	.cta-title {
-		font-size: 1.75rem;
-	}
-
-	.cta-text {
-		font-size: 1rem;
-	}
-
-	.cta-btn {
-		width: 100%;
-	}
-}
-
-.services-section {
-	/* stack gradient on top of photo */
-	background:
-		linear-gradient(to right,
-			rgba(0, 0, 0, 1.0) 50%,
-			/* 70% opaque black at left */
-			rgba(0, 0, 0, 0.2) 100%
-			/* fully transparent at right */
-		),
-		url("/assets/images/corp_meeting.jpg") center/cover no-repeat;
-
-	/* fallback colour */
-	background-color: #0d1b2a;
-
-	/* layout */
-	color: #fff;
-	min-height: 600px;
-	display: flex;
-	align-items: center;
-	position: relative;
-	overflow: hidden;
-}
-
-/* Card style: translucent with border and blur effect */
-.services-card {
-	background: rgba(0, 34, 58, 0.75);
-	border: 1px solid rgba(0, 173, 239, 0.4);
-	border-radius: 0.5rem;
-	backdrop-filter: blur(6px);
-	-webkit-backdrop-filter: blur(6px);
-}
-
-/* Underline style for list items (except last) via border-bottom from HTML) */
-.services-card ul li {
-	line-height: 1.5;
-}
-
-/* Responsiveness: adjust padding on smaller screens */
-@media (max-width: 767.98px) {
-	.services-section {
-		padding: 3rem 1rem;
-		min-height: auto;
-	}
-
-	.services-card {
-		margin-top: 2rem;
-	}
-}
-
-/* Increase main heading size & tighten line-height */
-.services-section h2 {
-	font-size: 5rem;
-	font-weight: 900 !important;
-	line-height: 1.1;
-}
-
-/* “Brady CFO provides:” text */
-.services-card>p {
-	font-size: 2rem;
-}
-
-/* Icons in the list */
-.services-card ul li i {
-	font-size: 3rem;
-}
-
-/* List item text */
-.services-card ul li span {
-	font-size: 22px;
-	/* Optional: slightly more letter-spacing for readability */
-	letter-spacing: 0.5px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 767.98px) {
-	.services-section h2 {
-		font-size: 2.5rem;
-	}
-
-	.services-card>p {
-		font-size: 1.1rem;
-	}
-
-	.services-card ul li i {
-		font-size: 1.75rem;
-	}
-
-	.services-card ul li span {
-		font-size: 1rem;
-	}
+    #testimonialCarousel .test-card .card-body p.text-muted {
+        font-size: 0.8rem;
+    }
 }
 
 .strategy-section {
-	position: relative;
-	background-image:
-		linear-gradient(to right,
-			rgba(255, 255, 255, 0.3) 0%,
-			rgba(255, 255, 255, 0.9) 25%,
-			rgba(255, 255, 255, 1.0) 75%,
-			rgba(255, 255, 255, 0.3) 100%),
-		url('/assets/images/farm_photo.jpg');
-	background-size: cover;
-	background-position: center;
-	min-height: 600px;
+    position: relative;
+    background-image:
+        linear-gradient(to right,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0.9) 25%,
+            rgba(255, 255, 255, 1.0) 75%,
+            rgba(255, 255, 255, 0.3) 100%),
+        url('/assets/images/farm_photo.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
 }
 
 .strategy-section h2 {
-	font-size: 36px;
+    font-size: 36px;
 }
 
 .strategy-section .h5 {
-	font-size: 30px;
-	font-weight: 700;
+    font-size: 30px;
+    font-weight: 700;
 }
 
 .strategy-section p {
-	font-weight: 500;
-	font-size: 24px;
-	line-height: 210%;
-	text-align: center;
-	color: #101010;
-	max-width: 728px;
-	margin: 0 auto;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 210%;
+    text-align: center;
+    color: #101010;
+    max-width: 728px;
+    margin: 0 auto;
 }
 
 /* Responsive tweaks for .strategy-section */
 @media (max-width: 767.98px) {
 
-	/* Mobile */
-	.strategy-section {
-		min-height: 250px;
-		padding: 2rem 1rem;
-		background-image:
-			linear-gradient(to right,
-				rgba(255, 255, 255, 0.3) 0%,
-				rgba(255, 255, 255, 0.9) 25%,
-				rgba(255, 255, 255, 1.0) 75%,
-				rgba(255, 255, 255, 0.3) 100%),
-			url('/assets/images/farm_photo.jpg');
-	}
+    /* Mobile */
+    .strategy-section {
+        min-height: 250px;
+        padding: 2rem 1rem;
+        background-image:
+            linear-gradient(to right,
+                rgba(255, 255, 255, 0.3) 0%,
+                rgba(255, 255, 255, 0.9) 25%,
+                rgba(255, 255, 255, 1.0) 75%,
+                rgba(255, 255, 255, 0.3) 100%),
+            url('/assets/images/farm_photo.jpg');
+    }
 
-	.strategy-section h2 {
-		font-size: 1.5rem;
-	}
+    .strategy-section h2 {
+        font-size: 1.5rem;
+    }
 
-	.strategy-section p.h5 {
-		font-size: 1.125rem;
-	}
+    .strategy-section p.h5 {
+        font-size: 1.125rem;
+    }
 
-	.strategy-section p.lead {
-		font-size: 1rem;
-		max-width: 100%;
-	}
+    .strategy-section p.lead {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    #our-services .services-title {
+        font-size: 3rem !important;
+        padding-bottom: 0rem;
+    }
 }
+
 
 @media (min-width: 768px) and (max-width: 991.98px) {
 
-	/* Tablet */
-	.strategy-section {
-		min-height: 300px;
-		padding: 3rem 1.5rem;
-		background-image:
-			linear-gradient(to right,
-				rgba(255, 255, 255, 0.3) 0%,
-				rgba(255, 255, 255, 0.9) 25%,
-				rgba(255, 255, 255, 1.0) 75%,
-				rgba(255, 255, 255, 0.3) 100%),
-			url('/assets/images/farm_photo.jpg');
-	}
+    /* Tablet */
+    .strategy-section {
+        min-height: 300px;
+        padding: 3rem 1.5rem;
+        background-image:
+            linear-gradient(to right,
+                rgba(255, 255, 255, 0.3) 0%,
+                rgba(255, 255, 255, 0.9) 25%,
+                rgba(255, 255, 255, 1.0) 75%,
+                rgba(255, 255, 255, 0.3) 100%),
+            url('/assets/images/farm_photo.jpg');
+    }
 
-	.strategy-section h2 {
-		font-size: 1.75rem;
-	}
+    .strategy-section h2 {
+        font-size: 1.75rem;
+    }
 
-	.strategy-section p.h5 {
-		font-size: 1.25rem;
-	}
+    .strategy-section p.h5 {
+        font-size: 1.25rem;
+    }
 
-	.strategy-section p.lead {
-		font-size: 1.125rem;
-		max-width: 600px;
-	}
+    .strategy-section p.lead {
+        font-size: 1.125rem;
+        max-width: 600px;
+    }
 }
 
 
 /* services.css */
 #our-services {
-	position: relative;
-	overflow: hidden;
-	min-height: 800px;
+    position: relative;
+    overflow: hidden;
+    min-height: 800px;
 }
 
 /* break the H1 out to full viewport width */
 #our-services .services-title {
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 100vw;
-	/* span the full viewport */
-	margin: 0 0 2rem;
-	font-size: 12rem;
-	font-weight: 900;
-	text-transform: uppercase;
-	color: rgba(0, 0, 0, 0.05);
-	pointer-events: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    margin: 0 0 2rem;
+    font-size: 11rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.05);
+    pointer-events: none;
 }
 
 /* pale block behind image */
 #our-services .bg-block {
-	position: absolute;
-	top: 35%;
-	right: -20%;
-	width: 100%;
-	height: 80%;
-	background-color: #e6eef3;
-	border-radius: 0.25rem;
-	z-index: 1;
+    position: absolute;
+    top: 35%;
+    right: -20%;
+    width: 100%;
+    height: 80%;
+    background-color: #e6eef3;
+    border-radius: 0.25rem;
+    z-index: 1;
 }
 
 /* lift image above the block */
 #our-services .section-img {
-	position: relative;
-	z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 /* underline on Learn More */
 #our-services .learn-more {
-	border-bottom: 3px solid #00adef;
-	padding-bottom: 2px;
+    border-bottom: 3px solid #00adef;
+    padding-bottom: 2px;
 }
 
 
 /* 2. Sub-heading (<h2>) */
 #our-services h2 {
-	font-family: Arial, sans-serif;
-	font-size: 22px;
-	font-weight: 500;
-	color: #33503f;
-	text-transform: uppercase;
-	margin-bottom: 1rem;
-	letter-spacing: .21em;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #33503f;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: .21em;
 }
 
 /* 3. Paragraphs */
 #our-services p {
-	font-family: Georgia, serif;
-	font-size: 18px;
-	font-weight: 500;
-	line-height: 1.6;
-	color: #222;
-	margin-bottom: 1rem;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #222;
+    margin-bottom: 1rem;
 }
 
 /* 4. List items */
 #our-services ul li {
-	font-family: Georgia, serif;
-	font-size: 18px;
-	font-weight: 500;
-	line-height: 1.6;
-	color: #222;
-	margin-bottom: .5rem;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #222;
+    margin-bottom: .5rem;
 }
 
 /* 5. “Learn More” link/button */
 #our-services .learn-more {
-	font-family: Arial, sans-serif;
-	font-size: 22px;
-	font-weight: 700;
-	color: #1d1d1d;
-	text-decoration: none;
-	border-bottom: 4px solid #009db3;
-	/*padding-bottom: 2px;*/
-	display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1d1d1d;
+    text-decoration: none;
+    border-bottom: 4px solid #009db3;
+    /*padding-bottom: 2px;*/
+    display: inline-block;
 }
 
 #our-services .learn-more:hover {
-	border-color: #007a8a;
+    border-color: #007a8a;
 }

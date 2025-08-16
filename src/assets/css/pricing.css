@@ -1,121 +1,136 @@
+@import url('base.css');
+
 /* ---------- Hero Section ---------- */
 .hero {
-	position: relative;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("/assets/images/pricing_hero.jpg");
-	background-size: cover;
-	background-position: center;
-	height: 90vh;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	padding: 2rem;
-	color: white;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("/assets/images/pricing_hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    color: white;
 }
 
 .hero .hero-card {
-	padding: 1rem;
+    padding: 1rem;
 }
 
 .hero-card h1.display-5 {
-	font-size: 66px;
-	font-weight: 700 !important;
-	text-transform: uppercase;
+    font-size: clamp(2rem, 6.5vw, 66px);
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    line-height: 1.1;
+    /* add: keeps big headings from wrapping too tall */
 }
 
 .hero-card p {
-	font-size: 25px;
-	font-weight: 600;
-	color: #ddd;
+    font-size: clamp(1rem, 3.5vw, 25px);
+    font-weight: 600;
+    color: #ddd;
 }
 
 .hero-btn {
-	background-color: #041536;
-	margin-top: 1rem;
-	padding: 1rem;
-	min-height: 40px;
+    background-color: var(--primary-color);
+    padding: 0 1.5rem;
 }
 
-/* colors */
-:root {
-	--dark-blue: #041536;
-	--light-gray: #e6edf3;
+/* --- OPTIONAL: make existing mobile rules actually hit your hero selectors --- */
+@media (max-width: 767.98px) {
+
+    .hero .hero-card h1.display-5 {
+        font-size: 2rem;
+    }
+
+    .hero .hero-card p {
+        font-size: 0.95rem;
+    }
+
+    .hero .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
 }
+
 
 /* SECTION SETUP */
 .pad-con {
-	padding-right: 4rem !important;
-	padding-left: 4rem !important;
+    padding-right: 4rem !important;
+    padding-left: 4rem !important;
 }
 
 /* BACKGROUND TITLE */
 .what-title {
-	top: 1rem;
-	left: 50%;
-	font-size: 12rem;
-	font-weight: 900;
-	line-height: 1;
-	color: #000;
-	opacity: 0.05;
-	white-space: nowrap;
-	pointer-events: none;
-	user-select: none;
+    top: 1rem;
+    left: 50%;
+    font-size: 12rem;
+    font-weight: 900;
+    line-height: 1;
+    color: #000;
+    opacity: 0.05;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
 }
 
 /* CARD STYLES */
 .what-we-do .card {
-	background: none;
+    background: none;
 }
 
 .what-we-do .card-header {
-	background-color: var(--dark-blue);
-	color: #fff;
-	padding: 1.5rem;
-	border-radius: 0.25rem 0.25rem 0 0;
-	min-height: 5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    min-height: 5rem;
 }
 
 .what-we-do .card-header i {
-	font-size: 1.75rem;
+    font-size: 1.75rem;
 }
 
 .what-we-do .card-header h5 {
-	font-size: 1.75rem;
+    font-size: 1.75rem;
 }
 
 .what-we-do .card-body {
-	background-color: var(--light-gray);
-	padding: 1.5rem;
-	border-radius: 0 0 0.25rem 0.25rem;
+    background-color: #e6edf3;
+    padding: 1.5rem;
+    border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .what-we-do .card-body p {
-	margin: 0;
-	font-size: 18px;
-	font-weight: 500;
-	line-height: 1.6;
-	color: #212529;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #212529;
 }
 
 /* GUTTER & SPACING */
 .what-we-do .row>[class*="col-"] {
-	display: flex;
+    display: flex;
 }
 
 .what-we-do .card {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* brand header background */
 .bg-brand {
-	background-color: #1f3e5c;
-	/* adjust to match your navy */
+    background-color: #1f3e5c;
+    /* adjust to match your navy */
 }
 
 /* ensure consistent icon/text alignment if needed */
 .what-we-do .card-header i {
-	flex-shrink: 0;
+    flex-shrink: 0;
 }
 
 /* optional: tighten paragraph to better match screenshot */
@@ -125,434 +140,310 @@
 
 /* RESPONSIVE ADJUSTMENTS */
 @media (max-width: 767.98px) {
-	.section-bg-title {
-		font-size: 3rem;
-	}
+    .section-bg-title {
+        font-size: 3rem;
+    }
 
-	.what-we-do .card-header {
-		padding: 1rem;
-		min-height: auto;
-	}
+    .what-we-do .card-header {
+        padding: 1rem;
+        min-height: auto;
+    }
 
-	.what-we-do .card-header i {
-		font-size: 1.5rem;
-	}
+    .what-we-do .card-header i {
+        font-size: 1.5rem;
+    }
 
-	.what-we-do .card-header h5 {
-		font-size: 1rem;
-	}
+    .what-we-do .card-header h5 {
+        font-size: 1rem;
+    }
 
-	.what-we-do .card-body {
-		padding: 1rem;
-	}
+    .what-we-do .card-body {
+        padding: 1rem;
+    }
 
-	.what-we-do .card-body p {
-		font-size: 0.9rem;
-	}
+    .what-we-do .card-body p {
+        font-size: 0.9rem;
+    }
 }
 
 /* ---------- Pricing Section ---------- */
 .pricing-section .plan-card {
-	border: 1px solid #041536;
-	border-radius: 0.5rem;
-	padding: 2rem;
-	background-color: #fff;
-	position: relative;
-	overflow: visible;
-	flex: 1;
-	display: flex;
-	flex-direction: column;
+    border: 1px solid #041536;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    background-color: #fff;
+    position: relative;
+    overflow: visible;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .pricing-section .row>[class*="col-"] {
-	display: flex;
+    display: flex;
 }
 
 .pricing-section .plan-card:hover {
-	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-	transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
 }
 
 .pricing-section .feature-item img[src$="check-mark.svg"] {
-	filter: invert(36%) sepia(82%) saturate(5283%) hue-rotate(90deg) brightness(90%) contrast(92%);
+    filter: invert(36%) sepia(82%) saturate(5283%) hue-rotate(90deg) brightness(90%) contrast(92%);
 }
 
 .price-btn {
-	background-color: #041536;
+    background-color: #041536;
 }
 
 .pricing-container {
-	padding-top: 2rem;
-	padding-right: 4rem !important;
-	padding-left: 4rem !important;
+    padding-top: 2rem;
+    padding-right: 4rem !important;
+    padding-left: 4rem !important;
 }
 
 .most-selected {
-	background-color: #000 !important;
+    background-color: #000 !important;
 }
 
 .pricing-heading {
-	font-size: 4rem;
-	font-weight: 700;
-	padding-top: 1rem;
-	padding-bottom: 2rem;
+    font-size: 4rem;
+    font-weight: 700;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
 
 
 .pricing-heading::after {
-	content: "";
-	display: block;
-	width: 3rem;
-	height: 0.35rem;
-	background-color: #041536;
-	margin: 0.25rem auto 0;
-	border-radius: 2px;
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 0.35rem;
+    background-color: #041536;
+    margin: 0.25rem auto 0;
+    border-radius: 2px;
 }
 
 .plan-card h3 {
-	font-size: 1.75rem;
+    font-size: 1.75rem;
 }
 
 .plan-card .price {
-	font-size: 1.25rem;
-	font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 
 .pricing-section .plan-card.featured .ribbon {
-	position: absolute;
-	top: -0.75rem;
-	left: 50%;
-	transform: translateX(-50%);
-	background-color: #e6edf3;
-	color: #000;
-	padding: 0.35rem 0.75rem;
-	border-radius: 1.5rem;
-	font-size: 0.875rem;
-	font-weight: 700;
-	z-index: 1;
-	white-space: nowrap;
+    position: absolute;
+    top: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e6edf3;
+    color: #000;
+    padding: 0.35rem 0.75rem;
+    border-radius: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    z-index: 1;
+    white-space: nowrap;
 }
 
 /* ---------- Testimonials Section ---------- */
 .testimonials-heading {
-	font-size: 5.5rem;
-	font-weight: 700;
-	letter-spacing: 3px;
-	padding-bottom: 1rem;
+    font-size: 5.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding-bottom: 1rem;
 }
 
 .testimonials-sub-heading {
-	font-size: 3rem;
-	font-weight: 500;
-	padding-bottom: 1.5rem;
+    font-size: 3rem;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
 }
 
 .test-card {
-	padding: 2rem 1rem;
+    padding: 2rem 1rem;
 }
 
 .testimonial-text {
-	font-size: 1.6rem;
-	line-height: 1.6;
+    font-size: 1.6rem;
+    line-height: 1.6;
 }
 
 .testimonial-author {
-	font-size: 2rem;
-	font-weight: 500;
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 .testimonial-company {
-	font-size: 1rem;
-	font-weight: 500;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 #testimonialCarousel .carousel-control-prev,
 #testimonialCarousel .carousel-control-next {
-	width: 2.5rem;
-	height: 2.5rem;
-	background-color: #000;
-	border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #000;
+    border-radius: 50%;
 }
 
 #testimonialCarousel .carousel-control-prev-icon,
 #testimonialCarousel .carousel-control-next-icon {
-	background-size: 1.2rem 1.2rem;
+    background-size: 1.2rem 1.2rem;
 }
 
 /* 1) Hide the default Swiper SVG backgrounds */
 .my-testimonial-swiper .swiper-button-prev,
 .my-testimonial-swiper .swiper-button-next {
-	background: none;
+    background: none;
 }
 
 /* 2) Inject your own light-grey arrows */
 .my-testimonial-swiper .swiper-button-prev::after,
 .my-testimonial-swiper .swiper-button-next::after {
-	content: '';
-	font-size: 1.8rem;
-	color: #ccc;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	font-family: monospace;
+    content: '';
+    font-size: 1.8rem;
+    color: #ccc;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: monospace;
 }
 
 /* ← on the left */
 .my-testimonial-swiper .swiper-button-prev::after {
-	content: '←';
-	left: 0.5rem;
+    content: '←';
+    left: 0.5rem;
 }
 
 /* → on the right */
 .my-testimonial-swiper .swiper-button-next::after {
-	content: '→';
-	right: 0.5rem;
+    content: '→';
+    right: 0.5rem;
 }
 
 /* ---------- Company Logos ---------- */
 .company-logo {
-	max-height: 40px;
-	width: auto;
-	object-fit: contain;
+    max-height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
 .company-logos .company-logo {
-	height: 120px;
-	width: 100%;
-	padding: 2rem;
+    height: 120px;
+    width: 100%;
+    padding: 2rem;
 }
 
-/* ---------- CTA Section ---------- */
-.cta-section {
-	background-color: #000;
-}
-
-.cta-title {
-	font-size: 2.5rem;
-}
-
-.cta-text {
-	font-size: 1.25rem;
-	max-width: 600px;
-	margin: 0 auto;
-}
-
-.cta-btn {
-	background-color: #041536;
-	border-color: #041536;
-	color: #fff;
-	padding: 0.75rem 1.5rem;
-	transition: background-color .3s;
-}
-
-.cta-btn:hover {
-	background-color: #03213a;
-}
 
 /* ---------- Responsive Adjustments ---------- */
 /* Mobile: Hero */
 @media (max-width: 767.98px) {
-	.hero {
-		height: 80vh;
-		padding: 1.5rem 1rem;
-	}
+    .hero {
+        height: 80vh;
+        padding: 1.5rem 1rem;
+    }
 
-	.hero h1 {
-		font-size: 2.5rem;
-		line-height: 1.2;
-	}
+    .hero h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
 
-	.hero p.lead {
-		font-size: 1rem;
-	}
+    .hero p.lead {
+        font-size: 1rem;
+    }
 
-	.hero .btn-lg {
-		padding: 0.75rem 1.5rem;
-		font-size: 1rem;
-	}
+    .hero .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
 }
 
 /* Tablet & below */
 @media (max-width: 992px) {
-	.testimonials-heading {
-		font-size: 4rem;
-	}
+    .testimonials-heading {
+        font-size: 4rem;
+    }
 
-	.testimonials-sub-heading {
-		font-size: 1.5rem;
-	}
+    .testimonials-sub-heading {
+        font-size: 1.5rem;
+    }
 
-	.testimonial-author {
-		font-size: 1.75rem;
-	}
+    .testimonial-author {
+        font-size: 1.75rem;
+    }
 
-	.testimonial-company {
-		font-size: 0.9rem;
-	}
+    .testimonial-company {
+        font-size: 0.9rem;
+    }
 
-	#testimonialCarousel .test-card .card-body p.fst-italic {
-		font-size: 1.4rem;
-	}
+    #testimonialCarousel .test-card .card-body p.fst-italic {
+        font-size: 1.4rem;
+    }
 
-	#testimonialCarousel .test-card .card-body h5.fw-bold {
-		font-size: 1.75rem;
-	}
+    #testimonialCarousel .test-card .card-body h5.fw-bold {
+        font-size: 1.75rem;
+    }
 
-	#testimonialCarousel .test-card .card-body p.text-muted {
-		font-size: 0.9rem;
-	}
-
-	.cta-title {
-		font-size: 2.25rem;
-	}
-
-	.cta-text {
-		font-size: 1.125rem;
-	}
+    #testimonialCarousel .test-card .card-body p.text-muted {
+        font-size: 0.9rem;
+    }
 }
 
 /* Phone & below */
 @media (max-width: 576px) {
+    .what-title {
+        font-size: 3rem;
+    }
 
-	.pricing-heading {
-		font-size: 3rem;
-		font-weight: 700;
-		padding-top: 1rem;
-		padding-bottom: 2rem;
-	}
+    .pricing-heading {
+        font-size: 3rem;
+        font-weight: 700;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
 
-	.pricing-container {
-		padding-top: 2rem;
-		padding-right: 1.5rem !important;
-		padding-left: 1.5rem !important;
-	}
+    .pricing-container {
+        padding-top: 2rem;
+        padding-right: 1.5rem !important;
+        padding-left: 1.5rem !important;
+    }
 
-	.testimonials-heading {
-		font-size: 2.5rem;
-	}
+    .testimonials-heading {
+        font-size: 2.5rem;
+    }
 
-	.testimonials-sub-heading {
-		font-size: 1.25rem;
-	}
+    .testimonials-sub-heading {
+        font-size: 1.25rem;
+    }
 
-	.testimonial-author {
-		font-size: 1.5rem;
-	}
+    .testimonial-author {
+        font-size: 1.5rem;
+    }
 
-	.testimonial-company {
-		font-size: 0.8rem;
-	}
+    .testimonial-company {
+        font-size: 0.8rem;
+    }
 
-	#testimonialCarousel .card {
-		height: 150vh;
-	}
+    #testimonialCarousel .card {
+        height: 150vh;
+    }
 
-	#testimonialCarousel .carousel-inner {
-		touch-action: pan-y;
-	}
+    #testimonialCarousel .carousel-inner {
+        touch-action: pan-y;
+    }
 
-	#testimonialCarousel .test-card .card-body p.fst-italic {
-		font-size: 1rem;
-	}
+    #testimonialCarousel .test-card .card-body p.fst-italic {
+        font-size: 1rem;
+    }
 
-	#testimonialCarousel .test-card .card-body h5.fw-bold {
-		font-size: 1.5rem;
-	}
+    #testimonialCarousel .test-card .card-body h5.fw-bold {
+        font-size: 1.5rem;
+    }
 
-	#testimonialCarousel .test-card .card-body p.text-muted {
-		font-size: 0.8rem;
-	}
-
-	.cta-title {
-		font-size: 1.75rem;
-	}
-
-	.cta-text {
-		font-size: 1rem;
-	}
-
-	.cta-btn {
-		width: 100%;
-	}
-}
-
-.services-section {
-	/* fallback colour in case image is not loaded */
-	background-color: #0d1b2a;
-	/* gradient overlay to mimic tinted glass effect */
-	background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(13, 27, 42, 0.9) 50%, rgba(13, 27, 42, 0.8) 100%), url("/assets/images/hero2.jpg");
-	color: #ffffff;
-	min-height: 600px;
-	display: flex;
-	align-items: center;
-	position: relative;
-	overflow: hidden;
-}
-
-/* Card style: translucent with border and blur effect */
-.services-card {
-	background: rgba(0, 34, 58, 0.75);
-	border: 1px solid rgba(0, 173, 239, 0.4);
-	border-radius: 0.5rem;
-	backdrop-filter: blur(6px);
-	-webkit-backdrop-filter: blur(6px);
-}
-
-/* Underline style for list items (except last) via border-bottom from HTML) */
-.services-card ul li {
-	line-height: 1.5;
-}
-
-/* Responsiveness: adjust padding on smaller screens */
-@media (max-width: 767.98px) {
-	.services-section {
-		padding: 3rem 1rem;
-		min-height: auto;
-	}
-
-	.services-card {
-		margin-top: 2rem;
-	}
-}
-
-/* Increase main heading size & tighten line-height */
-.services-section h2 {
-	font-size: 5rem;
-	line-height: 1.1;
-}
-
-/* “Brady CFO provides:” text */
-.services-card>p {
-	font-size: 2rem;
-}
-
-/* Icons in the list */
-.services-card ul li i {
-	font-size: 3rem;
-}
-
-/* List item text */
-.services-card ul li span {
-	font-size: 22px;
-	/* Optional: slightly more letter-spacing for readability */
-	letter-spacing: 0.5px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 767.98px) {
-	.services-section h2 {
-		font-size: 2.5rem;
-	}
-
-	.services-card>p {
-		font-size: 1.1rem;
-	}
-
-	.services-card ul li i {
-		font-size: 1.75rem;
-	}
-
-	.services-card ul li span {
-		font-size: 1rem;
-	}
+    #testimonialCarousel .test-card .card-body p.text-muted {
+        font-size: 0.8rem;
+    }
 }

@@ -1,221 +1,242 @@
+@import url('base.css');
+
 /* 1. translucent background + blur */
 nav.navbar {
-	background-color: rgba(255, 255, 255, 0.8) !important;
-	backdrop-filter: blur(10px);
-	transition: transform 0.3s ease, background-color 0.3s ease;
-	will-change: transform;
-	z-index: 1030;
-	/* ensure it sits above page content */
-	position: fixed;
-	top: 0;
-	width: 100%;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px);
+    transition: transform .3s ease, background-color .3s ease;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
 }
 
-/* 2. hidden state: slide up out of view */
 nav.navbar.navbar--hidden {
-	transform: translateY(-100%);
+    transform: translateY(-100%);
 }
 
 main.container-fluid {
-	padding-top: 80px;
-	/* roughly your navbar height + padding */
+    padding-top: 80px;
 }
 
-/* hide the little arrow on any .dropdown-toggle */
-.navbar-nav .dropdown-toggle::after {
-	display: none;
+/* Nav links: keep your style */
+.navbar .nav-link {
+    color: #041536 !important;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: .75rem 1.5rem;
 }
 
-/* increase space between About / Solutions / Careers */
-.navbar-nav.mx-auto .nav-link {
-	padding-left: 1rem;
-	padding-right: 1rem;
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #425F57;
+    transition: width .2s ease;
 }
 
-/* All nav bar text */
-.navbar .navbar-brand,
-.navbar .nav-link,
-.navbar .dropdown-item {
-	font-size: 0.95rem;
-	color: #000 !important;
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+    width: 100%;
 }
 
+/* CTA button styling (no fixed width/margins) */
 .conversation-btn {
-	margin-left: 15rem !important;
+    border: 3px solid #041536;
+    color: #041536;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.15em;
+    padding: .75rem 2.5rem;
+    border-radius: .25rem;
+    transition: background .2s, color .2s;
+}
+
+.conversation-btn:hover {
+    background: #041536;
+    color: #fff;
 }
 
 
 /* Mouse hover toggle menu */
 @media (min-width: 992px) {
 
-	/* TODO: test media */
-	.navbar .nav-item.dropdown:hover>.dropdown-menu {
-		display: block;
-		margin-top: 0;
-	}
+    /* TODO: test media */
+    .navbar .nav-item.dropdown:hover>.dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
 }
 
 .contact-us-btn {
-	background-color: #041536;
+    background-color: #041536;
 }
 
 
 /* super-specific hover styling for Contact Us button */
 nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collapse#mainNav>a.btn.btn-dark.btn-md.rounded-pill:hover {
-	background-color: #fff !important;
-	color: #000 !important;
-	border: 1px solid #000 !important;
-	box-shadow: none !important;
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
 }
 
 
 .dropdown-divider-center {
-	width: 50%;
-	margin: 0.05rem auto;
-	border-top: 1px solid #ccc;
+    width: 50%;
+    margin: 0.05rem auto;
+    border-top: 1px solid #ccc;
 }
 
 /* Overriding container-fluid boostrap class */
 .container-fluid {
-	padding-right: 0px !important;
-	padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
 }
 
 .footer-bg {
-	background-color: #000000;
+    background-color: #000000;
 }
 
 .footer-bg .row {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer-bg .col-md-6:first-child {
-	padding-left: 0;
-	/* flush the left block to the container’s left edge */
-	text-align: left;
-	/* ensure the text stays left-aligned */
+    padding-left: 0;
+    /* flush the left block to the container’s left edge */
+    text-align: left;
+    /* ensure the text stays left-aligned */
 }
 
 .footer-bg .col-md-6:last-child {
-	padding-right: 0;
-	/* flush the right block to the container’s right edge */
-	text-align: right;
-	/* ensure the list stays right-aligned */
+    padding-right: 0;
+    /* flush the right block to the container’s right edge */
+    text-align: right;
+    /* ensure the list stays right-aligned */
 }
 
 @media (max-width: 991.98px) {
 
-	.navbar-collapse.collapsing,
-	.navbar-collapse.show {
-		display: flex !important;
-		flex-direction: column;
-		align-items: center;
-		padding: 1rem 0;
-	}
+    .navbar-collapse.collapsing,
+    .navbar-collapse.show {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
 }
 
 @media (min-width: 992px) {
 
-	/* make the collapse container a positioning context */
-	.navbar .navbar-collapse {
-		position: relative;
-	}
+    /* make the collapse container a positioning context */
+    .navbar .navbar-collapse {
+        position: relative;
+    }
 
-	/* pull the nav-links out of the flex flow and center them */
-	.navbar-nav.mx-auto {
-		position: absolute;
-		top: 50%;
-		left: 42%;
-		transform: translate(-50%, -50%);
-	}
+    /* pull the nav-links out of the flex flow and center them */
+    .navbar-nav.mx-auto {
+        position: absolute;
+        top: 50%;
+        left: 42%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 /* — NAV LINKS — */
 .navbar .nav-link {
-	color: #041536 !important;
-	font-weight: 900;
-	font-size: 18px;
-	line-height: 1;
-	letter-spacing: 0.15em;
-	text-transform: uppercase;
-	padding: 0.5rem 1rem;
-	position: relative;
+    color: #041536 !important;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    position: relative;
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-	color: #041536 !important;
+    color: #041536 !important;
 }
 
 /* underline on hover & active */
 .navbar .nav-link::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 0;
-	height: 2px;
-	background-color: #425F57;
-	transition: width 0.2s ease;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #425F57;
+    transition: width 0.2s ease;
 }
 
 .navbar .nav-link:hover::after,
 .navbar .nav-link.active::after {
-	width: 100%;
+    width: 100%;
 }
 
 /* — CTA BUTTON — */
 .conversation-btn {
-	border: 3px solid #041536;
-	color: #041536;
-	background: transparent;
-	text-transform: uppercase;
-	font-weight: 600;
-	padding: 0.4rem 1.5rem;
-	border-radius: 0.25rem;
-	transition: background 0.2s, color 0.2s;
-	width: 25%;
+    border: 3px solid #041536;
+    color: #041536;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.4rem 1.5rem;
+    border-radius: 0.25rem;
+    transition: background 0.2s, color 0.2s;
+    width: 25%;
 }
 
 .conversation-btn:hover {
-	background: #041536;
-	color: #fff;
-	text-decoration: none;
+    background: #041536;
+    color: #fff;
+    text-decoration: none;
 }
 
 /* — BACKDROP & BLUR — */
 nav.navbar {
-	background-color: rgba(255, 255, 255, 0.8) !important;
-	backdrop-filter: blur(10px);
-	transition: transform 0.3s ease, background-color 0.3s ease;
-	z-index: 1030;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1030;
 }
 
 nav.navbar.navbar--hidden {
-	transform: translateY(-100%);
+    transform: translateY(-100%);
 }
 
 main.container-fluid {
-	padding-top: 80px;
-	/* navbar height */
+    padding-top: 80px;
+    /* navbar height */
 }
 
 /* 1. bump all nav-link text to 18px and add a bit more horizontal padding */
 .navbar .nav-link {
-	font-size: 18px;
-	padding: 0.75rem 1.5rem;
+    font-size: 18px;
+    padding: 0.75rem 1.5rem;
 }
 
 /* 2. bump the CTA button font to 18px and enlarge its “box” */
 .conversation-btn {
-	font-size: 18px;
-	padding: 0.75rem 2.5rem;
-	font-weight: 900;
-	line-height: 1;
-	letter-spacing: 0.15em;
-	/* you can also force a min-height if you like: */
-	/* min-height: 48px; */
+    font-size: 18px;
+    padding: 0.75rem 2.5rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.15em;
 }

@@ -1,49 +1,100 @@
+/* CONTACT HERO (responsive) */
 .hero {
-	position: relative;
-	background-image:
-		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-		url("/assets/images/contact_hero.jpg");
-	background-size: cover;
-	background-position: center;
-	height: 70vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	/* ← center horizontally */
-	padding: 2rem;
-	color: white;
+    position: relative;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+        url("/assets/images/contact_hero.jpg");
+    background-size: cover;
+    background-position: center;
+    /* Let it grow if content needs it */
+    min-height: 70vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: white;
 }
 
 .hero .hero-card {
-	/* remove the absolute positioning */
-	position: relative;
-	top: auto;
-	left: auto;
-	transform: none;
-	max-width: 600px;
-	width: 100%;
-	/* optional: lets it shrink/grow */
-	margin: 0 auto;
-	/* centers if width < container */
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    /* centers text on narrow screens */
 }
 
 .hero .hero-card>h1.display-5 {
-	font-size: 5rem;
-	font-weight: 700;
-	padding: 1rem;
+    /* scales from ~32px → 80px depending on viewport */
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: 700;
+    padding: 1rem 0.5rem;
+    line-height: 1.1;
 }
 
 .hero .hero-card>p.fs-5 {
-	color: black;
-	font-size: 1.6rem;
-	font-weight: 500;
-	padding: 1rem;
+    /* scales from ~16px → 25.6px */
+    font-size: clamp(1rem, 3.2vw, 1.6rem);
+    font-weight: 500;
+    padding: 0.5rem 0.5rem 0;
+    /* if you intended white text over the dark overlay, keep this white: */
+    /* color: #fff; */
+    color: black;
+    /* your original choice */
+    line-height: 1.45;
 }
 
 .hero-btn {
-	background-color: #041536;
-	margin-top: 1rem;
-	padding: 1rem;
-	/* This is to map it correctly below sub heading*/
-	margin-left: 0.9rem;
+    background-color: #041536;
+    margin-top: 1rem;
+    margin-left: 0.9rem;
+    padding: 0.8rem 1.1rem;
+    font-size: clamp(0.9rem, 2.8vw, 1.1rem);
+}
+
+/* Tablet tweaks */
+@media (max-width: 768px) {
+    .hero {
+        padding: 1.5rem;
+    }
+
+    .hero .hero-card {
+        max-width: 520px;
+    }
+
+    .hero-btn {
+        margin-left: 0;
+        /* avoid horizontal overflow */
+        display: inline-block;
+    }
+}
+
+/* Phone tweaks */
+@media (max-width: 576px) {
+    .hero {
+        padding: 1.25rem;
+    }
+
+    .hero .hero-card {
+        max-width: 100%;
+    }
+
+    .hero .hero-card>h1.display-5 {
+        /* clamp already handles it, but a small nudge tightens layout */
+        line-height: 1.15;
+    }
+
+    .hero .hero-card>p.fs-5 {
+        line-height: 1.5;
+    }
+
+    .hero-btn {
+        display: block;
+        /* stack under paragraph nicely */
+        margin: 0.75rem auto 0;
+    }
 }

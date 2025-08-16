@@ -1,0 +1,159 @@
+/* ===============================
+   Root variables (unchanged)
+   =============================== */
+:root {
+    /* colors */
+    --primary-color: #041536;
+
+    /* fonts */
+    --hero-font-family: "Barlow", Sans-serif;
+    --hero-font-size: 80px;
+    --hero-font-weight: 900;
+    --hero-font-size-p: 25px;
+    --hero-font-weight-p: 800;
+}
+
+/* ===============================
+   Services Section
+   =============================== */
+
+/* Base */
+.services-section {
+    /* stack gradient on top of photo */
+    background:
+        linear-gradient(to right,
+            rgba(0, 0, 0, 1.0) 50%,
+            rgba(0, 0, 0, 0.2) 100%),
+        url("/assets/images/corp_meeting.jpg") center/cover no-repeat;
+
+    /* fallback colour */
+    background-color: #0d1b2a;
+
+    /* layout */
+    color: #fff;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card */
+.services-card {
+    background: rgba(0, 34, 58, 0.75);
+    border: 1px solid rgba(0, 173, 239, 0.4);
+    border-radius: 0.5rem;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.services-card ul li {
+    line-height: 1.5;
+}
+
+/* Typography */
+.services-section h2 {
+    font-size: 5rem;
+    font-weight: 900 !important;
+    line-height: 1.1;
+}
+
+.services-card>p {
+    font-size: 2rem;
+}
+
+.services-card ul li i {
+    font-size: 3rem;
+}
+
+/* List item text */
+.services-card ul li span {
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive: Services (≤ 767.98px) */
+@media (max-width: 767.98px) {
+
+    /* Typography tweaks */
+    .services-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .services-card>p {
+        font-size: 1.1rem;
+    }
+
+    .services-card ul li i {
+        font-size: 1.75rem;
+    }
+
+    .services-card ul li span {
+        font-size: 1rem;
+    }
+
+    /* Layout tweaks */
+    .services-section {
+        padding: 3rem 1rem;
+        min-height: auto;
+    }
+
+    .services-card {
+        margin-top: 2rem;
+    }
+}
+
+/* ===============================
+   CTA Section
+   =============================== */
+.cta-section {
+    background-color: #000;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+}
+
+.cta-text {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    transition: background-color .3s;
+}
+
+.cta-btn:hover {
+    background-color: #03213a;
+}
+
+/* Responsive: CTA (≤ 992px) */
+@media (max-width: 992px) {
+    .cta-title {
+        font-size: 2.25rem;
+    }
+
+    .cta-text {
+        font-size: 1.125rem;
+    }
+}
+
+/* Responsive: CTA (≤ 576px) */
+@media (max-width: 576px) {
+    .cta-title {
+        font-size: 1.75rem;
+    }
+
+    .cta-text {
+        font-size: 1rem;
+    }
+
+    .cta-btn {
+        width: 100%;
+    }
+}
