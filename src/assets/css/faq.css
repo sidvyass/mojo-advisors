@@ -36,7 +36,7 @@
 }
 
 .hero-btn {
-    background-color: #041536;
+    background-color: var(--primary-color);
     margin-top: 1rem;
     padding: 1rem;
     margin-left: 0.9rem;

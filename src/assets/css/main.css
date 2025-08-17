@@ -21,7 +21,7 @@ main.container-fluid {
 
 /* Nav links: keep your style */
 .navbar .nav-link {
-    color: #041536 !important;
+    color: var(--primary-color) !important;
     font-weight: 900;
     font-size: 18px;
     line-height: 1;
@@ -49,8 +49,8 @@ main.container-fluid {
 
 /* CTA button styling (no fixed width/margins) */
 .conversation-btn {
-    border: 3px solid #041536;
-    color: #041536;
+    border: 3px solid var(--primary-color);
+    color: var(--primary-color);
     background: transparent;
     text-transform: uppercase;
     font-weight: 900;
@@ -63,7 +63,7 @@ main.container-fluid {
 }
 
 .conversation-btn:hover {
-    background: #041536;
+    background: #032d64;
     color: #fff;
 }
 
@@ -79,7 +79,7 @@ main.container-fluid {
 }
 
 .contact-us-btn {
-    background-color: #041536;
+    background-color: #032d64;
 }
 
 
@@ -157,7 +157,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
 
 /* — NAV LINKS — */
 .navbar .nav-link {
-    color: #041536 !important;
+    color: var(--primary-color) !important;
     font-weight: 900;
     font-size: 18px;
     line-height: 1;
@@ -169,7 +169,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-    color: #041536 !important;
+    color: var(--primary-color) !important;
 }
 
 /* underline on hover & active */
@@ -192,8 +192,8 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
 
 /* — CTA BUTTON — */
 .conversation-btn {
-    border: 3px solid #041536;
-    color: #041536;
+    border: 3px solid var(--primary-color);
+    color: var(--primary-color);
     background: transparent;
     text-transform: uppercase;
     font-weight: 600;
@@ -204,7 +204,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
 }
 
 .conversation-btn:hover {
-    background: #041536;
+    background: var(--primary-color);
     color: #fff;
     text-decoration: none;
 }

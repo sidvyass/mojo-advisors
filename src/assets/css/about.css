@@ -1,3 +1,5 @@
+@import url('base.css');
+
 /*--------------------------------------
   HERO
 --------------------------------------*/
@@ -28,7 +30,6 @@
     font-size: 70px;
     font-weight: 900 !important;
     text-transform: uppercase;
-    /*line-height: 60.6px;*/
     color: #FFFFFF;
 }
 
@@ -40,12 +41,11 @@
 }
 
 .hero-btn {
-    background-color: #041536;
+    background-color: var(--primary-color);
     margin-top: 1rem;
     padding: 1rem;
     margin-left: 0.9rem;
     font-size: 1.25rem;
-    /*width: 50%;*/
 }
 
 /*--------------------------------------
@@ -75,7 +75,7 @@
     display: block;
     width: 3rem;
     height: 0.35rem;
-    background-color: #041536;
+    background-color: var(--primary-color);
     margin: 0.25rem auto 0;
     border-radius: 2px;
 }
@@ -190,7 +190,6 @@
 
     .hero .hero-card>h1.display-5 {
         font-size: 2rem;
-        /* down from 4rem */
     }
 
     .hero .hero-card p {
@@ -201,7 +200,6 @@
     /* Team section heading */
     #team .team-heading {
         font-size: 2rem;
-        /* down from 4rem */
     }
 
     /* Name/title block */
@@ -427,8 +425,8 @@
 }
 
 .cta-btn {
-    background-color: #041536;
-    border-color: #041536;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
     color: #fff;
     padding: 0.75rem 1.5rem;
     transition: background-color .3s;

@@ -3,7 +3,8 @@
    =============================== */
 :root {
     /* colors */
-    --primary-color: #041536;
+    /*--primary-color: #041536;*/
+    --primary-color: #032d64;
 
     /* fonts */
     --hero-font-family: "Barlow", Sans-serif;
@@ -45,16 +46,17 @@
 }
 
 .hero-card p {
+    font-family: var(--hero-font-family, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
     font-size: var(--hero-font-size-p, 25px);
     font-weight: var(--hero-font-weight-p, 600);
     color: #ddd;
 }
 
 .hero-btn {
-    background-color: var(--primary-color, #00adef);
-    /* vertically centers text if no padding */
+    background-color: var(--primary-color);
+    /*border: 1px solid rgba(0, 173, 239, 0.4);*/
     padding: 0 1.5rem;
-    /* horizontal padding only */
+    /*padding-top: 2rem;*/
 }
 
 /* ---------- Responsive (same behavior as index.css) ---------- */

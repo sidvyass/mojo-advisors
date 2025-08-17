@@ -35,6 +35,16 @@
     width: auto;
 }
 
+.biz-img {
+    display: flex;
+}
+
+.biz-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* ---------- SVG Icons ---------- */
 .svg-icon {
     width: 2.5rem;
