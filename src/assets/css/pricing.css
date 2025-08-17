@@ -1,60 +1,9 @@
 @import url('base.css');
 
-/* ---------- Hero Section ---------- */
-.hero {
-    position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("/assets/images/pricing_hero.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 2rem;
-    color: white;
-}
-
-.hero .hero-card {
-    padding: 1rem;
-}
 
 .hero-card h1.display-5 {
-    font-size: clamp(2rem, 6.5vw, 66px);
-    font-weight: 700 !important;
-    text-transform: uppercase;
-    line-height: 1.1;
-    /* add: keeps big headings from wrapping too tall */
+    font-size: 60px;
 }
-
-.hero-card p {
-    font-size: clamp(1rem, 3.5vw, 25px);
-    font-weight: 600;
-    color: #ddd;
-}
-
-.hero-btn {
-    background-color: var(--primary-color);
-    padding: 0 1.5rem;
-}
-
-/* --- OPTIONAL: make existing mobile rules actually hit your hero selectors --- */
-@media (max-width: 767.98px) {
-
-    .hero .hero-card h1.display-5 {
-        font-size: 2rem;
-    }
-
-    .hero .hero-card p {
-        font-size: 0.95rem;
-    }
-
-    .hero .btn-lg {
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-    }
-
-}
-
 
 /* SECTION SETUP */
 .pad-con {
@@ -94,7 +43,7 @@
 }
 
 .what-we-do .card-header h5 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 .what-we-do .card-body {
@@ -338,29 +287,6 @@
 }
 
 
-/* ---------- Responsive Adjustments ---------- */
-/* Mobile: Hero */
-@media (max-width: 767.98px) {
-    .hero {
-        height: 80vh;
-        padding: 1.5rem 1rem;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-        line-height: 1.2;
-    }
-
-    .hero p.lead {
-        font-size: 1rem;
-    }
-
-    .hero .btn-lg {
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-    }
-}
-
 /* Tablet & below */
 @media (max-width: 992px) {
     .testimonials-heading {
@@ -394,6 +320,10 @@
 
 /* Phone & below */
 @media (max-width: 576px) {
+    .hero-card h1.display-5 {
+        font-size: 40px;
+    }
+
     .what-title {
         font-size: 3rem;
     }

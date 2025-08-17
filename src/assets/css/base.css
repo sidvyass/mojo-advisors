@@ -10,7 +10,97 @@
     --hero-font-size: 80px;
     --hero-font-weight: 900;
     --hero-font-size-p: 25px;
-    --hero-font-weight-p: 800;
+    --hero-font-weight-p: 400;
+}
+
+/* ---------- Hero (put this in base.css and use everywhere) ---------- */
+.hero {
+    position: relative;
+    /* default background; override per-page with: .hero { --hero-bg: url('/path.jpg'); } */
+    --hero-bg: url("/assets/images/hero2.jpg");
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+        var(--hero-bg);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    color: #fff;
+}
+
+.hero .hero-card {
+    padding: 1rem;
+    /* keep the nice left offset from index */
+    margin-left: 7rem;
+}
+
+.hero-card h1.display-5 {
+    font-family: var(--hero-font-family, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
+    font-size: var(--hero-font-size, 66px);
+    font-weight: var(--hero-font-weight, 700) !important;
+    text-transform: uppercase;
+}
+
+.hero-card p {
+    font-size: var(--hero-font-size-p, 25px);
+    font-weight: var(--hero-font-weight-p, 600);
+    color: #ddd;
+}
+
+.hero-btn {
+    background-color: var(--primary-color, #00adef);
+    /* vertically centers text if no padding */
+    padding: 0 1.5rem;
+    /* horizontal padding only */
+}
+
+/* ---------- Responsive (same behavior as index.css) ---------- */
+/* ≤992px */
+@media (max-width: 992px) {
+    .hero {
+        height: 80vh;
+        padding: 4rem 0;
+    }
+
+    .hero-card {
+        text-align: center !important;
+    }
+
+    .hero .hero-card {
+        padding: 1rem;
+        margin-left: 0;
+        /* drop offset on smaller screens */
+    }
+
+    .hero-card h1.display-5 {
+        font-size: var(--hero-font-size-md, 3.5rem);
+    }
+
+    .hero-card p {
+        font-size: var(--hero-font-size-p-md, 1.25rem);
+    }
+}
+
+/* ≤576px */
+@media (max-width: 576px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero-card {
+        text-align: center !important;
+    }
+
+    .hero-card h1.display-5 {
+        font-size: var(--hero-font-size-sm, 3rem);
+    }
+
+    .hero-card p {
+        font-size: var(--hero-font-size-p-sm, 1.25rem);
+    }
 }
 
 /* ===============================

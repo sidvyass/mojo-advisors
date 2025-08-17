@@ -1,43 +1,5 @@
 @import url('base.css');
 
-/* ---------- Hero Section ---------- */
-.hero {
-    position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("/assets/images/hero2.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 2rem;
-    color: white;
-}
-
-.hero .hero-card {
-    padding: 1rem;
-}
-
-.hero-card h1.display-5 {
-    font-family: var(--hero-font-family);
-    font-size: var(--hero-font-size);
-    font-weight: var(--hero-font-weight) !important;
-    text-transform: uppercase;
-}
-
-.hero-card p {
-    font-size: var(--hero-font-size-p);
-    font-weight: var(--hero-font-weight-p);
-    color: #ddd;
-}
-
-.hero-btn {
-    background-color: var(--primary-color);
-    /* vertically centers text if no padding */
-    padding: 0 1.5rem;
-    /* horizontal padding only */
-}
-
 /* ---------- Company Logos ---------- */
 .company-logo {
     max-height: 40px;
@@ -174,6 +136,11 @@
 
     .hero-card {
         text-align: center !important;
+    }
+
+    .hero .hero-card {
+        padding: 1rem;
+        margin-left: 0rem;
     }
 
     .hero-card h1.display-5 {
