@@ -60,7 +60,7 @@
     font-size: 10rem;
     font-weight: 900;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.05);
+    color: var(--light-dark-grey);
     pointer-events: none;
 }
 
@@ -70,19 +70,9 @@
     font-weight: 550;
 }
 
-.team-heading::after {
-    content: "";
-    display: block;
-    width: 3rem;
-    height: 0.35rem;
-    background-color: var(--primary-color);
-    margin: 0.25rem auto 0;
-    border-radius: 2px;
-}
-
 .name-title {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 23px;
     line-height: 150%;
     letter-spacing: 0.21em;
     text-transform: uppercase;
@@ -92,10 +82,10 @@
 }
 
 .name-position {
-    font-size: 43px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 107%;
-    padding-bottom: 4rem !important;
+    padding-bottom: 3rem !important;
 }
 
 .name-paragraph {
@@ -160,7 +150,7 @@
 .team-content-gray {
     background: linear-gradient(to bottom,
             rgba(255, 255, 255, 1) 35%,
-            #e8eef2 35%);
+            #e8eef2 37%);
     /*background-color: #e8eef2;*/
     padding: 2rem 5%;
     margin-bottom: 2rem;

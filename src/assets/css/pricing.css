@@ -18,8 +18,7 @@
     font-size: 12rem;
     font-weight: 900;
     line-height: 1;
-    color: #000;
-    opacity: 0.05;
+    color: var(--light-dark-grey);
     white-space: nowrap;
     pointer-events: none;
     user-select: none;

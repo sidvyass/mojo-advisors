@@ -418,7 +418,7 @@
     font-size: 11rem;
     font-weight: 900;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.05);
+    color: var(--light-dark-grey);
     pointer-events: none;
 }
 
