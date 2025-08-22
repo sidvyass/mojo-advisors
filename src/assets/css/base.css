@@ -220,6 +220,7 @@ select {
     .services-card {
         margin-top: 2rem;
     }
+
 }
 
 /* ===============================
@@ -280,4 +281,12 @@ select {
 .nav-bar-container {
     padding-left: 9% !important;
     padding-right: 5% !important;
+}
+
+
+@media (max-width: 576px) {
+    .navbar-brand img {
+        padding-left: 5%;
+        transform: scale(3) !important;
+    }
 }

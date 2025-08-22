@@ -1,3 +1,5 @@
+@import url('base.css');
+
 /* CONTACT HERO (responsive) */
 .hero {
     position: relative;
@@ -96,6 +98,11 @@
         display: block;
         /* stack under paragraph nicely */
         margin: 0.75rem auto 0;
+    }
+
+    #our-services .services-title {
+        font-size: 3rem !important;
+        padding-bottom: 0rem;
     }
 }
 
