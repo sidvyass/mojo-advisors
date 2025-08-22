@@ -125,17 +125,13 @@
     display: block;
     clear: both;
     width: 100%;
-    /*margin-top: 2rem;*/
-
     padding-left: 5%;
     padding-right: 5%;
-
     font-weight: 500;
     font-size: 18px;
     line-height: 1.8;
     text-align: justify;
     color: #000;
-
     background: none;
     padding: 0;
 }
@@ -331,7 +327,6 @@
     font-weight: 900;
     color: #fff;
     opacity: 0.1;
-    /* very faint */
     white-space: nowrap;
     pointer-events: none;
     z-index: 1;

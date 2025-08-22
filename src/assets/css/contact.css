@@ -98,3 +98,95 @@
         margin: 0.75rem auto 0;
     }
 }
+
+#our-services {
+    position: relative;
+    overflow: hidden;
+    min-height: 800px;
+}
+
+/* break the H1 out to full viewport width */
+#our-services .services-title {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    margin: 0 0 2rem;
+    font-size: 11rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--light-dark-grey);
+    pointer-events: none;
+}
+
+/* pale block behind image */
+#our-services .bg-block {
+    position: absolute;
+    top: 35%;
+    right: -20%;
+    width: 100%;
+    height: 80%;
+    background-color: #e6eef3;
+    border-radius: 0.25rem;
+    z-index: 1;
+}
+
+/* lift image above the block */
+#our-services .section-img {
+    position: relative;
+    z-index: 2;
+}
+
+/* underline on Learn More */
+#our-services .learn-more {
+    border-bottom: 3px solid #00adef;
+    padding-bottom: 2px;
+}
+
+
+/* 2. Sub-heading (<h2>) */
+#our-services h2 {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #33503f;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: .21em;
+}
+
+/* 3. Paragraphs */
+#our-services p {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+/* 4. List items */
+#our-services ul li {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #222;
+    margin-bottom: .5rem;
+}
+
+/* 5. “Learn More” link/button */
+#our-services .learn-more {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1d1d1d;
+    text-decoration: none;
+    border-bottom: 4px solid #009db3;
+    /*padding-bottom: 2px;*/
+    display: inline-block;
+}
+
+#our-services .learn-more:hover {
+    border-color: #007a8a;
+}
