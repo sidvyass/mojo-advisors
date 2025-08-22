@@ -73,7 +73,6 @@
 .name-title {
     font-weight: 600;
     font-size: 23px;
-    line-height: 150%;
     letter-spacing: 0.21em;
     text-transform: uppercase;
     color: #405544;
@@ -84,8 +83,7 @@
 .name-position {
     font-size: 40px;
     font-weight: 700;
-    line-height: 107%;
-    padding-bottom: 3rem !important;
+    padding-bottom: 2rem !important;
 }
 
 .name-paragraph {

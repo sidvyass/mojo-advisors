@@ -341,3 +341,10 @@
         font-size: 0.8rem;
     }
 }
+
+.cta-section {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        /* darker overlay */
+        url("/assets/images/pricing_hero2.jpg") center/cover no-repeat;
+}
