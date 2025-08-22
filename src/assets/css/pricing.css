@@ -1,5 +1,10 @@
 @import url('base.css');
 
+.hero {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+        url("/assets/images/pricing_hero.jpg");
+}
 
 .hero-card h1.display-5 {
     font-size: 60px;
@@ -295,18 +300,6 @@
     .testimonial-company {
         font-size: 0.9rem;
     }
-
-    #testimonialCarousel .test-card .card-body p.fst-italic {
-        font-size: 1.4rem;
-    }
-
-    #testimonialCarousel .test-card .card-body h5.fw-bold {
-        font-size: 1.75rem;
-    }
-
-    #testimonialCarousel .test-card .card-body p.text-muted {
-        font-size: 0.9rem;
-    }
 }
 
 /* Phone & below */
@@ -345,26 +338,6 @@
     }
 
     .testimonial-company {
-        font-size: 0.8rem;
-    }
-
-    #testimonialCarousel .card {
-        height: 150vh;
-    }
-
-    #testimonialCarousel .carousel-inner {
-        touch-action: pan-y;
-    }
-
-    #testimonialCarousel .test-card .card-body p.fst-italic {
-        font-size: 1rem;
-    }
-
-    #testimonialCarousel .test-card .card-body h5.fw-bold {
-        font-size: 1.5rem;
-    }
-
-    #testimonialCarousel .test-card .card-body p.text-muted {
         font-size: 0.8rem;
     }
 }
