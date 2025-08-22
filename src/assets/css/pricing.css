@@ -3,7 +3,7 @@
 .hero {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
-        url("/assets/images/pricing_hero.jpg");
+        url("/assets/images/about_us_hero.jpg");
 }
 
 .hero-card h1.display-5 {
@@ -81,6 +81,41 @@
 
 .what-we-do .card-header i {
     flex-shrink: 0;
+}
+
+/* ---------- Testimonials Section ---------- */
+.testimonials-heading {
+    font-size: 5.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding-bottom: 1rem;
+}
+
+
+/* 2) Inject your own light-grey arrows */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: '';
+    font-size: 2.0rem;
+    color: #ccc;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: monospace;
+}
+
+/* ← on the left */
+.swiper-button-prev::after {
+    content: '←';
+    left: 0.5rem;
+    color: black;
+}
+
+/* → on the right */
+.swiper-button-next::after {
+    content: '→';
+    right: 0.5rem;
+    color: black;
 }
 
 
@@ -193,82 +228,6 @@
     white-space: nowrap;
 }
 
-/* ---------- Testimonials Section ---------- */
-.testimonials-heading {
-    font-size: 5.5rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    padding-bottom: 1rem;
-}
-
-.testimonials-sub-heading {
-    font-size: 3rem;
-    font-weight: 500;
-    padding-bottom: 1.5rem;
-}
-
-.test-card {
-    padding: 2rem 1rem;
-}
-
-.testimonial-text {
-    font-size: 1.6rem;
-    line-height: 1.6;
-}
-
-.testimonial-author {
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-.testimonial-company {
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-#testimonialCarousel .carousel-control-prev,
-#testimonialCarousel .carousel-control-next {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: #000;
-    border-radius: 50%;
-}
-
-#testimonialCarousel .carousel-control-prev-icon,
-#testimonialCarousel .carousel-control-next-icon {
-    background-size: 1.2rem 1.2rem;
-}
-
-/* 1) Hide the default Swiper SVG backgrounds */
-.my-testimonial-swiper .swiper-button-prev,
-.my-testimonial-swiper .swiper-button-next {
-    background: none;
-}
-
-/* 2) Inject your own light-grey arrows */
-.my-testimonial-swiper .swiper-button-prev::after,
-.my-testimonial-swiper .swiper-button-next::after {
-    content: '';
-    font-size: 1.8rem;
-    color: #ccc;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: monospace;
-}
-
-/* ← on the left */
-.my-testimonial-swiper .swiper-button-prev::after {
-    content: '←';
-    left: 0.5rem;
-}
-
-/* → on the right */
-.my-testimonial-swiper .swiper-button-next::after {
-    content: '→';
-    right: 0.5rem;
-}
-
 /* ---------- Company Logos ---------- */
 .company-logo {
     max-height: 40px;
@@ -289,17 +248,6 @@
         font-size: 4rem;
     }
 
-    .testimonials-sub-heading {
-        font-size: 1.5rem;
-    }
-
-    .testimonial-author {
-        font-size: 1.75rem;
-    }
-
-    .testimonial-company {
-        font-size: 0.9rem;
-    }
 }
 
 /* Phone & below */
@@ -327,18 +275,6 @@
 
     .testimonials-heading {
         font-size: 2.5rem;
-    }
-
-    .testimonials-sub-heading {
-        font-size: 1.25rem;
-    }
-
-    .testimonial-author {
-        font-size: 1.5rem;
-    }
-
-    .testimonial-company {
-        font-size: 0.8rem;
     }
 }
 
