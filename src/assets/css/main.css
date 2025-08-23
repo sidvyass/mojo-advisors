@@ -19,7 +19,6 @@ main.container-fluid {
     padding-top: 80px;
 }
 
-/* Nav links: keep your style */
 .navbar .nav-link {
     color: var(--primary-color) !important;
     font-weight: 900;
@@ -47,7 +46,6 @@ main.container-fluid {
     width: 100%;
 }
 
-/* CTA button styling (no fixed width/margins) */
 .conversation-btn {
     border: 3px solid var(--primary-color);
     color: var(--primary-color);
@@ -68,7 +66,6 @@ main.container-fluid {
 }
 
 
-/* Mouse hover toggle menu */
 @media (min-width: 992px) {
 
     /* TODO: test media */
@@ -83,7 +80,6 @@ main.container-fluid {
 }
 
 
-/* super-specific hover styling for Contact Us button */
 nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collapse#mainNav>a.btn.btn-dark.btn-md.rounded-pill:hover {
     background-color: #fff !important;
     color: #000 !important;
@@ -116,16 +112,12 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
 
 .footer-bg .col-md-6:first-child {
     padding-left: 0;
-    /* flush the left block to the container’s left edge */
     text-align: left;
-    /* ensure the text stays left-aligned */
 }
 
 .footer-bg .col-md-6:last-child {
     padding-right: 0;
-    /* flush the right block to the container’s right edge */
     text-align: right;
-    /* ensure the list stays right-aligned */
 }
 
 @media (max-width: 991.98px) {
@@ -136,22 +128,6 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
         flex-direction: column;
         align-items: center;
         padding: 1rem 0;
-    }
-}
-
-@media (min-width: 992px) {
-
-    /* make the collapse container a positioning context */
-    .navbar .navbar-collapse {
-        position: relative;
-    }
-
-    /* pull the nav-links out of the flex flow and center them */
-    .navbar-nav.mx-auto {
-        position: absolute;
-        top: 50%;
-        left: 42%;
-        transform: translate(-50%, -50%);
     }
 }
 
@@ -200,7 +176,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
     padding: 0.4rem 1.5rem;
     border-radius: 0.25rem;
     transition: background 0.2s, color 0.2s;
-    width: 25%;
+    width: 20%;
 }
 
 .conversation-btn:hover {
@@ -209,7 +185,6 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
     text-decoration: none;
 }
 
-/* — BACKDROP & BLUR — */
 nav.navbar {
     background-color: rgba(255, 255, 255, 0.8) !important;
     backdrop-filter: blur(10px);
@@ -223,20 +198,30 @@ nav.navbar.navbar--hidden {
 
 main.container-fluid {
     padding-top: 80px;
-    /* navbar height */
 }
 
-/* 1. bump all nav-link text to 18px and add a bit more horizontal padding */
 .navbar .nav-link {
     font-size: 18px;
     padding: 0.75rem 1.5rem;
 }
 
-/* 2. bump the CTA button font to 18px and enlarge its “box” */
 .conversation-btn {
     font-size: 18px;
     padding: 0.75rem 2.5rem;
     font-weight: 900;
     line-height: 1;
     letter-spacing: 0.15em;
+}
+
+.nav-bar-container {
+    padding-left: 9% !important;
+    padding-right: 5% !important;
+}
+
+
+@media (max-width: 576px) {
+    .navbar-brand img {
+        padding-left: 5%;
+        transform: scale(3) !important;
+    }
 }
