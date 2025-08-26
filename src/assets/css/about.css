@@ -286,11 +286,11 @@
 }
 
 .services-card ul li i {
-    font-size: 3rem;
+    font-size: 1rem;
 }
 
 .services-card ul li span {
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 0.5px;
 }
 
@@ -364,7 +364,7 @@
 
 .cta-text {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     max-width: 600px;
     margin: 0 auto;
 }
