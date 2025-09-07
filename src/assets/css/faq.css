@@ -1,4 +1,5 @@
 /* assets/css/faq.css */
+@import url('base.css');
 
 /* keep your existing hero styles */
 .hero {
@@ -15,31 +16,10 @@
     color: white;
 }
 
-.hero .hero-card {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 2000px;
-}
-
-.hero .hero-card>h1.display-5 {
-    font-size: 5rem;
-    font-weight: 700;
-    padding: 1rem;
-}
-
-.hero .hero-card>p.fs-5 {
-    color: black;
-    font-size: 1.6rem;
-    font-weight: 500;
-    padding: 1rem;
-}
-
 .hero-btn {
     background-color: var(--primary-color);
     margin-top: 1rem;
     padding: 1rem;
-    margin-left: 0.9rem;
 }
 
 /* ====== NEW DARK-MODE FAQ STYLES ====== */
@@ -86,9 +66,7 @@
     background-color: #000;
     color: #fff;
     padding: 1.25rem 1.5rem;
-    /* increased padding */
     font-size: 1.25rem;
-    /* larger text */
     border-top: 1px solid #444;
 }
 

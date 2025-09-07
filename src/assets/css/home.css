@@ -45,26 +45,36 @@
     object-fit: cover;
 }
 
-/* ---------- SVG Icons ---------- */
-.svg-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    fill: currentColor;
-    opacity: 0.8;
-    transition: opacity .25s;
-    margin-right: 1rem;
-}
-
-.svg-icon:hover {
-    opacity: 1;
-}
+/* /* ---------- SVG Icons ---------- */
+/* .svg-icon { */
+/*     width: 3.0rem; */
+/*     height: 3.0rem; */
+/*     fill: currentColor; */
+/*     opacity: 0.8; */
+/*     transition: opacity .25s; */
+/*     margin-right: 1rem; */
+/* } */
+/**/
+/* .svg-icon:hover { */
+/*     opacity: 1; */
+/* } */
 
 /* ---------- Testimonials Section ---------- */
 .testimonials-heading {
-    font-size: 5.5rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    padding-bottom: 1rem;
+    /* font-size: 5.5rem; */
+    /* font-weight: 700; */
+    /* letter-spacing: 3px; */
+    /* padding-bottom: 1rem; */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    margin: 0 0 2rem;
+    font-size: 7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--light-dark-grey);
+    pointer-events: none;
 }
 
 

@@ -6,6 +6,10 @@
         url("/assets/images/about_us_hero.jpg");
 }
 
+.hero .hero-card {
+    padding-right: 40%;
+}
+
 .hero-card h1.display-5 {
     font-size: 60px;
 }
@@ -18,15 +22,25 @@
 
 /* BACKGROUND TITLE */
 .what-title {
-    top: 1rem;
+    /* top: 1rem; */
+    /* left: 50%; */
+    /* font-size: 12rem; */
+    /* font-weight: 900; */
+    /* line-height: 1; */
+    /* color: var(--light-dark-grey); */
+    /* white-space: nowrap; */
+    /* pointer-events: none; */
+    /* user-select: none; */
+    position: relative;
     left: 50%;
-    font-size: 12rem;
+    transform: translateX(-50%);
+    width: 100vw;
+    margin: 0 0 2rem;
+    font-size: 11rem;
     font-weight: 900;
-    line-height: 1;
+    text-transform: uppercase;
     color: var(--light-dark-grey);
-    white-space: nowrap;
     pointer-events: none;
-    user-select: none;
 }
 
 /* CARD STYLES */
@@ -85,10 +99,16 @@
 
 /* ---------- Testimonials Section ---------- */
 .testimonials-heading {
-    font-size: 5.5rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    padding-bottom: 1rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    margin: 0 0 2rem;
+    font-size: 7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--light-dark-grey);
+    pointer-events: none;
 }
 
 

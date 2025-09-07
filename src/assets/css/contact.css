@@ -8,7 +8,6 @@
         url("/assets/images/contact_hero.jpg");
     background-size: cover;
     background-position: center;
-    /* Let it grow if content needs it */
     min-height: 70vh;
     height: auto;
     display: flex;
@@ -23,7 +22,7 @@
     top: auto;
     left: auto;
     transform: none;
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -36,18 +35,6 @@
     font-weight: 700;
     padding: 1rem 0.5rem;
     line-height: 1.1;
-}
-
-.hero .hero-card>p.fs-5 {
-    /* scales from ~16px → 25.6px */
-    font-size: clamp(1rem, 3.2vw, 1.6rem);
-    font-weight: 500;
-    padding: 0.5rem 0.5rem 0;
-    /* if you intended white text over the dark overlay, keep this white: */
-    /* color: #fff; */
-    color: black;
-    /* your original choice */
-    line-height: 1.45;
 }
 
 .hero-btn {
