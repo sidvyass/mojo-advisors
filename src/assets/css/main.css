@@ -43,47 +43,6 @@ main.container-fluid {
     padding-left: 2.5rem !important;
 }
 
-.navbar .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background-color: #425F57;
-    transition: width .2s ease;
-}
-
-.navbar .nav-link:hover::after,
-.navbar .nav-link.active::after {
-    width: 100%;
-}
-
-/* — NAV LINKS — */
-.navbar .nav-link:hover,
-.navbar .nav-link.active {
-    color: var(--primary-color) !important;
-}
-
-/* underline on hover & active */
-.navbar .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background-color: #425F57;
-    transition: width 0.2s ease;
-}
-
-.navbar .nav-link:hover::after,
-.navbar .nav-link.active::after {
-    width: 100%;
-}
-
 .conversation-btn {
     text-transform: uppercase;
     font-size: 18px;
