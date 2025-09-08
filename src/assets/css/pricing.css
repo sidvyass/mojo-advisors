@@ -22,15 +22,6 @@
 
 /* BACKGROUND TITLE */
 .what-title {
-    /* top: 1rem; */
-    /* left: 50%; */
-    /* font-size: 12rem; */
-    /* font-weight: 900; */
-    /* line-height: 1; */
-    /* color: var(--light-dark-grey); */
-    /* white-space: nowrap; */
-    /* pointer-events: none; */
-    /* user-select: none; */
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -104,7 +95,7 @@
     transform: translateX(-50%);
     width: 100vw;
     margin: 0 0 2rem;
-    font-size: 7rem;
+    font-size: 6rem;
     font-weight: 900;
     text-transform: uppercase;
     color: var(--light-dark-grey);
