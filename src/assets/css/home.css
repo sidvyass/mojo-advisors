@@ -45,20 +45,6 @@
     object-fit: cover;
 }
 
-/* /* ---------- SVG Icons ---------- */
-/* .svg-icon { */
-/*     width: 3.0rem; */
-/*     height: 3.0rem; */
-/*     fill: currentColor; */
-/*     opacity: 0.8; */
-/*     transition: opacity .25s; */
-/*     margin-right: 1rem; */
-/* } */
-/**/
-/* .svg-icon:hover { */
-/*     opacity: 1; */
-/* } */
-
 /* ---------- Testimonials Section ---------- */
 .testimonials-heading {
     /* font-size: 5.5rem; */
@@ -104,118 +90,6 @@
     color: black;
 }
 
-
-/* ---------- Media Queries ---------- */
-/* Medium tablets and below (≤992px) */
-@media (max-width: 992px) {
-    .hero {
-        height: 80vh;
-        padding: 4rem 0;
-    }
-
-    .hero-card {
-        text-align: center !important;
-    }
-
-    .hero .hero-card {
-        padding: 1rem;
-        margin-left: 0rem;
-    }
-
-    .hero-card h1.display-5 {
-        font-size: 3.5rem;
-    }
-
-
-    .hero-card p {
-        font-size: 1.25rem;
-    }
-
-    .services-heading {
-        font-size: 3.5rem;
-    }
-
-    .service-point h5 {
-        font-size: 2rem;
-        font-weight: 500 !important;
-    }
-
-    .service-point p {
-        font-size: 1.125rem;
-    }
-
-    .biz-heading {
-        font-size: 2.75rem;
-    }
-
-    .biz-copy {
-        font-size: 1.25rem;
-    }
-
-    .biz-section .row {
-        margin-top: 2rem;
-    }
-
-    .testimonials-heading {
-        font-size: 4rem;
-    }
-}
-
-/* Phones down (≤576px) */
-@media (max-width: 576px) {
-    .hero {
-        padding: 2rem 1rem;
-    }
-
-    .hero-card {
-        text-align: center !important;
-    }
-
-    .hero-card h1.display-5 {
-        font-size: 3rem;
-    }
-
-    .hero-card p {
-        font-size: 1.25rem;
-    }
-
-    .company-logo {
-        max-height: 35px;
-    }
-
-    .services-heading {
-        font-size: 2.5rem;
-    }
-
-    .service-point h5 {
-        font-size: 1.5rem;
-        font-weight: 500 !important;
-    }
-
-    .service-point p {
-        font-size: 1.125rem;
-    }
-
-    .biz-heading {
-        font-size: 2.25rem;
-    }
-
-    .biz-copy {
-        font-size: 1rem;
-    }
-
-    .biz-btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
-    .testimonials-heading {
-        font-size: 2.5rem;
-    }
-
-}
-
 .strategy-section {
     position: relative;
     background-image:
@@ -248,59 +122,6 @@
     max-width: 728px;
     margin: 0 auto;
 }
-
-/* Responsive tweaks for .strategy-section */
-@media (max-width: 767.98px) {
-
-    .strategy-section h2 {
-        font-size: 1.5rem;
-    }
-
-    .strategy-section p.h5 {
-        font-size: 1.125rem;
-    }
-
-    .strategy-section p.lead {
-        font-size: 1rem;
-        max-width: 100%;
-    }
-
-    #our-services .services-title {
-        font-size: 3rem !important;
-        padding-bottom: 0rem;
-    }
-}
-
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-
-    /* Tablet */
-    .strategy-section {
-        min-height: 300px;
-        padding: 3rem 1.5rem;
-        background-image:
-            linear-gradient(to right,
-                rgba(255, 255, 255, 0.3) 0%,
-                rgba(255, 255, 255, 0.9) 25%,
-                rgba(255, 255, 255, 1.0) 75%,
-                rgba(255, 255, 255, 0.3) 100%),
-            url('/assets/images/farm_photo.jpg');
-    }
-
-    .strategy-section h2 {
-        font-size: 1.75rem;
-    }
-
-    .strategy-section p.h5 {
-        font-size: 1.25rem;
-    }
-
-    .strategy-section p.lead {
-        font-size: 1.125rem;
-        max-width: 600px;
-    }
-}
-
 
 /* services.css */
 #our-services {
@@ -393,4 +214,168 @@
 
 #our-services .learn-more:hover {
     border-color: #007a8a;
+}
+
+/* ---------- Media Queries ---------- */
+/* Medium tablets and below (≤992px) */
+@media (max-width: 992px) {
+    .hero {
+        height: 80vh;
+        padding: 4rem 0;
+    }
+
+    .hero-card {
+        text-align: center !important;
+    }
+
+    .hero .hero-card {
+        padding: 1rem;
+        margin-left: 0rem;
+    }
+
+    .hero-card h1.display-5 {
+        font-size: 3.5rem;
+    }
+
+
+    .hero-card p {
+        font-size: 1.05rem;
+    }
+
+    .services-heading {
+        font-size: 3.5rem;
+    }
+
+    .service-point h5 {
+        font-size: 2rem;
+        font-weight: 500 !important;
+    }
+
+    .service-point p {
+        font-size: 1.125rem;
+    }
+
+    .biz-heading {
+        font-size: 2.75rem;
+    }
+
+    .biz-copy {
+        font-size: 1.25rem;
+    }
+
+    .biz-section .row {
+        margin-top: 2rem;
+    }
+
+    .testimonials-heading {
+        font-size: 4rem;
+    }
+}
+
+/* Phones down (≤576px) */
+@media (max-width: 576px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero-card {
+        text-align: center !important;
+    }
+
+    .hero-card h1.display-5 {
+        font-size: 3rem;
+    }
+
+    .hero-card p {
+        font-size: 1.05rem;
+    }
+
+    .company-logo {
+        max-height: 35px;
+    }
+
+    .services-heading {
+        font-size: 2.5rem;
+    }
+
+    .service-point h5 {
+        font-size: 1.5rem;
+        font-weight: 500 !important;
+    }
+
+    .service-point p {
+        font-size: 1.125rem;
+    }
+
+    .biz-heading {
+        font-size: 2.25rem;
+    }
+
+    .biz-copy {
+        font-size: 1rem;
+    }
+
+    .biz-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .testimonials-heading {
+        font-size: 2.5rem;
+    }
+
+}
+
+/* Responsive tweaks for .strategy-section */
+@media (max-width: 767.98px) {
+
+    .strategy-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .strategy-section p.h5 {
+        font-size: 1.125rem;
+    }
+
+    .strategy-section p.lead {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    #our-services .services-title {
+        font-size: 3rem !important;
+        padding-bottom: 0rem;
+        padding-top: 1rem;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    /* Tablet */
+    .strategy-section {
+        min-height: 300px;
+        padding: 3rem 1.5rem;
+        background-image:
+            linear-gradient(to right,
+                rgba(255, 255, 255, 0.3) 0%,
+                rgba(255, 255, 255, 0.9) 25%,
+                rgba(255, 255, 255, 1.0) 75%,
+                rgba(255, 255, 255, 0.3) 100%),
+            url('/assets/images/farm_photo.jpg');
+    }
+
+    .strategy-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .strategy-section p.h5 {
+        font-size: 1.25rem;
+    }
+
+    .strategy-section p.lead {
+        font-size: 1.125rem;
+        max-width: 600px;
+    }
 }

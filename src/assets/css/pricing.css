@@ -272,12 +272,20 @@
 
 /* Phone & below */
 @media (max-width: 576px) {
+    .hero .hero-card {
+        padding-right: 0%;
+    }
+
     .hero-card h1.display-5 {
         font-size: 40px;
     }
 
+    .hero-card p {
+        font-size: 1.05rem;
+    }
+
     .what-title {
-        font-size: 3rem;
+        font-size: 3.2rem;
     }
 
     .pricing-heading {
@@ -295,6 +303,11 @@
 
     .testimonials-heading {
         font-size: 2.5rem;
+    }
+
+    .pad-con {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
     }
 }
 

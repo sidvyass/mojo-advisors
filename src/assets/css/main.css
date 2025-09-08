@@ -1,6 +1,15 @@
 @import url('base.css');
 
-/* 1. translucent background + blur */
+/* exact box */
+.img-brand {
+    width: 60px;
+    height: 60px;
+    transform: scale(5.0);
+    object-fit: contain;
+    display: block;
+}
+
+
 nav.navbar {
     background-color: rgba(255, 255, 255, 0.8) !important;
     backdrop-filter: blur(10px);
@@ -23,10 +32,15 @@ main.container-fluid {
     color: var(--primary-color) !important;
     font-weight: 900;
     font-size: 18px;
-    line-height: 1;
+    /* line-height: 1; */
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    padding: .75rem 1.5rem;
+    padding-left: 2rem !important;
+    position: relative;
+}
+
+.navbar-collapse {
+    padding-left: 2.5rem !important;
 }
 
 .navbar .nav-link::after {
@@ -46,25 +60,51 @@ main.container-fluid {
     width: 100%;
 }
 
+/* — NAV LINKS — */
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* underline on hover & active */
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #425F57;
+    transition: width 0.2s ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+    width: 100%;
+}
+
 .conversation-btn {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.15em;
     border: 3px solid var(--primary-color);
     color: var(--primary-color);
     background: transparent;
     text-transform: uppercase;
+    border-radius: 0.25rem;
+    transition: background 0.2s, color 0.2s;
+    width: 20%;
+    padding: 0.75rem 2.5rem;
     font-weight: 900;
-    font-size: 18px;
-    line-height: 1;
-    letter-spacing: 0.15em;
-    padding: .75rem 2.5rem;
-    border-radius: .25rem;
-    transition: background .2s, color .2s;
 }
 
 .conversation-btn:hover {
-    background: #032d64;
+    background: var(--primary-color);
     color: #fff;
+    text-decoration: none;
 }
-
 
 @media (min-width: 992px) {
 
@@ -79,14 +119,12 @@ main.container-fluid {
     background-color: #032d64;
 }
 
-
 nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collapse#mainNav>a.btn.btn-dark.btn-md.rounded-pill:hover {
     background-color: #fff !important;
     color: #000 !important;
     border: 1px solid #000 !important;
     box-shadow: none !important;
 }
-
 
 .dropdown-divider-center {
     width: 50%;
@@ -131,71 +169,6 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white .container.px-4 .navbar-collap
     }
 }
 
-/* — NAV LINKS — */
-.navbar .nav-link {
-    color: var(--primary-color) !important;
-    font-weight: 900;
-    font-size: 18px;
-    line-height: 1;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 0.5rem 1rem;
-    position: relative;
-}
-
-.navbar .nav-link:hover,
-.navbar .nav-link.active {
-    color: var(--primary-color) !important;
-}
-
-/* underline on hover & active */
-.navbar .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background-color: #425F57;
-    transition: width 0.2s ease;
-}
-
-.navbar .nav-link:hover::after,
-.navbar .nav-link.active::after {
-    width: 100%;
-}
-
-/* — CTA BUTTON — */
-.conversation-btn {
-    border: 3px solid var(--primary-color);
-    color: var(--primary-color);
-    background: transparent;
-    text-transform: uppercase;
-    font-weight: 600;
-    padding: 0.4rem 1.5rem;
-    border-radius: 0.25rem;
-    transition: background 0.2s, color 0.2s;
-    width: 20%;
-}
-
-.conversation-btn:hover {
-    background: var(--primary-color);
-    color: #fff;
-    text-decoration: none;
-}
-
-nav.navbar {
-    background-color: rgba(255, 255, 255, 0.8) !important;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    z-index: 1030;
-}
-
-nav.navbar.navbar--hidden {
-    transform: translateY(-100%);
-}
-
 main.container-fluid {
     padding-top: 80px;
 }
@@ -205,23 +178,17 @@ main.container-fluid {
     padding: 0.75rem 1.5rem;
 }
 
-.conversation-btn {
-    font-size: 18px;
-    padding: 0.75rem 2.5rem;
-    font-weight: 900;
-    line-height: 1;
-    letter-spacing: 0.15em;
+/* .nav-bar-container { */
+/*     padding-left: 9% !important; */
+/*     padding-right: 5% !important; */
+/* } */
+.navbar-brand img {
+    padding-left: 1.25rem;
 }
-
-.nav-bar-container {
-    padding-left: 9% !important;
-    padding-right: 5% !important;
-}
-
 
 @media (max-width: 576px) {
     .navbar-brand img {
-        padding-left: 5%;
+        padding-left: 25%;
         transform: scale(3) !important;
     }
 }

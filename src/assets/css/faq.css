@@ -83,3 +83,28 @@
 #faqAccordion .accordion-button:not(.collapsed) .arrow-icon {
     transform: rotate(90deg);
 }
+
+@media (max-width: 576px) {
+
+    .hero {
+        padding: 0px;
+        height: 80vh;
+    }
+
+    .hero-card {
+        padding: 1rem !important;
+    }
+
+    .hero .hero-card>h1.display-5 {
+        font-size: 2rem;
+    }
+
+    .hero .hero-card p {
+        font-size: 1rem;
+    }
+
+    .hero-btn {
+        margin-left: 0rem !important;
+        font-size: 1.2rem !important;
+        width: 90% !important;
+    }

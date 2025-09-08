@@ -73,8 +73,8 @@
     }
 
     .hero .hero-card>h1.display-5 {
-        /* clamp already handles it, but a small nudge tightens layout */
         line-height: 1.15;
+        font-size: 3rem;
     }
 
     .hero .hero-card>p.fs-5 {
@@ -90,6 +90,11 @@
     #our-services .services-title {
         font-size: 3rem !important;
         padding-bottom: 0rem;
+        padding-top: 1rem;
+    }
+
+    .second-title {
+        font-size: 2rem !important;
     }
 }
 

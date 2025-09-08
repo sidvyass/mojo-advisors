@@ -87,15 +87,6 @@
     padding-bottom: 2rem !important;
 }
 
-.name-paragraph {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 180%;
-    text-align: justify;
-    color: #000000;
-    margin: 0 0 12px;
-}
-
 .img-div {
     position: relative;
     overflow: hidden;
@@ -141,12 +132,6 @@
    NEW: grey “bleed” wrapper
    ------------------------ */
 .team-content-gray {
-    /* background: linear-gradient(to bottom, */
-    /*         rgba(255, 255, 255, 1) 35%, */
-    /*         #e8eef2 37%); */
-    /* /*background-color: #e8eef2;*/
-    /* padding: 2rem 5%; */
-    /* margin-bottom: 2rem; */
     background: #e8eef2;
     padding: 2rem 5%;
     margin-bottom: 2rem;
@@ -171,6 +156,11 @@
 
     .hero {
         padding: 0px;
+        height: 90vh;
+    }
+
+    .hero-card {
+        padding: 1rem !important;
     }
 
     .hero .hero-card>h1.display-5 {
@@ -178,11 +168,16 @@
     }
 
     .hero .hero-card p {
-        font-size: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .hero-btn {
+        margin-left: 0rem !important;
+        font-size: 1.5rem !important;
     }
 
     #team .team-heading {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .name-title {
@@ -194,14 +189,10 @@
         padding-bottom: 2rem !important;
     }
 
-    .name-paragraph {
-        font-size: 18px;
-        line-height: 1.6;
-    }
-
     .text-section {
         font-size: 0.875rem;
         line-height: 1.6;
+        padding: 1rem;
     }
 
     .signature {
@@ -209,7 +200,7 @@
     }
 
     .team-content-gray {
-        padding: 0 !important;
+        padding: 1rem !important;
         margin: 0 !important;
     }
 
@@ -235,152 +226,155 @@
         width: 80%;
         margin: 0 auto 1rem;
     }
-}
+
+    .cta-title: {
+        font-size: 2rem;
+    }
 
 
-.services-section {
-    background:
-        linear-gradient(to right,
-            rgba(0, 0, 0, 1.0) 50%,
-            rgba(0, 0, 0, 0.2) 100%),
-        url("/assets/images/corp_meeting.jpg") center/cover no-repeat;
-
-    background-color: #0d1b2a;
-
-    /* layout */
-    color: #fff;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.services-card {
-    background: rgba(0, 34, 58, 0.75);
-    border: 1px solid rgba(0, 173, 239, 0.4);
-    border-radius: 0.5rem;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-}
-
-.services-card ul li {
-    line-height: 1.5;
-}
-
-@media (max-width: 767.98px) {
     .services-section {
-        padding: 3rem 1rem;
-        min-height: auto;
+        background:
+            linear-gradient(to right,
+                rgba(0, 0, 0, 1.0) 50%,
+                rgba(0, 0, 0, 0.2) 100%),
+            url("/assets/images/corp_meeting.jpg") center/cover no-repeat;
+
+        background-color: #0d1b2a;
+
+        /* layout */
+        color: #fff;
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
     }
 
     .services-card {
-        margin-top: 2rem;
+        background: rgba(0, 34, 58, 0.75);
+        border: 1px solid rgba(0, 173, 239, 0.4);
+        border-radius: 0.5rem;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
     }
-}
 
-.services-section h2 {
-    font-size: 65px;
-    font-weight: 900 !important;
-    line-height: 1.1;
-}
+    .services-card ul li {
+        line-height: 1.5;
+    }
 
-.services-card>p {
-    font-size: 2rem;
-}
+    @media (max-width: 767.98px) {
+        .services-section {
+            padding: 3rem 1rem;
+            min-height: auto;
+        }
 
-.services-card ul li i {
-    font-size: 1rem;
-}
+        .services-card {
+            margin-top: 2rem;
+        }
+    }
 
-.services-card ul li span {
-    font-size: 20px;
-    letter-spacing: 0.5px;
-}
-
-@media (max-width: 767.98px) {
     .services-section h2 {
-        font-size: 2.5rem;
+        font-size: 65px;
+        font-weight: 900 !important;
+        line-height: 1.1;
     }
 
     .services-card>p {
-        font-size: 1.1rem;
+        font-size: 2rem;
     }
 
     .services-card ul li i {
-        font-size: 1.75rem;
+        font-size: 1rem;
     }
 
     .services-card ul li span {
-        font-size: 1rem;
+        font-size: 20px;
+        letter-spacing: 0.5px;
     }
-}
 
-.services-section h2.display-5 {
-    position: relative;
-    z-index: 2;
-    padding-top: 6rem !important;
-}
+    @media (max-width: 767.98px) {
+        .services-section h2 {
+            font-size: 2.5rem;
+        }
 
-.services-section h2.display-5::before {
-    content: "OUR CORE VALUES";
-    position: absolute;
-    top: -20px;
-    left: 0;
-    font-size: 120px;
-    font-weight: 900;
-    color: #fff;
-    opacity: 0.1;
-    white-space: nowrap;
-    pointer-events: none;
-    z-index: 1;
-    text-transform: uppercase;
-}
+        .services-card>p {
+            font-size: 1.1rem;
+        }
 
-@media (max-width: 767.98px) {
+        .services-card ul li i {
+            font-size: 1.75rem;
+        }
+
+        .services-card ul li span {
+            font-size: 1rem;
+        }
+    }
+
+    .services-section h2.display-5 {
+        position: relative;
+        z-index: 2;
+        padding-top: 6rem !important;
+    }
+
     .services-section h2.display-5::before {
-        font-size: 3rem;
-        top: -0.5rem;
+        content: "OUR CORE VALUES";
+        position: absolute;
+        top: -20px;
+        left: 0;
+        font-size: 120px;
+        font-weight: 900;
+        color: #fff;
+        opacity: 0.1;
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 1;
+        text-transform: uppercase;
     }
-}
 
-/* ---------- CTA Section ---------- */
-.cta-section {
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("/assets/images/construction.jpg") center/cover no-repeat;
-}
+    @media (max-width: 767.98px) {
+        .services-section h2.display-5::before {
+            font-size: 3rem;
+            top: -0.5rem;
+        }
+    }
 
-.cta-title {
-    font-weight: 900 !important;
-    font-size: 40px !important;
-    line-height: 109% !important;
-    text-align: center !important;
-    text-transform: uppercase !important;
-}
+    /* ---------- CTA Section ---------- */
+    .cta-section {
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("/assets/images/construction.jpg") center/cover no-repeat;
+    }
 
-.cta-title-h2 {
-    font-weight: 900 !important;
-    font-size: 40px !important;
-    line-height: 109% !important;
-    text-align: center !important;
-}
+    .cta-title {
+        font-weight: 900 !important;
+        font-size: 35px !important;
+        line-height: 109% !important;
+        text-align: center !important;
+        text-transform: uppercase !important;
+    }
 
-.cta-text {
-    font-size: 24px;
-    font-weight: 500;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    .cta-title-h2 {
+        font-weight: 900 !important;
+        font-size: 30px !important;
+        line-height: 109% !important;
+        text-align: center !important;
+    }
 
-.cta-btn {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    transition: background-color .3s;
-}
+    .cta-text {
+        font-size: 23px;
+        font-weight: 500;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-.cta-btn:hover {
-    background-color: #03213a;
-}
+    .cta-btn {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        transition: background-color .3s;
+    }
+
+    .cta-btn:hover {
+        background-color: #03213a;
+    }
