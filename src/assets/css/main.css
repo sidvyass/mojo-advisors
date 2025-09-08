@@ -40,7 +40,7 @@ main.container-fluid {
 }
 
 .navbar-collapse {
-    padding-left: 2.5rem !important;
+    padding-left: 4rem !important;
 }
 
 .conversation-btn {
@@ -149,5 +149,9 @@ main.container-fluid {
     .navbar-brand img {
         padding-left: 25%;
         transform: scale(3) !important;
+    }
+
+    .navbar-collapse {
+        padding-left: 0rem !important;
     }
 }
