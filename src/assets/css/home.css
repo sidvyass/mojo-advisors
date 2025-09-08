@@ -280,6 +280,10 @@
         font-size: 3rem;
     }
 
+    .hero-btn {
+        width: 97% !important;
+    }
+
     .hero-card p {
         font-size: 1.15rem;
     }

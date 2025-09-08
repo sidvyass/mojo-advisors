@@ -11,12 +11,12 @@
 
 .hero .hero-card {
     width: 100%;
-    padding-right: 10%;
+    padding-right: 30%;
 }
 
-.hero-card h1.display-5 {
-    font-size: 60px;
-}
+/*.hero-card h1.display-5 {*/
+/*    font-size: 60px;*/
+/*}*/
 
 .hero-btn {
     margin-top: 1rem;
@@ -143,11 +143,6 @@
 
     .hero .hero-card p {
         font-size: 1.25rem;
-    }
-
-    .hero-btn {
-        margin-left: 0rem !important;
-        font-size: 1.5rem !important;
     }
 
     #team .team-heading {

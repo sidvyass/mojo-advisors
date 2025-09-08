@@ -122,6 +122,12 @@ select {
     .hero-card p {
         font-size: var(--hero-font-size-p-sm, 1.25rem);
     }
+
+    .hero-btn {
+        margin-left: 0rem !important;
+        font-size: 1rem !important;
+        width: 95% !important;
+    }
 }
 
 /* ===============================
