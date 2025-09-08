@@ -274,6 +274,7 @@
 @media (max-width: 576px) {
     .hero .hero-card {
         padding-right: 0%;
+        padding-left: 0%
     }
 
     .hero-card h1.display-5 {
@@ -281,7 +282,7 @@
     }
 
     .hero-card p {
-        font-size: 1.05rem;
+        font-size: 1.15rem;
     }
 
     .what-title {
