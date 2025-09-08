@@ -4,48 +4,23 @@
   HERO
 --------------------------------------*/
 .hero {
-    position: relative;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
         url("/assets/images/contact_hero.jpg");
-    background-size: cover;
-    background-position: center;
-    /* height: auto; */
-    height: 900px;
-    display: flex;
-    padding: 2rem;
-    padding-left: 12%;
-    color: white;
 }
 
 .hero .hero-card {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    max-width: 1000px;
     width: 100%;
+    padding-right: 10%;
 }
 
-.hero .hero-card>h1.display-5 {
-    font-size: 55px;
-    font-weight: 900 !important;
-    text-transform: uppercase;
-    color: #FFFFFF;
+.hero-card h1.display-5 {
+    font-size: 60px;
 }
-
-/* .hero .hero-card p { */
-/*     font-size: 21px; */
-/*     font-weight: 400; */
-/*     line-height: 30px; */
-/*     color: #FFFFFF; */
-/* } */
 
 .hero-btn {
-    background-color: var(--primary-color);
     margin-top: 1rem;
     padding: 1rem;
-    /*margin-left: 0.9rem;*/
     font-size: 1.25rem;
 }
 
