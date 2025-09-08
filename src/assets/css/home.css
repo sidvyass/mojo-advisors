@@ -1,5 +1,3 @@
-@import url('base.css');
-
 /* ---------- Company Logos ---------- */
 .company-logo {
     max-height: 40px;
@@ -127,7 +125,7 @@
 #our-services {
     position: relative;
     overflow: hidden;
-    min-height: 800px;
+    min-height: 720px;
 }
 
 /* break the H1 out to full viewport width */
